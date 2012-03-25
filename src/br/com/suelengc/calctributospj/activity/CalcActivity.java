@@ -5,21 +5,27 @@ import java.util.Locale;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
 import android.media.ExifInterface;
 import android.os.Bundle;
 import android.widget.*;
+import android.text.style.IconMarginSpan;
 import android.view.*;
 import br.com.suelengc.utils.*;
 import br.com.suelengc.calctributospj.controller.*;
 import br.com.suelengc.calctributospj.model.TributacaoNormal;
-import com.calculadora.impostos.pj.R;
+import br.com.calctributospj.R;
 
 public class CalcActivity extends Activity {
+	private static final int INFORMACOES = Menu.FIRST+1;
+	private static final int SAIR = Menu.FIRST+2;
+	
     EditText edvalorhora, edtotalhoras;
 	TextView tvvalor_bruto, tvvalor_liquido, tvirpj_retido, tvcofins_retido, tvpis_retido, tvcsll_retido, tvinss_darf, tvirpj_darf, tvcsll_darf;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         setTitle("Cálculo de Tributos PJ");
@@ -69,4 +75,32 @@ public class CalcActivity extends Activity {
 
 		});
     }
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		menu.add(0, INFORMACOES, 0, "Informações");
+		menu.add(0, SAIR, 0, "Sair");
+		return super.onCreateOptionsMenu(menu);
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case INFORMACOES:
+			AlertDialog.Builder infos = new AlertDialog.Builder(CalcActivity.this);
+			infos.setTitle("Desenvolvedor");
+			infos.setMessage("Suelen G. Carvalho \n" +
+							 "www.suelengc.com.br \n" +
+							 "suelengcarvalho@gmail.com \n");
+			infos.setNeutralButton("Fechar", null);
+			infos.show();
+			
+			return true;
+		case SAIR:
+			finish();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
 }
