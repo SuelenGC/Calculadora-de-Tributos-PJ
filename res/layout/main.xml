@@ -1,153 +1,287 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical" >
+    android:layout_height="fill_parent"
+    android:background="@drawable/gradientbackground"
+    android:orientation="horizontal"
+    android:padding="10dp" >
 
-    <ScrollView
-        android:id="@+id/scrollView1"
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
-
-        <LinearLayout
-            android:id="@+id/linearLayout1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+
+        <TableRow>
 
             <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Dados de Entrada"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textStyle="bold" />
-
-            <TextView
+                android:id="@+id/textView10"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Valor/hora:" />
+                android:text="Valor/hora:     R$ "
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <EditText
                 android:id="@+id/valorhora"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_weight="1"
                 android:inputType="numberDecimal" />
+        </TableRow>
+
+        <TableRow>
 
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total de horas:" />
+                android:text="Total de horas: "
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <EditText
                 android:id="@+id/totalhoras"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_weight="1"
-                android:inputType="numberDecimal" >
+                android:inputType="numberDecimal" />
+        </TableRow>
 
-                <requestFocus />
-            </EditText>
+        <TableRow android:layout_height="wrap_content" >
 
             <TextView
-                android:id="@+id/textView8"
-                android:layout_width="67dp"
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="6" />
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <Button
                 android:id="@+id/btcalcular"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
                 android:text="Calcular" />
+        </TableRow>
 
-            <TextView
-                android:id="@+id/textView3"
+        <TableLayout android:layout_width="fill_parent" >
+
+            <ScrollView
+                android:id="@+id/scrollView1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Dados de Saída:"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textStyle="bold" />
+                android:layout_height="fill_parent"
+                android:layout_weight="13.33" >
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Valor Líquido (antes de descontar impostos):" />
+                <LinearLayout
+                    android:id="@+id/LinearLayout1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
 
-            <EditText
-                android:id="@+id/valorliquido"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal" />
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="IRPJ (1,5%):" />
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Valor Bruto........: "
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
-            <EditText
-                android:id="@+id/irpj_retido"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="numberDecimal" />
+                        <TextView
+                            android:id="@+id/valorbruto"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                    </TableRow>
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="COFINC (3,0%):" />
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
 
-            <EditText
-                android:id="@+id/cofins_retido"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="numberDecimal" />
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Valor Líquido.....: "
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="PIS (0,65%):" />
+                        <TextView
+                            android:id="@+id/valorliquido"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                    </TableRow>
 
-            <EditText
-                android:id="@+id/pis_retido"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="numberDecimal" />
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
 
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CSLL (1,0%):" />
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="Tributos Mensais"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textStyle="bold" />
+                    </LinearLayout>
 
-            <EditText
-                android:id="@+id/csll_retido"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="numberDecimal" />
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
 
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Valor Bruto (após descontar impostos):" />
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="IRPJ (1,5%).........: "
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
-            <EditText
-                android:id="@+id/valorbruto"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal" />
+                        <TextView
+                            android:id="@+id/irpj_retido"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                    </TableRow>
 
-        </LinearLayout>
-    </ScrollView>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="COFINS (3,0%)...: "
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <TextView
+                            android:id="@+id/cofins_retido"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PIS (0,65%)........: "
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <TextView
+                            android:id="@+id/pis_retido"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CSLL (1,0%)........: "
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <TextView
+                            android:id="@+id/csll_retido"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="INSS (2%)...........: "
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <TextView
+                            android:id="@+id/inss_darf"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                    </TableRow>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="Tributos Trimestrais"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="IRPJ (0,9%).........: "
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <TextView
+                            android:id="@+id/irpj_darf"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CSLL (1,88%)......: "
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <TextView
+                            android:id="@+id/csll_darf"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                    </TableRow>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </TableLayout>
+
+    </TableLayout>
 
 </LinearLayout>
