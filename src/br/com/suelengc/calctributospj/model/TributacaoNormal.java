@@ -17,7 +17,7 @@ public class TributacaoNormal {
 		this.irpjMensal = valorTotalNotaFiscal * 0.015;
 		this.irpjTrimestral = valorTotalNotaFiscal * 0.009;
 		this.cofinsMensal = valorTotalNotaFiscal * 0.03;
-		this.pisMensal = valorTotalNotaFiscal * 0.065;
+		this.pisMensal = valorTotalNotaFiscal * 0.0065;
 		this.csllMensal = valorTotalNotaFiscal * 0.01;
 		this.csllTrimetral = valorTotalNotaFiscal * 0.0188;
 		this.inssMensal = valorTotalNotaFiscal * 0.02;
