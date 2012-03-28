@@ -1,21 +1,8 @@
 package br.com.suelengc.calctributospj.activity;
 
-import java.text.NumberFormat;
-import java.util.Locale;
-
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
-import android.content.Context;
-import android.content.Intent;
-import android.media.ExifInterface;
 import android.os.Bundle;
 import android.widget.*;
-import android.text.style.IconMarginSpan;
-import android.view.*;
-import br.com.suelengc.utils.*;
-import br.com.suelengc.calctributospj.controller.*;
-import br.com.suelengc.calctributospj.model.TributacaoNormal;
 import br.com.calctributospj.R;
 
 public class SecondActivity extends Activity {
