@@ -6,6 +6,8 @@ import java.util.Locale;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
+import android.content.Context;
+import android.content.Intent;
 import android.media.ExifInterface;
 import android.os.Bundle;
 import android.widget.*;
@@ -27,7 +29,7 @@ public class CalcActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.calc);
         setTitle("Cálculo de Tributos PJ");
         
         //Entrada de dados
@@ -49,7 +51,7 @@ public class CalcActivity extends Activity {
         
         btcalcular.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {		        
-		        double valorhora = 0, totalhoras = 0;
+				double valorhora = 0, totalhoras = 0;
 		        
 		        if (Validators.ValidaEditText(edvalorhora) && Validators.ValidaEditText(edtotalhoras)) {
 		        	
@@ -70,6 +72,10 @@ public class CalcActivity extends Activity {
 			        
 			        tvirpj_darf.setText("R$ " + Formaters.DoubleToString(objTributacaoNormal.getIrpjTrimestral()));
 			        tvcsll_darf.setText("R$ " + Formaters.DoubleToString(objTributacaoNormal.getCsllTrimetral()));
+			        
+			        Intent i = new Intent(CalcActivity.this, SecondActivity.class);
+					startActivity(i);
+					
 		        }
 			}
 
