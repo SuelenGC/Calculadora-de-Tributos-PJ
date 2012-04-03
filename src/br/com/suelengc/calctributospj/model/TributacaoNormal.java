@@ -7,9 +7,10 @@ public class TributacaoNormal {
 	private double pisMensal;
 	private double csllMensal;
 	private double csllTrimetral;
-	private double inssMensal;
+	private double issMensal;
 	private double valorBrutoNotaFiscal;
 	private double valorLiquidoNotaFiscal;
+	private double valorTotalDescontosMensais;
 	
 	
 	public TributacaoNormal(double valorTotalNotaFiscal) {
@@ -20,9 +21,10 @@ public class TributacaoNormal {
 		this.pisMensal = valorTotalNotaFiscal * 0.0065;
 		this.csllMensal = valorTotalNotaFiscal * 0.01;
 		this.csllTrimetral = valorTotalNotaFiscal * 0.0188;
-		this.inssMensal = valorTotalNotaFiscal * 0.02;
+		this.issMensal = valorTotalNotaFiscal * 0.02;
 		this.valorLiquidoNotaFiscal = this.valorBrutoNotaFiscal - (this.irpjMensal + this.cofinsMensal + 
-									this.pisMensal + this.csllMensal + this.inssMensal); 
+									this.pisMensal + this.csllMensal + this.issMensal); 
+		this.valorTotalDescontosMensais = this.irpjMensal+this.cofinsMensal+this.csllMensal+this.pisMensal+this.issMensal;
 	}
 
 	public double getIrpjMensal() {
@@ -55,8 +57,8 @@ public class TributacaoNormal {
 	}
 
 	
-	public double getInssMensal() {
-		return inssMensal;
+	public double getIssMensal() {
+		return issMensal;
 	}
 
 	
@@ -70,5 +72,9 @@ public class TributacaoNormal {
 	
 	public double getValorLiquidoNotaFiscal() {
 		return valorLiquidoNotaFiscal;
+	}
+	
+	public double getTotalDescontosMensais() {
+		return valorTotalDescontosMensais;
 	}
 }

@@ -3,7 +3,7 @@
 
     <string name="hello">Hello World!</string>
     <string name="app_name">Calculadora Tributos PJ</string>
-    <string name="teste">Mensagem de teste.</string>
+    <string name="versao">Versão: 1.0</string>
     
 
 </resources>
