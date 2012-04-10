@@ -5,91 +5,196 @@
     android:background="@drawable/gradientbackground"
     android:orientation="horizontal"
     android:padding="10dp" >
-    <TableLayout
-        android:id="@+id/tableLayout1"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
+   
+	<TableLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >
 
-        <!-- Tributação -->
-        <TableRow
-            android:id="@+id/tableRow1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+           <LinearLayout
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content" >
 
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tributação:"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                 <TextView
+                     android:id="@+id_config/textView15"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="10dp"
+                     android:gravity="left"
+                     android:textColor="#FFA500"
+                     android:text="Tributos Mensais"
+                     android:textAppearance="?android:attr/textAppearanceLarge"
+                     android:textStyle="bold" />
+             </LinearLayout>
 
-        </TableRow>
+             <TableRow
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content">
 
-        <TableRow
-            android:id="@+id/tableRow2"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+                 <TextView
+                     android:id="@+id_config/textView4"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="left"
+                     android:text="IRPJ: "
+                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
-            <Spinner
-                android:id="@+id/spntributacao"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                 <TextView
+                     android:id="@+id_config/irpj_retido"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="right"
+                     android:layout_weight="1"
+                     android:text="1,50%"
+                     android:textAppearance="?android:attr/textAppearanceLarge" />
+             </TableRow>
 
-        </TableRow>
+             <TableRow
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent" >
 
-		<!-- CSLL -->
-        <TableRow
-            android:id="@+id/tableRow1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+                 <TextView
+                     android:id="@+id_config/textView4"
+                     android:layout_width="wrap_content"
+                     android:gravity="left"
+                     android:layout_height="wrap_content"
+                     android:text="COFINS: "
+                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="% p/ cálculo do CSLL:"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                 <TextView
+                     android:id="@+id_config/cofins_retido"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="right"
+                     android:layout_weight="1"
+                     android:text="3,00%"
+                     android:textAppearance="?android:attr/textAppearanceLarge" />
+             </TableRow>
 
-        </TableRow>
+             <TableRow
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent" >
 
-        <TableRow
-            android:id="@+id/tableRow2"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+                 <TextView
+                     android:id="@+id_config/textView6"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="left"
+                     android:text="PIS.: "
+                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
-            <Spinner
-                android:id="@+id/spncsll"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                 <TextView
+                     android:id="@+id_config/pis_retido"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="right"
+                     android:layout_weight="1"
+                     android:text="0,65%"
+                     android:textAppearance="?android:attr/textAppearanceLarge" />
+             </TableRow>
 
-        </TableRow>
+             <TableRow
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent" >
 
-        <!-- CSLL -->
-        <TableRow
-            android:id="@+id/tableRow1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+                 <TextView
+                     android:id="@+id_config/textView7"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="left"
+                     android:text="CSLL: "
+                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="% p/ cálculo do IRPJ:"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                 <TextView
+                     android:id="@+id_config/csll_retido"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="right"
+                     android:layout_weight="1"
+                     android:text="1,00%"
+                     android:textAppearance="?android:attr/textAppearanceLarge" />
+             </TableRow>
 
-        </TableRow>
+             <TableRow
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent" >
 
-        <TableRow
-            android:id="@+id/tableRow2"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+                 <TextView
+                     android:id="@+id_config/textView12"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="left"
+                     android:text="ISS: "
+                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
-            <Spinner
-                android:id="@+id/spnirpj"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                 <TextView
+                     android:id="@+id_config/inss_darf"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="right"
+                     android:layout_weight="1"
+                     android:text="2,00%"
+                     android:textAppearance="?android:attr/textAppearanceLarge" />
+             </TableRow>
 
-        </TableRow>
-    </TableLayout>
-    
+             <LinearLayout
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content" >
+
+                 <TextView
+                     android:id="@+id_config/textView16"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="10dp"
+                     android:textColor="#FFA500"
+                     android:gravity="left"
+                     android:text="% Tributos Trimestrais"
+                     android:textAppearance="?android:attr/textAppearanceLarge"
+                     android:textStyle="bold" />
+             </LinearLayout>
+
+             <TableRow
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent" >
+
+                 <TextView
+                     android:id="@+id_config/textView13"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="left"
+                     android:text="IRPJ: "
+                     android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                 <TextView
+                     android:id="@+id_config/irpj_darf"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="right"
+                     android:layout_weight="1"
+                     android:text="0,90%"
+                     android:textAppearance="?android:attr/textAppearanceLarge" />
+             </TableRow>
+
+             <TableRow
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent" >
+
+                 <TextView
+                     android:id="@+id_config/textView14"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="CSLL: "
+                     android:gravity="left"
+                     android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                 <TextView
+                     android:id="@+id_config/csll_darf"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="right"
+                     android:text="1,88%"
+                     android:layout_weight="1"
+                     android:textAppearance="?android:attr/textAppearanceLarge" />
+             </TableRow>
+
+        </TableLayout>    
 </LinearLayout>
