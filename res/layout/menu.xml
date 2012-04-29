@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gradientbackground"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <TableLayout android:background="@drawable/border"
+        		 android:layout_height="fill_parent"
+        		 android:layout_width="fill_parent">
+        		 
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Escolha quais dados deseja informar para o cálculo:"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+                    
+	    <Button android:id="@+id/btn_calc_by_value_per_hour"
+	        	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:background="@drawable/rounded_button"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:padding="10dp"
+	        	android:layout_margin="10dp"
+	        	android:text="Valor/Hora"
+	        	android:onClick="CallCalcActivity_ByValuePerHour"/>
+	    
+	    <Button android:id="@+id/btn_calc_by_value"
+	        	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:background="@drawable/rounded_button"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+	        	android:text="Valor Bruto"
+	        	android:onClick="CallCalcActivity_ByValue"/>
+    </TableLayout>
+</LinearLayout>

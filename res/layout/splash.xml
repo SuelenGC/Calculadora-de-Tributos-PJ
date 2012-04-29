@@ -8,19 +8,10 @@
 
     <ImageView
         android:id="@+id/AnimationImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_gravity="center_vertical|center_horizontal"
         android:src="@drawable/ic_app_play_store2" >
     </ImageView>
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_weight="0.21"
-        android:text="@string/versao"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </LinearLayout>

@@ -9,20 +9,42 @@
     <TableLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" 
+        android:layout_height="fill_parent" 
         android:background="@drawable/border">
 
-		<TableRow>
+        <TableRow android:id="@+id_calc/tr_valor">
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id_calc/textView22"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Valor Bruto:    R$ "
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <EditText
+                android:id="@+id_calc/valorBruto"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:selectAllOnFocus="true"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="numberDecimal" >
+
+                <requestFocus />
+            </EditText>
+        </TableRow>     
+        
+		<TableRow android:id="@+id_calc/tr_valorhora1">
+
+            <TextView
+                android:id="@+id_calc/textView10"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="Valor/hora:     R$ "
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <EditText
-                android:id="@+id/valorhora"
+                android:id="@+id_calc/valorhora"
                 android:layout_width="fill_parent"
                 android:layout_height="40dp"
                 android:selectAllOnFocus="true"
@@ -34,10 +56,10 @@
             </EditText>
         </TableRow>     
            
-        <TableRow>
+        <TableRow android:id="@+id_calc/tr_valorhora2">
 
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id_calc/textView1"
                 android:layout_width="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_height="wrap_content"
@@ -45,7 +67,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <EditText
-                android:id="@+id/totalhoras"
+                android:id="@+id_calc/totalhoras"
                 android:layout_width="fill_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
@@ -58,14 +80,14 @@
         <TableRow android:layout_height="wrap_content" >
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id_calc/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <Button
-                android:id="@+id/btcalcular"
+                android:id="@+id_calc/btcalcular"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
@@ -78,13 +100,13 @@
         <TableLayout android:layout_width="fill_parent" >
 
             <ScrollView
-                android:id="@+id/scrollView1"
+                android:id="@+id_calc/scrollView1"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight="13.33" >
 
                 <LinearLayout
-                    android:id="@+id/LinearLayout1"
+                    android:id="@+id_calc/LinearLayout1"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:orientation="vertical" >
@@ -94,7 +116,7 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id/textView15"
+                            android:id="@+id_calc/textView15"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -110,7 +132,7 @@
                         android:layout_height="fill_parent">
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id_calc/textView4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
@@ -118,7 +140,7 @@
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
-                            android:id="@+id/irpj_retido"
+                            android:id="@+id_calc/irpj_retido"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:gravity="right"
@@ -131,7 +153,7 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id_calc/textView4"
                             android:layout_width="wrap_content"
                             android:gravity="left"
                             android:layout_height="wrap_content"
@@ -139,7 +161,7 @@
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
-                            android:id="@+id/cofins_retido"
+                            android:id="@+id_calc/cofins_retido"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:gravity="right"
@@ -152,7 +174,7 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id/textView6"
+                            android:id="@+id_calc/textView6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
@@ -160,7 +182,7 @@
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
-                            android:id="@+id/pis_retido"
+                            android:id="@+id_calc/pis_retido"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:gravity="right"
@@ -173,7 +195,7 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id/textView7"
+                            android:id="@+id_calc/textView7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
@@ -181,7 +203,7 @@
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
-                            android:id="@+id/csll_retido"
+                            android:id="@+id_calc/csll_retido"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:gravity="right"
@@ -194,7 +216,7 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id/textView12"
+                            android:id="@+id_calc/textView12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
@@ -202,7 +224,7 @@
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
-                            android:id="@+id/inss_darf"
+                            android:id="@+id_calc/inss_darf"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:gravity="right"
@@ -215,7 +237,7 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id/textView16"
+                            android:id="@+id_calc/textView16"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -231,7 +253,7 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id/textView13"
+                            android:id="@+id_calc/textView13"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
@@ -239,7 +261,7 @@
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
-                            android:id="@+id/irpj_darf"
+                            android:id="@+id_calc/irpj_darf"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:gravity="right"
@@ -252,7 +274,7 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id/textView14"
+                            android:id="@+id_calc/textView14"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="CSLL: "
@@ -260,7 +282,7 @@
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
-                            android:id="@+id/csll_darf"
+                            android:id="@+id_calc/csll_darf"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:gravity="right"
@@ -273,7 +295,7 @@
                         android:layout_height="fill_parent">
 
                         <TextView
-                            android:id="@+id/textView16"
+                            android:id="@+id_calc/textView16"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -289,7 +311,7 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id/textView5"
+                            android:id="@+id_calc/textView5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Valor Bruto: "
@@ -297,7 +319,7 @@
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
-                            android:id="@+id/valorbruto"
+                            android:id="@+id_calc/valorbruto"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -310,7 +332,7 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id/textView9"
+                            android:id="@+id_calc/textView9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
@@ -318,7 +340,7 @@
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
-                            android:id="@+id/totaldescontosmensais"
+                            android:id="@+id_calc/totaldescontosmensais"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -331,7 +353,7 @@
                         android:layout_height="fill_parent">
 
                         <TextView
-                            android:id="@+id/textView9"
+                            android:id="@+id_calc/textView9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
@@ -339,7 +361,7 @@
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
-                            android:id="@+id/valorliquido"
+                            android:id="@+id_calc/valorliquido"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
