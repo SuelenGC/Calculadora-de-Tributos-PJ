@@ -1,7 +1,5 @@
 package br.com.suelengc.calctributospj.model;
 
-import android.util.Log;
-
 public class TributosLucroPresumido implements Tributos {
 	private double irpjMensal;
 	private double irpjTrimestral;
@@ -21,8 +19,6 @@ public class TributosLucroPresumido implements Tributos {
 		setIrpjTrimestral(valorTotalNotaFiscal);
 		setIssMensal(valorTotalNotaFiscal);
 		setPisMensal(valorTotalNotaFiscal);
-		
-		Log.d("S-DEBUG-MODEL", "valorTotalNotaFiscal: " + valorTotalNotaFiscal);
 	}
 
 	private void setIrpjMensal(double valorTotalNotaFiscal) {
