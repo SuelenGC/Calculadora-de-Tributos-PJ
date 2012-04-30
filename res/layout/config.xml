@@ -92,6 +92,7 @@
 		</TableLayout>
 		
 	<TableLayout
+			android:id="@+id_config/frmLucroPresumido"	    	
 	        xmlns:android="http://schemas.android.com/apk/res/android"
 	        android:layout_width="fill_parent"
 	        android:layout_height="fill_parent" 
@@ -99,13 +100,12 @@
 	        android:background="@drawable/border">
 
 		     <ScrollView
-                android:id="@+id_calc/scrollView1"
+                android:id="@+id_config/scrollView1"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight="13.33" >
 
 		        <LinearLayout
-                    android:id="@+id_calc/frmLucroPresumido"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical" >
@@ -301,5 +301,36 @@
 			</ScrollView>
 		 	
 		</TableLayout>
-		 
+
+	<TableLayout
+			android:id="@+id_config/frmSimplesNacional"	    	
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent" 
+	        android:layout_marginTop="10dp"
+	        android:background="@drawable/border">
+
+			
+             <TableRow
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content">
+
+                 <TextView
+                     android:id="@+id_config/textView4"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="left"
+                     android:text="Tributo Unificado "
+                     android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                 <TextView
+                     android:id="@+id_config/tributo_unificado"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="right"
+                     android:layout_weight="1"
+                     android:text="6,00%"
+                     android:textAppearance="?android:attr/textAppearanceLarge" />
+             </TableRow>	    		     
+	</TableLayout>		 
 </LinearLayout>
