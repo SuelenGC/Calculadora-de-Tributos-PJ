@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 import br.com.suelengc.calctributospj.R;
+import br.com.suelengc.utils.Preferencias;
 
 public class MenuActivity extends Activity {
 
@@ -18,7 +19,7 @@ public class MenuActivity extends Activity {
 		setContentView(R.layout.menu);
 		setTitle("Calculadora de Tributos PJ - Menu");
 		
-		Toast.makeText(MenuActivity.this, "Tipo Tributação: " + getTipoTributacao(), Toast.LENGTH_SHORT).show();
+		Toast.makeText(MenuActivity.this, "Tipo Tributação: " + Preferencias.getPreferenciaDescricao(MenuActivity.this, "TipoTributacao"), Toast.LENGTH_SHORT).show();
 	}
 	
 	public void CallCalcActivity_ByValuePerHour(View view) {
@@ -33,14 +34,4 @@ public class MenuActivity extends Activity {
 		intent.putExtra(EXTRA_FORMATO_TELA, "2");
 		startActivity(intent);
 	}
-	
-	private String getTipoTributacao() {
-		SharedPreferences settings = getSharedPreferences("TIPO_TRIBUTACAO", MODE_PRIVATE);
-        int tipoTributacao = settings.getInt("TipoTributacao", 1);
-        if (tipoTributacao == 1) 
-        	return "Lucro Presumido";
-        else 
-        	return "Simples";
-	}
-	
 }

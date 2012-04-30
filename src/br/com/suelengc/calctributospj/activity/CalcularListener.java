@@ -4,6 +4,7 @@ import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.calctributospj.controller.NotaFiscalController;
 import br.com.suelengc.calctributospj.model.NotaFiscal;
 import br.com.suelengc.calctributospj.model.TributosLucroPresumido;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
@@ -48,7 +49,9 @@ public class CalcularListener implements OnClickListener {
 			    notaFiscalController = new NotaFiscalController(valorHora, qtdeHoras);
 			    
 			} else if (formatoTela == FormatoTela.CALCULO_POR_VALOR_BRUTO) { 
-				edvalor = (EditText) p.findViewById(R.id_calc.valorbruto);
+				edvalor = (EditText) p.findViewById(R.id_calc.valorBruto);
+				
+				Log.d("S-DEBUG-CALC", "Chegou aqui");
 				
 				valorBruto = Double.parseDouble(edvalor.getText().toString());
 				valorTotalNotaFiscal = valorBruto;
