@@ -18,8 +18,6 @@ public class MenuActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu);
 		setTitle("Calculadora de Tributos PJ - Menu");
-		
-		Toast.makeText(MenuActivity.this, "Tipo Tributação: " + Preferencias.getPreferenciaDescricao(MenuActivity.this, "TipoTributacao"), Toast.LENGTH_SHORT).show();
 	}
 	
 	public void CallCalcActivity_ByValuePerHour(View view) {

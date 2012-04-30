@@ -25,20 +25,21 @@ public class ConfigActivity extends Activity {
         rbLucroPresumido = (RadioButton) findViewById(R.id_config.rbLucroPresumido);
         rbSimples = (RadioButton) findViewById(R.id_config.rbSimples);
         
-        if (Preferencias.getPreferenciaValor(ConfigActivity.this, "TipoTributacao") == 1) 
+        if (Preferencias.getPreferenciaValor(ConfigActivity.this, "TipoTributacao") == 1) {
         	rbLucroPresumido.setChecked(true);
-        else
+        } else {
         	rbSimples.setChecked(true);
+        }
         
         rgTipoTributacao.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 			
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
 				if(rbLucroPresumido.getId() == checkedId) {  
-					Toast.makeText(ConfigActivity.this, "Lucro presumido selecionado!", Toast.LENGTH_SHORT).show();
+					Toast.makeText(ConfigActivity.this, "Lucro Presumido selecionado!", Toast.LENGTH_SHORT).show();
 				    Preferencias.setPreferencia(ConfigActivity.this, "TipoTributacao", 1);
 					
 			    } else if(rbSimples.getId() == checkedId) {  
-			    	Toast.makeText(ConfigActivity.this, "Simples selecionado!", Toast.LENGTH_SHORT).show();
+			    	Toast.makeText(ConfigActivity.this, "Simples Nacional selecionado!", Toast.LENGTH_SHORT).show();
 			    	Preferencias.setPreferencia(ConfigActivity.this, "TipoTributacao", 2);
 			    }  
 			}
