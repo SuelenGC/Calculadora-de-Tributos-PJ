@@ -23,6 +23,7 @@ public class CalcularListener implements OnClickListener {
 	public CalcularListener(int formatoTela) {
 		this.formatoTela = formatoTela; 
 	}
+	
 	public void onClick(View v) {
 		
 		View p = (View) v.getRootView();

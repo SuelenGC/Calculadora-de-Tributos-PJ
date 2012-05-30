@@ -14,6 +14,7 @@ public class CalcActivity extends Activity {
 	private static final int INFORMACOES = Menu.FIRST+1;
 	
     TableRow trValorHora1, trValorHora2, trValor;
+    TableLayout frmLucroPresumido, frmSimplesNacional;
 
     Button btcalcular;
     int formatoTela;
@@ -37,6 +38,13 @@ public class CalcActivity extends Activity {
         	ExibirTelaValorBruto();
         } else if (formatoTela == FormatoTela.CALCULO_POR_VALOR_HORA) {
         	ExibirTelaValorHora();
+        }
+        
+        int tipoTributacao = Preferencias.getPreferenciaValor(CalcActivity.this, "TipoTributacao");
+        if (tipoTributacao == 1) {
+        	FormataTela(1);
+        } else if (tipoTributacao == 2) {
+        	FormataTela(2);
         }
         
         btcalcular = (Button) findViewById(R.id_calc.btcalcular);
@@ -85,4 +93,18 @@ public class CalcActivity extends Activity {
 			return super.onOptionsItemSelected(item);
 		}
 	}
+	
+    private void FormataTela(int TipoTributacaoEscolhida) {
+        frmLucroPresumido = (TableLayout) findViewById(R.id_calc.frmLucroPresumido);
+        frmSimplesNacional = (TableLayout) findViewById(R.id_calc.frmSimplesNacional);
+        
+		if(TipoTributacaoEscolhida == 1) {  
+		    frmLucroPresumido.setVisibility(View.VISIBLE);
+		    frmSimplesNacional.setVisibility(View.GONE);
+			
+	    } else if(TipoTributacaoEscolhida == 2) {  
+	    	frmLucroPresumido.setVisibility(View.GONE);
+	    	frmSimplesNacional.setVisibility(View.VISIBLE);
+	    }  
+    }
 }

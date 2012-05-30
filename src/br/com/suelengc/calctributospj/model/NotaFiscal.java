@@ -16,23 +16,23 @@ public class NotaFiscal {
 		this.tributos = tributo;
 	}
 	
+	public Tributos getTributos() {
+		return tributos;
+	}
+	
 	private void setValorBruto (double valorTotalNotaFiscal) {
 		valorBruto = valorTotalNotaFiscal;
+	}
+
+	public double getValorBruto() {
+		return valorBruto;
 	}
 	
 	private void setValorLiquido() {
 		valorLiquido = getValorBruto() - getTributos().getValorTotalDescontos();
 	}
 	
-	public double getValorBruto() {
-		return valorBruto;
-	}
-
 	public double getValorLiquido() {
 		return valorLiquido;
-	}
-	
-	public Tributos getTributos() {
-		return tributos;
 	}
 }
