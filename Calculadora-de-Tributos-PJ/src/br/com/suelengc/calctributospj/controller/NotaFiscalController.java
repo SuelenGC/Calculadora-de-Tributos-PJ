@@ -6,12 +6,17 @@ public class NotaFiscalController {
 
 	private NotaFiscal notaFiscal;
 	
-	public NotaFiscalController (double valorTotalNotaFiscal) {
-		notaFiscal = new NotaFiscal(valorTotalNotaFiscal, new TributosLucroPresumido(valorTotalNotaFiscal));
+	public NotaFiscalController (double valorTotalNotaFiscal, int tipoTributacao) {
+		if (tipoTributacao == 1) {
+			notaFiscal = new NotaFiscal(valorTotalNotaFiscal, new TributosLucroPresumido(valorTotalNotaFiscal));
+		} else if (tipoTributacao ==2) {
+			notaFiscal = new NotaFiscal(valorTotalNotaFiscal, new TributosSimples(valorTotalNotaFiscal));
+		}
+		
 	}
 	
-	public NotaFiscalController (double valorHora, double qtdeHoras) {
-		this(valorHora * qtdeHoras);
+	public NotaFiscalController (double valorHora, double qtdeHoras, int tipoTributacao) {
+		this(valorHora * qtdeHoras, tipoTributacao);
 
 	}
 	

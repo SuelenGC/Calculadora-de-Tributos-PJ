@@ -40,7 +40,7 @@ public class CalcActivity extends Activity {
         	ExibirTelaValorHora();
         }
         
-        int tipoTributacao = Preferencias.getPreferenciaValor(CalcActivity.this, "TipoTributacao");
+        int tipoTributacao = Preferencias.getPreferenciaValorInteiro(CalcActivity.this, "TipoTributacao");
         if (tipoTributacao == 1) {
         	FormataTela(1);
         } else if (tipoTributacao == 2) {
@@ -48,7 +48,7 @@ public class CalcActivity extends Activity {
         }
         
         btcalcular = (Button) findViewById(R.id_calc.btcalcular);
-        btcalcular.setOnClickListener(new CalcularListener(formatoTela));
+        btcalcular.setOnClickListener(new CalcularListener(formatoTela, this));
     }
     
     private void ExibirTelaValorBruto() {
