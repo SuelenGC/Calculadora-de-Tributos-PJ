@@ -3,6 +3,7 @@ package br.com.suelengc.calctributospj.activity;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.widget.*;
 import android.view.*;
@@ -14,7 +15,7 @@ public class CalcActivity extends Activity {
 	
     TableRow trValorHora1, trValorHora2, trValor;
     TableLayout frmLucroPresumido, frmSimplesNacional;
-
+    
     Button btcalcular;
     int formatoTela;
     

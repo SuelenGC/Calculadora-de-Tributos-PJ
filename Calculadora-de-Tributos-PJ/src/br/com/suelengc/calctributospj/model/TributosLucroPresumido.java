@@ -11,12 +11,12 @@ public class TributosLucroPresumido implements Tributos {
 	
 	public TributosLucroPresumido() {}
 	
-	public TributosLucroPresumido(double valorTotalNotaFiscal) {
+	public TributosLucroPresumido(double valorTotalNotaFiscal, float percIRPJ) {
 		setCofinsMensal(valorTotalNotaFiscal);
 		setCsllMensal(valorTotalNotaFiscal);
 		setCsllTrimetral(valorTotalNotaFiscal);
 		setIrpjMensal(valorTotalNotaFiscal);
-		setIrpjTrimestral(valorTotalNotaFiscal);
+		setIrpjTrimestral(valorTotalNotaFiscal, percIRPJ);
 		setIssMensal(valorTotalNotaFiscal);
 		setPisMensal(valorTotalNotaFiscal);
 	}
@@ -25,8 +25,13 @@ public class TributosLucroPresumido implements Tributos {
 		this.irpjMensal = valorTotalNotaFiscal * 0.015;
 	}
 
-	private void setIrpjTrimestral(double valorTotalNotaFiscal) {
-		this.irpjTrimestral = valorTotalNotaFiscal * 0.009;
+	private void setIrpjTrimestral(double valorTotalNotaFiscal, float percIRPJ) {
+		if (percIRPJ == 2.4f) {
+			this.irpjTrimestral = valorTotalNotaFiscal * 0.009;	
+		} else if (percIRPJ == 4.8f) {
+			this.irpjTrimestral = valorTotalNotaFiscal * 0.033;
+		}
+		
 	}
 
 	private void setCofinsMensal(double valorTotalNotaFiscal) {

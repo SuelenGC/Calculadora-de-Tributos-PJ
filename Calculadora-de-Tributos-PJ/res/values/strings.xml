@@ -3,9 +3,9 @@
 
     <string name="app_name">Calculadora Tributos PJ</string>
     <string name="versao">versão 4.0</string>
-    <string name="desenvolvedor">Desenvolvedor: Suelen Goularte Carvalho</string>
-    <string name="twitter">Twitter: @SuelenGC</string>
-    <string name="email">E-mail: suelengcarvalho@gmail.com</string>
-    <string name="website">Website: www.suelengc.com.br</string>
+    <string name="desenvolvedor">Suelen Goularte Carvalho</string>
+    <string name="twitter">SuelenGC</string>
+    <string name="email">suelengcarvalho@gmail.com</string>
+    <string name="website">www.suelengc.com.br</string>
 
 </resources>

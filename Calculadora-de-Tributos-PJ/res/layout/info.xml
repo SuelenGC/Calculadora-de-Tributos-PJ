@@ -6,51 +6,102 @@
     android:orientation="vertical"
     android:padding="10dp" >
 
-    <TextView 
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-		android:text="Calculadora de Tributos PJ"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:gravity="center_horizontal"
-		android:layout_weight="1"/>
-    
     <LinearLayout 
+        android:layout_height="fill_parent"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="6"
-        android:orientation="vertical">
-        
-	    <TextView 
-	        android:layout_height="wrap_content"
-	        android:layout_width="fill_parent"
-	        android:textColor="#ffffff"
-			android:text="@string/desenvolvedor"/>
-	    
-		<TextView 
-	        android:layout_height="wrap_content"
-	        android:layout_width="fill_parent"
-	        android:textColor="#ffffff"
-			android:text="@string/email"/>
-	        
-		<TextView 
-	        android:layout_height="wrap_content"
-	        android:layout_width="fill_parent"
-	        android:textColor="#ffffff"
-			android:text="@string/twitter"/>
+        android:orientation="vertical"
+        android:background="@drawable/border">
+
+            <TextView 
+		        android:layout_height="wrap_content"
+		        android:layout_width="fill_parent"
+				android:text="Calculadora de Tributos PJ"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:gravity="center_horizontal"
+				android:textColor="#FFA500"
+				android:layout_weight="1"/>
+		    
+		    <TableLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="6"
+		        android:orientation="vertical">
+		        
+		        <TableRow 
+		            android:layout_height="wrap_content"
+		            android:layout_width="wrap_content">
+			        
+			        <TextView 
+			            android:layout_height="wrap_content"
+			            android:layout_width="wrap_content"
+			            android:textColor="#FFA500"
+			            android:text="Desenvolvedor(a): "/>
+			        <TextView 
+				        android:layout_height="wrap_content"
+				        android:layout_width="fill_parent"
+				        android:textColor="#ffffff"
+						android:text="@string/desenvolvedor"/>    
+		        </TableRow>
+			    
+			    
+				<TableRow 
+		            android:layout_height="wrap_content"
+		            android:layout_width="wrap_content">
+			        
+			        <TextView 
+			            android:layout_height="wrap_content"
+			            android:layout_width="wrap_content"
+			            android:textColor="#FFA500"
+			            android:text="Twitter: "/>
+			        <TextView 
+				        android:layout_height="wrap_content"
+				        android:layout_width="fill_parent"
+				        android:textColor="#ffffff"
+						android:text="@string/twitter"/>    
+		        </TableRow>
+		        
+				<TableRow 
+		            android:layout_height="wrap_content"
+		            android:layout_width="wrap_content">
+			        
+			        <TextView 
+			            android:layout_height="wrap_content"
+			            android:layout_width="wrap_content"
+			            android:textColor="#FFA500"
+			            android:text="E-mail: "/>
+			        <TextView 
+				        android:layout_height="wrap_content"
+				        android:layout_width="fill_parent"
+				        android:textColor="#ffffff"
+						android:text="@string/email"/>    
+		        </TableRow>
+		        
+				<TableRow 
+		            android:layout_height="wrap_content"
+		            android:layout_width="wrap_content">
+			        
+			        <TextView 
+			            android:layout_height="wrap_content"
+			            android:layout_width="wrap_content"
+			            android:textColor="#FFA500"
+			            android:text="Website: "/>
+			        
+			        <TextView 
+				        android:layout_height="wrap_content"
+				        android:layout_width="fill_parent"
+				        android:textColor="#ffffff"
+						android:text="@string/website"/>    
+		        </TableRow>
 		
-		<TextView 
-	        android:layout_height="wrap_content"
-	        android:layout_width="fill_parent"
-	        android:textColor="#ffffff"
-			android:text="@string/website"/>    
+		    </TableLayout>
+		    
+		    <TextView 
+		        android:layout_height="20dp"
+		        android:layout_width="wrap_content"
+		        android:layout_gravity="center"
+		        android:textColor="#ffffff"
+		        android:text="@string/versao" />
         
     </LinearLayout>
-    
-    <TextView 
-        android:layout_height="20dp"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="#ffffff"
-        android:text="@string/versao" />
 
 </LinearLayout>

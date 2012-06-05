@@ -9,6 +9,7 @@ import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import br.com.suelengc.utils.*;
@@ -32,6 +33,7 @@ public class CalcularListener implements OnClickListener {
 		
 		View p = (View) v.getRootView();
 		int tipoTributacao = 1;
+		float percIRPJ = 2.4f;
 		
 		if (p != null) {
 			
@@ -41,6 +43,8 @@ public class CalcularListener implements OnClickListener {
 				tipoTributacao = 2;
 			}
 			
+			percIRPJ = Preferencias.getPreferenciaValorFloat(p.getContext(), "PercIRPJ");
+			
 			if (formatoTela  == FormatoTela.CALCULO_POR_VALOR_HORA) {
 				
 			    edvalorhora = (EditText) p.findViewById(R.id_calc.valorhora);
@@ -49,7 +53,7 @@ public class CalcularListener implements OnClickListener {
 			    valorHora = Double.parseDouble(edvalorhora.getText().toString());
 			    qtdeHoras = Double.parseDouble(edtotalhoras.getText().toString());
 			    
-			    notaFiscalController = new NotaFiscalController(valorHora, qtdeHoras, tipoTributacao);
+			    notaFiscalController = new NotaFiscalController(valorHora, qtdeHoras, tipoTributacao, percIRPJ);
 			    
 			} else if (formatoTela == FormatoTela.CALCULO_POR_VALOR_BRUTO) { 
 				edvalor = (EditText) p.findViewById(R.id_calc.valorBruto);
@@ -59,7 +63,7 @@ public class CalcularListener implements OnClickListener {
 				valorBruto = Double.parseDouble(edvalor.getText().toString());
 				valorTotalNotaFiscal = valorBruto;
 				
-				notaFiscalController = new NotaFiscalController(valorTotalNotaFiscal, tipoTributacao);
+				notaFiscalController = new NotaFiscalController(valorTotalNotaFiscal, tipoTributacao, percIRPJ);
 			}
 			
 			NotaFiscal notaFiscal = notaFiscalController.getNotaFiscal();
@@ -108,10 +112,6 @@ public class CalcularListener implements OnClickListener {
 					tvvalor_liquido2.setText("R$ " + Formaters.DoubleToString(notaFiscal.getValorLiquido()));
 				}
 			}	
-			
-			
-			
-				
 		}
 	}
 }

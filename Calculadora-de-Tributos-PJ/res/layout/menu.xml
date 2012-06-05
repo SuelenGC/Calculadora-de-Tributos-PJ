@@ -20,7 +20,7 @@
 	            android:textAppearance="?android:attr/textAppearanceLarge"
 	            android:padding="10dp"
 		       	android:layout_margin="10dp"
-		       	android:text="Cálculo com valor/hora"
+		       	android:text="Cálculo pelo valor/hora"
 		       	android:textColor="#ffffff"
 		       	android:onClick="CallCalcActivity_ByValuePerHour" />
 		    
@@ -33,7 +33,7 @@
 	            android:padding="10dp"
 	            android:layout_margin="10dp"
 	            android:textColor="#ffffff"
-	        	android:text="Cálculo com valor bruto"
+	        	android:text="Cálculo pelo valor bruto"
 	        	android:onClick="CallCalcActivity_ByValue"/>	
 	        
 	        <Button 
