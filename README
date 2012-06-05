@@ -1,0 +1,20 @@
+CALCULADORA DE TRIBUTOS PJ
+=====================
+
+Aplicação Android para cálculo dos tributos que incidem sobre uma nota fiscal emitida por empresa de serviços
+
+Lista de Funcionalidades
+================
+ 
+Versão 1
+    - Cálculo dos tributos IRPJ, CSLL, PIS, COFINS e ISS com base no valor/hora pela qtde. de horas informada.
+ 
+Versão 2
+    - Correção do cálculo do PIS.
+ 
+Versão 3
+    - Cálculo com base no valor bruto informado.
+ 
+Versão 4
+    - Permitir selecionar tipo de tributação.
+    - Permitir selecionar percentual do IRPJ.
