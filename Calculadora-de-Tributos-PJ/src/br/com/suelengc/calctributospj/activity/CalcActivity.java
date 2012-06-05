@@ -10,8 +10,7 @@ import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.utils.*;
 
 public class CalcActivity extends Activity {
-	private static final int CONFIGURACOES = Menu.FIRST;
-	private static final int INFORMACOES = Menu.FIRST+1;
+	private static final int INFORMACOES = Menu.FIRST;
 	
     TableRow trValorHora1, trValorHora2, trValor;
     TableLayout frmLucroPresumido, frmSimplesNacional;
@@ -65,8 +64,7 @@ public class CalcActivity extends Activity {
     
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		menu.add(0, CONFIGURACOES, 0, "Configurações");
-		menu.add(0, INFORMACOES, 0, "Informações");
+		menu.add(0, INFORMACOES, 0, "Informações...");
 		return super.onCreateOptionsMenu(menu);
 	}
 	
@@ -74,21 +72,9 @@ public class CalcActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case INFORMACOES:
-			AlertDialog.Builder infos = new AlertDialog.Builder(CalcActivity.this);
-			infos.setTitle("Desenvolvedor");
-			infos.setMessage("Suelen G. Carvalho \n" +
-							 "www.suelengc.com.br \n" +
-							 "suelengcarvalho@gmail.com \n" +
-							 "Versão 2.1");
-			infos.setNeutralButton("Fechar", null);
-			infos.show();
-			
+			Intent intent = new Intent(this, InfoActivity.class);
+			startActivity(intent);
 			return true;
-		case CONFIGURACOES:
-			startActivity(new Intent(this, ConfigActivity.class));
-						
-			return true;
-			
 		default:
 			return super.onOptionsItemSelected(item);
 		}

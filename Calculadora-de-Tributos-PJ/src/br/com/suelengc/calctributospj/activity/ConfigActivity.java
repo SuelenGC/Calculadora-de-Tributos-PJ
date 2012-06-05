@@ -1,9 +1,12 @@
 package br.com.suelengc.calctributospj.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.LinearLayout;
@@ -26,6 +29,7 @@ public class ConfigActivity extends Activity {
 	
 	private static final int LUCRO_PRESUMIDO = 1;
 	private static final int SIMPLES_NACIONAL = 2;
+	private static final int INFORMACOES = Menu.FIRST;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -78,12 +82,12 @@ public class ConfigActivity extends Activity {
         rgPercIRPJ.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
 				if(rb2_40.getId() == checkedId) {  
-					Toast.makeText(ConfigActivity.this, "IRPJ de 2,4%", Toast.LENGTH_SHORT).show();
+					Toast.makeText(ConfigActivity.this, "IRPJ: 2,4%", Toast.LENGTH_SHORT).show();
 				    Preferencias.setPreferencia(ConfigActivity.this, "PercIRPJ", 2.4f);
 				    lirpj_darf.setText("0,90%");
 					
 			    } else if(rb4_80.getId() == checkedId) {  
-			    	Toast.makeText(ConfigActivity.this, "IRPJ de 2,4%", Toast.LENGTH_SHORT).show();
+			    	Toast.makeText(ConfigActivity.this, "IRPJ: 4,8%", Toast.LENGTH_SHORT).show();
 			    	Preferencias.setPreferencia(ConfigActivity.this, "PercIRPJ", 4.8f);
 			    	lirpj_darf.setText("3,30%");
 			    }  
@@ -107,4 +111,23 @@ public class ConfigActivity extends Activity {
 	    	frmSimplesNacional.setVisibility(View.VISIBLE);
 	    }  
     }
+    
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		menu.add(0, INFORMACOES, 0, "Informações...");
+		return super.onCreateOptionsMenu(menu);
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case INFORMACOES:
+			Intent intent = new Intent(this, InfoActivity.class);
+			startActivity(intent);
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
+	
 }

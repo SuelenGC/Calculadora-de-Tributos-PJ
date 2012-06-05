@@ -18,9 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="br.com.suelengc.calctributospj.activity.CalcActivity"></activity>
-		<activity android:name="br.com.suelengc.calctributospj.activity.ConfigActivity"></activity>  
-		<activity android:name="br.com.suelengc.calctributospj.activity.MenuActivity"></activity>
+        <activity android:name=".activity.CalcActivity"></activity>
+		<activity android:name=".activity.ConfigActivity"></activity>  
+		<activity android:name=".activity.MenuActivity"></activity>
+		<activity android:name=".activity.InfoActivity"></activity>
     </application>
 
 </manifest>

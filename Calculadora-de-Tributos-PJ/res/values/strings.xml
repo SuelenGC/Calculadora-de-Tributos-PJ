@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Hello World!</string>
     <string name="app_name">Calculadora Tributos PJ</string>
-    <string name="versao">Versão: 1.0</string>
-    
+    <string name="versao">versão 4.0</string>
+    <string name="desenvolvedor">Desenvolvedor: Suelen Goularte Carvalho</string>
+    <string name="twitter">Twitter: @SuelenGC</string>
+    <string name="email">E-mail: suelengcarvalho@gmail.com</string>
+    <string name="website">Website: www.suelengc.com.br</string>
 
 </resources>

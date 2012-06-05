@@ -3,37 +3,50 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/gradientbackground"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:padding="10dp" >
 
-    <TableLayout android:background="@drawable/border"
+    <LinearLayout android:background="@drawable/border"
         		 android:layout_height="fill_parent"
-        		 android:layout_width="fill_parent">
-        		 
-        <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Escolha quais dados deseja informar para o cálculo:"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-                    
-	    <Button android:id="@+id/btn_calc_by_value_per_hour"
-	        	android:layout_width="wrap_content"
+        		 android:layout_width="fill_parent"
+        		 android:gravity="center_horizontal"
+        		 android:orientation="vertical">
+		    
+	       <Button 
+	            android:id="@+id/btn_calc_by_value_per_hour"
+		       	android:layout_width="fill_parent"
+		       	android:layout_height="wrap_content"
+		       	android:background="@drawable/rounded_button_menu"
+	            android:textAppearance="?android:attr/textAppearanceLarge"
+	            android:padding="10dp"
+		       	android:layout_margin="10dp"
+		       	android:text="Cálculo com valor/hora"
+		       	android:textColor="#ffffff"
+		       	android:onClick="CallCalcActivity_ByValuePerHour" />
+		    
+		    <Button 
+		        android:id="@+id/btn_calc_by_value"
+	        	android:layout_width="fill_parent"
 	        	android:layout_height="wrap_content"
-	        	android:background="@drawable/rounded_button"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:padding="10dp"
-	        	android:layout_margin="10dp"
-	        	android:text="Valor/Hora"
-	        	android:onClick="CallCalcActivity_ByValuePerHour"/>
-	    
-	    <Button android:id="@+id/btn_calc_by_value"
-	        	android:layout_width="wrap_content"
+	        	android:background="@drawable/rounded_button_menu"
+	            android:textAppearance="?android:attr/textAppearanceLarge"
+	            android:padding="10dp"
+	            android:layout_margin="10dp"
+	            android:textColor="#ffffff"
+	        	android:text="Cálculo com valor bruto"
+	        	android:onClick="CallCalcActivity_ByValue"/>	
+	        
+	        <Button 
+		        android:id="@+id/configuracoes"
+	        	android:layout_width="fill_parent"
 	        	android:layout_height="wrap_content"
-	        	android:background="@drawable/rounded_button"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:padding="10dp"
-                android:layout_margin="10dp"
-	        	android:text="Valor Bruto"
-	        	android:onClick="CallCalcActivity_ByValue"/>
-    </TableLayout>
+	        	android:background="@drawable/rounded_button_menu"
+	            android:textAppearance="?android:attr/textAppearanceLarge"
+	            android:padding="10dp"
+	            android:layout_margin="10dp"
+	            android:textColor="#ffffff"
+	        	android:text="Configurações"
+	        	android:onClick="CallConfigActivity"/>
+   
+	</LinearLayout>
 </LinearLayout>

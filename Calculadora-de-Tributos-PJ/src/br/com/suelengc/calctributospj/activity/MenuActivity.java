@@ -15,8 +15,7 @@ import br.com.suelengc.utils.Preferencias;
 public class MenuActivity extends Activity {
 
 	public static final String EXTRA_FORMATO_TELA = "1"; 
-	private static final int CONFIGURACOES = Menu.FIRST;
-	private static final int INFORMACOES = Menu.FIRST+1;
+	private static final int INFORMACOES = Menu.FIRST;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -38,10 +37,19 @@ public class MenuActivity extends Activity {
 		startActivity(intent);
 	}
 	
+	public void CallInfoActivity(View view) {
+		Intent intent = new Intent(this, InfoActivity.class);
+		startActivity(intent);
+	}
+	
+	public void CallConfigActivity(View view) {
+		Intent intent = new Intent(this, ConfigActivity.class);
+		startActivity(intent);
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		menu.add(0, CONFIGURACOES, 0, "Configurações");
-		menu.add(0, INFORMACOES, 0, "Informações");
+		menu.add(0, INFORMACOES, 0, "Informações...");
 		return super.onCreateOptionsMenu(menu);
 	}
 	
@@ -49,21 +57,9 @@ public class MenuActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case INFORMACOES:
-			AlertDialog.Builder infos = new AlertDialog.Builder(MenuActivity.this);
-			infos.setTitle("Desenvolvedor");
-			infos.setMessage("Suelen G. Carvalho \n" +
-							 "www.suelengc.com.br \n" +
-							 "suelengcarvalho@gmail.com \n" +
-							 "Versão 2.1");
-			infos.setNeutralButton("Fechar", null);
-			infos.show();
-			
+			Intent intent = new Intent(this, InfoActivity.class);
+			startActivity(intent);
 			return true;
-		case CONFIGURACOES:
-			startActivity(new Intent(this, ConfigActivity.class));
-						
-			return true;
-			
 		default:
 			return super.onOptionsItemSelected(item);
 		}
