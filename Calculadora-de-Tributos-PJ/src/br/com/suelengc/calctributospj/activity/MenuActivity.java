@@ -15,7 +15,7 @@ import br.com.suelengc.utils.Preferencias;
 public class MenuActivity extends Activity {
 
 	public static final String EXTRA_FORMATO_TELA = "1"; 
-	private static final int INFORMACOES = Menu.FIRST;
+	private static final int SOBRE = Menu.FIRST;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class MenuActivity extends Activity {
 	}
 	
 	public void CallInfoActivity(View view) {
-		Intent intent = new Intent(this, InfoActivity.class);
+		Intent intent = new Intent(this, AboutActivity.class);
 		startActivity(intent);
 	}
 	
@@ -49,15 +49,15 @@ public class MenuActivity extends Activity {
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		menu.add(0, INFORMACOES, 0, "Informações...");
+		menu.add(0, SOBRE, 0, "Sobre!");
 		return super.onCreateOptionsMenu(menu);
 	}
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case INFORMACOES:
-			Intent intent = new Intent(this, InfoActivity.class);
+		case SOBRE:
+			Intent intent = new Intent(this, AboutActivity.class);
 			startActivity(intent);
 			return true;
 		default:

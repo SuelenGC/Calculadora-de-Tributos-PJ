@@ -11,7 +11,7 @@ import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.utils.*;
 
 public class CalcActivity extends Activity {
-	private static final int INFORMACOES = Menu.FIRST;
+	private static final int SOBRE = Menu.FIRST;
 	
     TableRow trValorHora1, trValorHora2, trValor;
     TableLayout frmLucroPresumido, frmSimplesNacional;
@@ -66,15 +66,15 @@ public class CalcActivity extends Activity {
     
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		menu.add(0, INFORMACOES, 0, "Informações...");
+		menu.add(0, SOBRE, 0, "Sobre!");
 		return super.onCreateOptionsMenu(menu);
 	}
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case INFORMACOES:
-			Intent intent = new Intent(this, InfoActivity.class);
+		case SOBRE:
+			Intent intent = new Intent(this, AboutActivity.class);
 			startActivity(intent);
 			return true;
 		default:

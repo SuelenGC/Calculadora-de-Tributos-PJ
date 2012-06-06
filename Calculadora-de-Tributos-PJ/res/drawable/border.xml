@@ -4,16 +4,16 @@
         android:color="@android:color/transparent" />
     
     <stroke 
-        android:width="3dip" 
+        android:width="1dip" 
         android:color="#FFA500" />
     
     <corners 
         android:radius="10dip"/>
     
     <padding 
-        android:left="10dip" 
-        android:top="10dip" 
-        android:right="10dip" 
-        android:bottom="10dip" />
+        android:left="5dip" 
+        android:top="5dip" 
+        android:right="5dip" 
+        android:bottom="5dip" />
 </shape>
 
