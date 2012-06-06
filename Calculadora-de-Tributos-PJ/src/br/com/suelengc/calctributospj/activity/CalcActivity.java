@@ -49,6 +49,7 @@ public class CalcActivity extends Activity {
         
         btcalcular = (Button) findViewById(R.id_calc.btcalcular);
         btcalcular.setOnClickListener(new CalcularListener(formatoTela, this));
+
     }
     
     private void ExibirTelaValorBruto() {

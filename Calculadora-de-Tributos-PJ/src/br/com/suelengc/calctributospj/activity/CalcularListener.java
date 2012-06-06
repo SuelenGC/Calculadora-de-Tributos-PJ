@@ -34,9 +34,14 @@ public class CalcularListener implements OnClickListener {
 		View p = (View) v.getRootView();
 		int tipoTributacao = 1;
 		float percIRPJ = 2.4f;
+		NotaFiscal notaFiscal = null;
 		
 		if (p != null) {
-			
+
+			edvalor = (EditText) p.findViewById(R.id_calc.valorBruto);
+		    edvalorhora = (EditText) p.findViewById(R.id_calc.valorhora);
+		    edtotalhoras = (EditText) p.findViewById(R.id_calc.totalhoras);
+		    
 			if (Preferencias.getPreferenciaValorInteiro(p.getContext(), "TipoTributacao") == 1) {//LUCRO PRESUMIDO
 				tipoTributacao = 1;
 			} else { //SIMPLES NACIONAL
@@ -47,29 +52,28 @@ public class CalcularListener implements OnClickListener {
 			
 			if (formatoTela  == FormatoTela.CALCULO_POR_VALOR_HORA) {
 				
-			    edvalorhora = (EditText) p.findViewById(R.id_calc.valorhora);
-			    edtotalhoras = (EditText) p.findViewById(R.id_calc.totalhoras);
-			    
-			    valorHora = Double.parseDouble(edvalorhora.getText().toString());
-			    qtdeHoras = Double.parseDouble(edtotalhoras.getText().toString());
-			    
-			    notaFiscalController = new NotaFiscalController(valorHora, qtdeHoras, tipoTributacao, percIRPJ);
+			    if (Validators.ValidaEditText(edvalorhora) && Validators.ValidaEditText(edtotalhoras)) {
+
+					valorHora = Double.parseDouble(edvalorhora.getText().toString());
+				    qtdeHoras = Double.parseDouble(edtotalhoras.getText().toString());
+				    
+				    notaFiscalController = new NotaFiscalController(valorHora, qtdeHoras, tipoTributacao, percIRPJ);
+			    } else return;
 			    
 			} else if (formatoTela == FormatoTela.CALCULO_POR_VALOR_BRUTO) { 
-				edvalor = (EditText) p.findViewById(R.id_calc.valorBruto);
 				
-				Log.d("S-DEBUG-CALC", "Chegou aqui");
-				
-				valorBruto = Double.parseDouble(edvalor.getText().toString());
-				valorTotalNotaFiscal = valorBruto;
-				
-				notaFiscalController = new NotaFiscalController(valorTotalNotaFiscal, tipoTributacao, percIRPJ);
+				if (Validators.ValidaEditText(edvalor)) {
+					valorBruto = Double.parseDouble(edvalor.getText().toString());
+					valorTotalNotaFiscal = valorBruto;
+					
+					notaFiscalController = new NotaFiscalController(valorTotalNotaFiscal, tipoTributacao, percIRPJ);
+				} else return;
 			}
 			
-			NotaFiscal notaFiscal = notaFiscalController.getNotaFiscal();
+			if (notaFiscalController != null && notaFiscalController.getNotaFiscal().getValorBruto() > 0.0) {
 			
-			if (notaFiscal.getValorBruto() > 0.0) {
-				
+				notaFiscal = notaFiscalController.getNotaFiscal();
+			
 				if (tipoTributacao == 1) {
 					TributosLucroPresumido tributos = (TributosLucroPresumido) notaFiscal.getTributos();
 					
