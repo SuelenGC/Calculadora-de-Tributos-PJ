@@ -11,7 +11,7 @@ import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.calctributospj.activity.listener.CalcularListener;
 import br.com.suelengc.util.*;
 
-public class CalcActivity extends Activity {
+public class CalcActivity extends Activity implements ActivityBase {
 	private static final int SOBRE = Menu.FIRST;
 	
     TableRow trValorHora1, trValorHora2, trValor;
@@ -27,12 +27,9 @@ public class CalcActivity extends Activity {
         setContentView(R.layout.calc);
         setTitle("Calculadora de Tributos PJ - Principal");
     
-        trValorHora1 = (TableRow) findViewById(R.id_calc.tr_valorhora1);
-        trValorHora2 = (TableRow) findViewById(R.id_calc.tr_valorhora2);
-        trValor = (TableRow) findViewById(R.id_calc.tr_valor);
-
-        Intent intent = getIntent();
+        getScreenInformation();
         
+        Intent intent = getIntent();
         formatoTela = Integer.parseInt(intent.getStringExtra(MenuActivity.EXTRA_FORMATO_TELA));
         
         if (formatoTela == FormatoTela.CALCULO_POR_VALOR_BRUTO) {
@@ -53,6 +50,12 @@ public class CalcActivity extends Activity {
 
     }
     
+	public void getScreenInformation() {
+        trValorHora1 = (TableRow) findViewById(R.id_calc.tr_valorhora1);
+        trValorHora2 = (TableRow) findViewById(R.id_calc.tr_valorhora2);
+        trValor = (TableRow) findViewById(R.id_calc.tr_valor);		
+	}
+	
     private void ExibirTelaValorBruto() {
     	trValorHora1.setVisibility(View.GONE);
     	trValorHora2.setVisibility(View.GONE);
