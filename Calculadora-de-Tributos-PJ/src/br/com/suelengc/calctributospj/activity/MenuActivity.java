@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 import br.com.suelengc.calctributospj.R;
-import br.com.suelengc.utils.Preferencias;
+import br.com.suelengc.util.Preferencias;
 
 public class MenuActivity extends Activity {
 
@@ -38,7 +38,7 @@ public class MenuActivity extends Activity {
 	}
 	
 	public void CallInfoActivity(View view) {
-		Intent intent = new Intent(this, AboutActivity.class);
+		Intent intent = new Intent(this, SobreActivity.class);
 		startActivity(intent);
 	}
 	
@@ -57,7 +57,7 @@ public class MenuActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case SOBRE:
-			Intent intent = new Intent(this, AboutActivity.class);
+			Intent intent = new Intent(this, SobreActivity.class);
 			startActivity(intent);
 			return true;
 		default:

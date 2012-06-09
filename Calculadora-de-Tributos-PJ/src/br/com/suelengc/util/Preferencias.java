@@ -1,4 +1,4 @@
-package br.com.suelengc.utils;
+package br.com.suelengc.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;

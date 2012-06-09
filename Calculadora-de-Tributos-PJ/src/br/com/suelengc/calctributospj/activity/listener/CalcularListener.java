@@ -1,4 +1,4 @@
-package br.com.suelengc.calctributospj.activity;
+package br.com.suelengc.calctributospj.activity.listener;
 
 import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.calctributospj.controller.NotaFiscalController;
@@ -12,7 +12,7 @@ import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
-import br.com.suelengc.utils.*;
+import br.com.suelengc.util.*;
 
 public class CalcularListener implements OnClickListener {
 
@@ -52,7 +52,7 @@ public class CalcularListener implements OnClickListener {
 			
 			if (formatoTela  == FormatoTela.CALCULO_POR_VALOR_HORA) {
 				
-			    if (Validators.ValidaEditText(edvalorhora) && Validators.ValidaEditText(edtotalhoras)) {
+			    if (Validadores.ValidaEditText(edvalorhora) && Validadores.ValidaEditText(edtotalhoras)) {
 
 					valorHora = Double.parseDouble(edvalorhora.getText().toString());
 				    qtdeHoras = Double.parseDouble(edtotalhoras.getText().toString());
@@ -62,7 +62,7 @@ public class CalcularListener implements OnClickListener {
 			    
 			} else if (formatoTela == FormatoTela.CALCULO_POR_VALOR_BRUTO) { 
 				
-				if (Validators.ValidaEditText(edvalor)) {
+				if (Validadores.ValidaEditText(edvalor)) {
 					valorBruto = Double.parseDouble(edvalor.getText().toString());
 					valorTotalNotaFiscal = valorBruto;
 					
@@ -88,18 +88,18 @@ public class CalcularListener implements OnClickListener {
 				    tvcsll_darf = (TextView) p.findViewById(R.id_calc.csll_darf);
 				    tvtotaldescontosmensais = (TextView) p.findViewById(R.id_calc.totaldescontosmensais);
 				    
-					tvirpj_retido.setText("R$ " + Formaters.DoubleToString(tributos.getIrpjMensal()));
-					tvcofins_retido.setText("R$ " + Formaters.DoubleToString(tributos.getCofinsMensal()));
-					tvpis_retido.setText("R$ " + Formaters.DoubleToString(tributos.getPisMensal()));
-					tvcsll_retido.setText("R$ " + Formaters.DoubleToString(tributos.getCsllMensal()));
+					tvirpj_retido.setText("R$ " + Formatadores.DoubleToString(tributos.getIrpjMensal()));
+					tvcofins_retido.setText("R$ " + Formatadores.DoubleToString(tributos.getCofinsMensal()));
+					tvpis_retido.setText("R$ " + Formatadores.DoubleToString(tributos.getPisMensal()));
+					tvcsll_retido.setText("R$ " + Formatadores.DoubleToString(tributos.getCsllMensal()));
 					
-					tvinss_darf.setText("R$ " + Formaters.DoubleToString(tributos.getIssMensal()));
-					tvirpj_darf.setText("R$ " + Formaters.DoubleToString(tributos.getIrpjTrimestral()));
-					tvcsll_darf.setText("R$ " + Formaters.DoubleToString(tributos.getCsllTrimetral()));
+					tvinss_darf.setText("R$ " + Formatadores.DoubleToString(tributos.getIssMensal()));
+					tvirpj_darf.setText("R$ " + Formatadores.DoubleToString(tributos.getIrpjTrimestral()));
+					tvcsll_darf.setText("R$ " + Formatadores.DoubleToString(tributos.getCsllTrimetral()));
 
-					tvvalor_bruto.setText("R$ " + Formaters.DoubleToString(notaFiscal.getValorBruto()));
-					tvtotaldescontosmensais.setText("R$ " + Formaters.DoubleToString(tributos.getValorTotalDescontos()));
-					tvvalor_liquido.setText("R$ " + Formaters.DoubleToString(notaFiscal.getValorLiquido()));
+					tvvalor_bruto.setText("R$ " + Formatadores.DoubleToString(notaFiscal.getValorBruto()));
+					tvtotaldescontosmensais.setText("R$ " + Formatadores.DoubleToString(tributos.getValorTotalDescontos()));
+					tvvalor_liquido.setText("R$ " + Formatadores.DoubleToString(notaFiscal.getValorLiquido()));
 					
 				} else if (tipoTributacao == 2) {
 					TributosSimples tributos = (TributosSimples) notaFiscal.getTributos();
@@ -109,11 +109,11 @@ public class CalcularListener implements OnClickListener {
 				    tvtotaldescontosmensais2 = (TextView) p.findViewById(R.id_calc.totaldescontosmensais2);
 				    
 					tvtributo_unificado = (TextView) p.findViewById(R.id_calc.tributo_unificado);
-					tvtributo_unificado.setText("R$ " + Formaters.DoubleToString(tributos.getValorTotalDescontos()));
+					tvtributo_unificado.setText("R$ " + Formatadores.DoubleToString(tributos.getValorTotalDescontos()));
 					
-					tvvalor_bruto2.setText("R$ " + Formaters.DoubleToString(notaFiscal.getValorBruto()));
-					tvtotaldescontosmensais2.setText("R$ " + Formaters.DoubleToString(tributos.getValorTotalDescontos()));
-					tvvalor_liquido2.setText("R$ " + Formaters.DoubleToString(notaFiscal.getValorLiquido()));
+					tvvalor_bruto2.setText("R$ " + Formatadores.DoubleToString(notaFiscal.getValorBruto()));
+					tvtotaldescontosmensais2.setText("R$ " + Formatadores.DoubleToString(tributos.getValorTotalDescontos()));
+					tvvalor_liquido2.setText("R$ " + Formatadores.DoubleToString(notaFiscal.getValorLiquido()));
 				}
 			}	
 		}

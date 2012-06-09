@@ -8,7 +8,8 @@ import android.os.Bundle;
 import android.widget.*;
 import android.view.*;
 import br.com.suelengc.calctributospj.R;
-import br.com.suelengc.utils.*;
+import br.com.suelengc.calctributospj.activity.listener.CalcularListener;
+import br.com.suelengc.util.*;
 
 public class CalcActivity extends Activity {
 	private static final int SOBRE = Menu.FIRST;
@@ -74,7 +75,7 @@ public class CalcActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case SOBRE:
-			Intent intent = new Intent(this, AboutActivity.class);
+			Intent intent = new Intent(this, SobreActivity.class);
 			startActivity(intent);
 			return true;
 		default:

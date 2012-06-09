@@ -1,8 +1,8 @@
-package br.com.suelengc.utils;
+package br.com.suelengc.util;
 
 import android.widget.EditText;
 
-public class Validators {
+public class Validadores {
 
 	public static boolean ValidaEditText(EditText editText) {
 		boolean retorno = true;

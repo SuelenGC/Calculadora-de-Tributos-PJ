@@ -2,7 +2,7 @@ package br.com.suelengc.calctributospj.controller;
 
 import android.content.Context;
 import br.com.suelengc.calctributospj.model.*;
-import br.com.suelengc.utils.*;
+import br.com.suelengc.util.*;
 
 public class NotaFiscalController {
 

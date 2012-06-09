@@ -4,14 +4,14 @@ import br.com.suelengc.calctributospj.R;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class AboutActivity extends Activity {
+public class SobreActivity extends Activity {
 
 		    
 	    @Override
 	    public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
-	        setTitle("Calculadora de Tributos PJ - Informações");
-	        setContentView(R.layout.about);
+	        setTitle("Calculadora de Tributos PJ - Sobre");
+	        setContentView(R.layout.sobre);
 	    }
 
 	

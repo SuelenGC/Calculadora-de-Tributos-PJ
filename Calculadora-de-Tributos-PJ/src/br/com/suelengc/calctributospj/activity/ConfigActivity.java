@@ -2,22 +2,18 @@ package br.com.suelengc.calctributospj.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TableLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 import br.com.suelengc.calctributospj.R;
-import br.com.suelengc.utils.Preferencias;
+import br.com.suelengc.util.Preferencias;
 
 public class ConfigActivity extends Activity {
 	
@@ -90,10 +86,11 @@ public class ConfigActivity extends Activity {
 			    	Toast.makeText(ConfigActivity.this, "IRPJ: 4,8%", Toast.LENGTH_SHORT).show();
 			    	Preferencias.setPreferencia(ConfigActivity.this, "PercIRPJ", 4.8f);
 			    	lirpj_darf.setText("3,30%");
-			    }  
+			    } 
 			}
 		});
     }
+    
     
     private void FormataTela(int TipoTributacaoEscolhida) {
         frmPercIRPJ = (LinearLayout) findViewById(R.id_config.frmPercIRPJ);
@@ -122,7 +119,7 @@ public class ConfigActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case INFORMACOES:
-			Intent intent = new Intent(this, AboutActivity.class);
+			Intent intent = new Intent(this, SobreActivity.class);
 			startActivity(intent);
 			return true;
 		default:
