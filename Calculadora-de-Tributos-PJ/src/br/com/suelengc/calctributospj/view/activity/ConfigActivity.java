@@ -1,4 +1,4 @@
-package br.com.suelengc.calctributospj.activity;
+package br.com.suelengc.calctributospj.view.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,7 +13,7 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import br.com.suelengc.calctributospj.R;
-import br.com.suelengc.util.Preferencias;
+import br.com.suelengc.calctributospj.preference.Preferencias;
 
 public class ConfigActivity extends Activity {
 	

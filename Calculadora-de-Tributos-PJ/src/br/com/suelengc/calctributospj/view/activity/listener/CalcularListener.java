@@ -1,10 +1,14 @@
-package br.com.suelengc.calctributospj.activity.listener;
+package br.com.suelengc.calctributospj.view.activity.listener;
 
 import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.calctributospj.controller.NotaFiscalController;
+import br.com.suelengc.calctributospj.domain.TipoBaseCalculo;
 import br.com.suelengc.calctributospj.model.NotaFiscal;
 import br.com.suelengc.calctributospj.model.TributosLucroPresumido;
 import br.com.suelengc.calctributospj.model.TributosSimples;
+import br.com.suelengc.calctributospj.preference.*;
+import br.com.suelengc.calctributospj.view.controller.Formatadores;
+import br.com.suelengc.calctributospj.view.controller.Validadores;
 import android.content.Context;
 import android.util.Log;
 import android.view.View;
@@ -12,7 +16,6 @@ import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
-import br.com.suelengc.util.*;
 
 public class CalcularListener implements OnClickListener {
 
@@ -21,11 +24,11 @@ public class CalcularListener implements OnClickListener {
 	TextView tvvalor_bruto2, tvvalor_liquido2, tvtotaldescontosmensais2, tvtributo_unificado;
 
 	private double valorHora, qtdeHoras, valorBruto, valorTotalNotaFiscal;
-	private int formatoTela;
+	private TipoBaseCalculo baseCalculo;
 	NotaFiscalController notaFiscalController;
 	
-	public CalcularListener(int formatoTela, Context contexto) {
-		this.formatoTela = formatoTela; 
+	public CalcularListener(TipoBaseCalculo baseCalculo, Context contexto) {
+		this.baseCalculo = baseCalculo; 
 	}
 	
 	
@@ -50,7 +53,7 @@ public class CalcularListener implements OnClickListener {
 			
 			percIRPJ = Preferencias.getPreferenciaValorFloat(p.getContext(), "PercIRPJ");
 			
-			if (formatoTela  == FormatoTela.CALCULO_POR_VALOR_HORA) {
+			if (baseCalculo  == TipoBaseCalculo.VALOR_HORA) {
 				
 			    if (Validadores.ValidaEditText(edvalorhora) && Validadores.ValidaEditText(edtotalhoras)) {
 
@@ -60,7 +63,7 @@ public class CalcularListener implements OnClickListener {
 				    notaFiscalController = new NotaFiscalController(valorHora, qtdeHoras, tipoTributacao, percIRPJ);
 			    } else return;
 			    
-			} else if (formatoTela == FormatoTela.CALCULO_POR_VALOR_BRUTO) { 
+			} else if (baseCalculo == TipoBaseCalculo.VALOR_BRUTO) { 
 				
 				if (Validadores.ValidaEditText(edvalor)) {
 					valorBruto = Double.parseDouble(edvalor.getText().toString());

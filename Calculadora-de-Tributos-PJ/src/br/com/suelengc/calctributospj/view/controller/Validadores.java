@@ -1,4 +1,4 @@
-package br.com.suelengc.util;
+package br.com.suelengc.calctributospj.view.controller;
 
 import android.widget.EditText;
 

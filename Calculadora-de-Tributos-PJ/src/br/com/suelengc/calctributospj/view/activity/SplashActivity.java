@@ -1,4 +1,4 @@
-package br.com.suelengc.calctributospj.activity;
+package br.com.suelengc.calctributospj.view.activity;
 
 import android.app.Activity;
 import android.content.Intent;
