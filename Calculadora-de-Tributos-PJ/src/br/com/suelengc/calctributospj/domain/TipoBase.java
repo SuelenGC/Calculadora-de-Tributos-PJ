@@ -1,5 +1,6 @@
 package br.com.suelengc.calctributospj.domain;
 
-public interface TipoBase {
+interface TipoBase {
+	@Override
 	public String toString(); 
 }

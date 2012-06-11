@@ -13,4 +13,5 @@ public enum TipoTributacao implements TipoBase {
 	public String toString () {
 		return this.descricao;
 	}
+
 }

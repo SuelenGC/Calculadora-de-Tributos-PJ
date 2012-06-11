@@ -1,4 +1,4 @@
-package br.com.suelengc.calctributospj.controller.test;
+package br.com.suelengc.calctributospj.controller;
 
 import junit.framework.Assert;
 import android.test.AndroidTestCase;
