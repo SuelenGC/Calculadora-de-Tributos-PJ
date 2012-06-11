@@ -7,19 +7,19 @@
         
         <ListPreference 
             android:key="tipoTributacao"
-            android:title="Tipo de Tributação"
-            android:summary="Define qual o tipo de tributação"
+            android:title="@string/setting_title_type_taxation"
+            android:summary="@string/setting_summary_type_taxation"
             android:defaultValue="1" 
             android:entries="@array/tipoTributacao"
-            android:entryValues="@array/tipoTributacaoValues"/>    
+            android:entryValues="@array/tipoTributacaoValues" />    
             
          <ListPreference 
             android:key="percIRPJ"
-            android:title="% de IRPJ"
-            android:summary="Define qual o % de IRPJ"
+            android:title="@string/setting_title_percentage_irpj"
+            android:summary="@string/setting_summary_percentage_irpj"
             android:defaultValue="240" 
             android:entries="@array/percIRPJ"
-            android:entryValues="@array/percIRPJValues"/>    
+            android:entryValues="@array/percIRPJValues" />    
     </PreferenceCategory>
 
     <PreferenceCategory 
