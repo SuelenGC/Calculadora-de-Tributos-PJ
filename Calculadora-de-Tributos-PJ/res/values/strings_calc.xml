@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="calc_label_valor_bruto">Valor Bruto:</string>    
+	<string name="calc_label_valor_hora">Valor/Hora:</string>
+	<string name="calc_label_qtde_horas">Qtde de horas:</string>
+	<string name="calc_button_calcular">Calcular</string>
+	
+	<string name="calc_label_tributos_mensais">Tributos Mensais</string>
+	<string name="calc_label_irpj_mensal">IRPJ:</string>
+	<string name="calc_label_cofins">COFINS:</string>
+	<string name="calc_label_pis">PIS:</string>
+	<string name="calc_label_csll_mensal">CSLL:</string>
+	<string name="calc_label_iss">ISS:</string>
+		
+	<string name="calc_label_tributos_trimestrais">Tributos Trimestrais</string>
+	<string name="calc_label_irpj_trimestral">IRPJ:</string>
+	<string name="calc_label_csll_trimestral">CSLL:</string>
+	
+	<string name="calc_label_resumo">Resumo</string>
+	<string name="calc_label_resumo_valor_bruto">Valor Bruto:</string>
+	<string name="calc_label_total_descontos">Total Descontos:</string>
+	<string name="calc_label_valor_liquido">Valor Líquido:</string>
+	
+	<string name="calc_label_tributos">Tributos</string>
+	<string name="calc_label_tributo_unificado">Tributo Unificado:</string>
+	
+</resources>

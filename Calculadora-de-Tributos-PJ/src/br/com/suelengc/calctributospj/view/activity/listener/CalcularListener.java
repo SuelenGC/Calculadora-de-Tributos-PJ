@@ -86,7 +86,7 @@ public class CalcularListener implements OnClickListener {
 				    tvcofins_retido = (TextView) p.findViewById(R.id_calc.cofins_retido);
 				    tvpis_retido = (TextView) p.findViewById(R.id_calc.pis_retido);
 				    tvcsll_retido = (TextView) p.findViewById(R.id_calc.csll_retido);
-				    tvinss_darf = (TextView) p.findViewById(R.id_calc.inss_darf);
+				    tvinss_darf = (TextView) p.findViewById(R.id_calc.iss_darf);
 				    tvirpj_darf = (TextView) p.findViewById(R.id_calc.irpj_darf);
 				    tvcsll_darf = (TextView) p.findViewById(R.id_calc.csll_darf);
 				    tvtotaldescontosmensais = (TextView) p.findViewById(R.id_calc.totaldescontosmensais);

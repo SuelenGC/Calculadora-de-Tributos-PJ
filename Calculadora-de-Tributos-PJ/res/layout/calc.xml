@@ -15,10 +15,9 @@
         <TableRow android:id="@+id_calc/tr_valor">
 
             <TextView
-                android:id="@+id_calc/textView22"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Valor Bruto:    R$ "
+                android:text="@string/calc_label_valor_bruto"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <EditText
@@ -37,10 +36,9 @@
 		<TableRow android:id="@+id_calc/tr_valorhora1">
 
             <TextView
-                android:id="@+id_calc/textView10"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Valor/hora:     R$ "
+                android:text="@string/calc_label_valor_hora"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <EditText
@@ -59,11 +57,10 @@
         <TableRow android:id="@+id_calc/tr_valorhora2">
 
             <TextView
-                android:id="@+id_calc/textView1"
                 android:layout_width="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_height="wrap_content"
-                android:text="Total de horas: "
+                android:text="@string/calc_label_qtde_horas"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <EditText
@@ -80,7 +77,6 @@
         <TableRow android:layout_height="wrap_content" >
 
             <TextView
-                android:id="@+id_calc/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
@@ -95,7 +91,7 @@
                 android:background="@drawable/rounded_button"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_weight="1"
-                android:text="Calcular" />
+                android:text="@string/calc_button_calcular" />
         </TableRow>
 
         <TableLayout 
@@ -119,13 +115,12 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id_calc/textView15"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:gravity="left"
                             android:textColor="#FFA500"
-                            android:text="Tributos Mensais"
+                            android:text="@string/calc_label_tributos_mensais"
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -135,11 +130,10 @@
                         android:layout_height="fill_parent">
 
                         <TextView
-                            android:id="@+id_calc/textView4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
-                            android:text="IRPJ: "
+                            android:text="@string/calc_label_irpj_mensal"
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
@@ -156,11 +150,10 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id_calc/textView4"
                             android:layout_width="wrap_content"
                             android:gravity="left"
                             android:layout_height="wrap_content"
-                            android:text="COFINS: "
+                            android:text="@string/calc_label_cofins"
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
@@ -177,11 +170,10 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id_calc/textView6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
-                            android:text="PIS.: "
+                            android:text="@string/calc_label_pis"
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
@@ -198,11 +190,10 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id_calc/textView7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
-                            android:text="CSLL: "
+                            android:text="@string/calc_label_csll_mensal"
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
@@ -219,15 +210,14 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id_calc/textView12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
-                            android:text="ISS: "
+                            android:text="@string/calc_label_iss"
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
-                            android:id="@+id_calc/inss_darf"
+                            android:id="@+id_calc/iss_darf"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:gravity="right"
@@ -240,13 +230,12 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id_calc/textView16"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:textColor="#FFA500"
                             android:gravity="left"
-                            android:text="Tributos Trimestrais"
+                            android:text="@string/calc_label_tributos_trimestrais"
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -256,11 +245,10 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id_calc/textView13"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
-                            android:text="IRPJ: "
+                            android:text="@string/calc_label_irpj_trimestral"
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
@@ -277,10 +265,9 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id_calc/textView14"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="CSLL: "
+                            android:text="@string/calc_label_csll_trimestral"
                             android:gravity="left"
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -298,13 +285,12 @@
                         android:layout_height="fill_parent">
 
                         <TextView
-                            android:id="@+id_calc/textView16"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:textColor="#FFA500"
                             android:gravity="left"
-                            android:text="Resumo"
+                            android:text="@string/calc_label_resumo"
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -314,10 +300,9 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id_calc/textView5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Valor Bruto: "
+                            android:text="@string/calc_label_resumo_valor_bruto"
                             android:gravity="left"
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -335,11 +320,10 @@
                         android:layout_height="fill_parent" >
 
                         <TextView
-                            android:id="@+id_calc/textView9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
-                            android:text="Desc. Mensais: "
+                            android:text="@string/calc_label_total_descontos"
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
@@ -356,11 +340,10 @@
                         android:layout_height="fill_parent">
 
                         <TextView
-                            android:id="@+id_calc/textView9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="left"
-                            android:text="Valor Líquido: "
+                            android:text="@string/calc_label_valor_liquido"
                             android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
@@ -393,7 +376,7 @@
                      android:layout_marginTop="10dp"
                      android:textColor="#FFA500"
                      android:gravity="left"
-                     android:text="Tributos"
+                     android:text="@string/calc_label_tributos"
                      android:textAppearance="?android:attr/textAppearanceLarge"
                      android:textStyle="bold" />
              </LinearLayout>
@@ -406,7 +389,7 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:gravity="left"
-                     android:text="Tributo Unificado "
+                     android:text="@string/calc_label_tributo_unificado"
                      android:textAppearance="?android:attr/textAppearanceLarge" />
 
                  <TextView
@@ -424,13 +407,12 @@
                  android:layout_height="fill_parent">
 
                  <TextView
-                     android:id="@+id_calc/textView16"
                      android:layout_width="fill_parent"
                      android:layout_height="wrap_content"
                      android:layout_marginTop="10dp"
                      android:textColor="#FFA500"
                      android:gravity="left"
-                     android:text="Resumo"
+                     android:text="@string/calc_label_resumo"
                      android:textAppearance="?android:attr/textAppearanceLarge"
                      android:textStyle="bold" />
              </LinearLayout>
@@ -442,7 +424,7 @@
                  <TextView
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
-                     android:text="Valor Bruto: "
+                     android:text="@string/calc_label_resumo_valor_bruto"
                      android:gravity="left"
                      android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -463,7 +445,7 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:gravity="left"
-                     android:text="Desc. Mensais: "
+                     android:text="@string/calc_label_total_descontos"
                      android:textAppearance="?android:attr/textAppearanceLarge" />
 
                  <TextView
@@ -483,7 +465,7 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:gravity="left"
-                     android:text="Valor Líquido: "
+                     android:text="@string/calc_label_valor_liquido"
                      android:textAppearance="?android:attr/textAppearanceLarge" />
 
                  <TextView

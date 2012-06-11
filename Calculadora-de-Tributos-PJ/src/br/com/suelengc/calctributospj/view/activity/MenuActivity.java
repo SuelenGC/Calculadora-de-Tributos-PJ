@@ -49,6 +49,8 @@ public class MenuActivity extends Activity {
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
+		
+		Log.d("SuelenGC", menu.toString());
 		MenuInflater mi = new MenuInflater(getApplicationContext());
 		mi.inflate(R.menu.menu, menu);
 		
@@ -59,12 +61,14 @@ public class MenuActivity extends Activity {
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		Intent intent = new Intent(this, SettingsActivity.class);
-		startActivity(intent);
+		//Intent intent = new Intent(this, SettingsActivity.class);
+		//startActivity(intent);
+		
+		Intent intent;
 		
 		Log.d("SuelenGC", "Menu: " + item.getItemId());
-		/*
-		switch (item.getItemId()) {
+
+		switch (item.getOrder()) {
 		
 		case SOBRE:
 			intent = new Intent(this, SobreActivity.class);
@@ -78,8 +82,7 @@ public class MenuActivity extends Activity {
 			
 		default:
 			return super.onOptionsItemSelected(item);
-		}*/
-		return true;
+		}
 		
 	}
 }

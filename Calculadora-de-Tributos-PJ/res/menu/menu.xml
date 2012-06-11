@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item 
-        android:id="@+id/SETTINGS" 
-        android:title="Settings" 
-        android:orderInCategory="2"
-        android:icon="@drawable/action_settings" />
     
     <item 
-        android:id="@+id/SOBRE" 
-        android:title="Sobre" 
-        android:orderInCategory="1" />
+        android:id="@+id/Settings" 
+        android:title="@string/menu_settings" 
+        android:orderInCategory="1"
+        android:icon="@drawable/action_settings_white" />
+    
+    <item 
+        android:id="@+id/Informations" 
+        android:title="@string/menu_informations" 
+        android:orderInCategory="2"
+        android:icon="@drawable/action_about_white" />
 
 </menu>
