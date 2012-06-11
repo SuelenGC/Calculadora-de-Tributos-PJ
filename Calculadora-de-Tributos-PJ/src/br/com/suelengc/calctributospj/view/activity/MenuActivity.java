@@ -38,7 +38,7 @@ public class MenuActivity extends Activity {
 	}
 	
 	public void CallInfoActivity(View view) {
-		Intent intent = new Intent(this, SobreActivity.class);
+		Intent intent = new Intent(this, InformationActivity.class);
 		startActivity(intent);
 	}
 	
@@ -71,7 +71,7 @@ public class MenuActivity extends Activity {
 		switch (item.getOrder()) {
 		
 		case SOBRE:
-			intent = new Intent(this, SobreActivity.class);
+			intent = new Intent(this, InformationActivity.class);
 			startActivity(intent);
 			return true;
 			

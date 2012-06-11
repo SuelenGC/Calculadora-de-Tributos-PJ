@@ -89,7 +89,7 @@ public class CalcActivity extends Activity implements BaseActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case SOBRE:
-			Intent intent = new Intent(this, SobreActivity.class);
+			Intent intent = new Intent(this, InformationActivity.class);
 			startActivity(intent);
 			return true;
 		default:
