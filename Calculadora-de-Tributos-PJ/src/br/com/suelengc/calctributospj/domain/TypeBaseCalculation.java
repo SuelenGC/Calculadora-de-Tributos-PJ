@@ -1,11 +1,11 @@
 package br.com.suelengc.calctributospj.domain;
 
-public enum TipoBaseCalculo implements TipoBase {
+public enum TypeBaseCalculation implements TypeBase {
 	VALOR_HORA("Valor/Hora"), VALOR_BRUTO("Valor Bruto"); 
 	
 	private String descricao;
 	
-	private TipoBaseCalculo(String value) {
+	private TypeBaseCalculation(String value) {
 		this.descricao = value;
 	}
 	

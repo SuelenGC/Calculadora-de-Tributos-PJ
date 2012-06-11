@@ -3,8 +3,6 @@ package br.com.suelengc.calctributospj.domain;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
-import br.com.suelengc.calctributospj.domain.TipoBaseCalculo;
-
 import android.test.AndroidTestCase;
 import android.util.Log;
 
@@ -12,7 +10,7 @@ public class TipoBaseCalculoTest extends AndroidTestCase {
 
 	public void testFields() {
 
-		Class<TipoBaseCalculo> clazz = TipoBaseCalculo.class;
+		Class<TypeBaseCalculation> clazz = TypeBaseCalculation.class;
 
 		Field[] fields = clazz.getDeclaredFields();
 		try {

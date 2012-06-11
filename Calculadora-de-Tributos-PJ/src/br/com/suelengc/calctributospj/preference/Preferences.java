@@ -3,7 +3,7 @@ package br.com.suelengc.calctributospj.preference;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-public class Preferencias {
+public class Preferences {
 	public static final String PREF_FILE_CTPJ = "PREFERENCES_CTPJ";
 	
     public static int getPreferenciaValorInteiro(Context c, String item) {

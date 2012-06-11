@@ -13,9 +13,9 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import br.com.suelengc.calctributospj.R;
-import br.com.suelengc.calctributospj.preference.Preferencias;
+import br.com.suelengc.calctributospj.preference.Preferences;
 
-public class ConfigActivity extends Activity {
+public class ConfigurationActivity extends Activity {
 	
 	RadioButton rbLucroPresumido, rbSimples, rb2_40, rb4_80;
 	RadioGroup rgTipoTributacao, rgPercIRPJ;
@@ -42,12 +42,12 @@ public class ConfigActivity extends Activity {
         rb4_80 = (RadioButton) findViewById(R.id_config.rb4_80);
         lirpj_darf = (TextView) findViewById(R.id_config.irpj_darf);
         
-        if (Preferencias.getPreferenciaValorInteiro(ConfigActivity.this, "TipoTributacao") == 1) {
+        if (Preferences.getPreferenciaValorInteiro(ConfigurationActivity.this, "TipoTributacao") == 1) {
         	rbLucroPresumido.setChecked(true);
         	FormataTela(LUCRO_PRESUMIDO);
         	
         	//Lógica para carregar o IRPJ correto
-			if (Preferencias.getPreferenciaValorFloat(ConfigActivity.this, "PercIRPJ") == 2.4f) {
+			if (Preferences.getPreferenciaValorFloat(ConfigurationActivity.this, "PercIRPJ") == 2.4f) {
 				rb2_40.setChecked(true);
 				lirpj_darf.setText("0,90%");
 			} else {
@@ -63,13 +63,13 @@ public class ConfigActivity extends Activity {
         rgTipoTributacao.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
 				if(rbLucroPresumido.getId() == checkedId) {  
-					Toast.makeText(ConfigActivity.this, "Lucro Presumido selecionado!", Toast.LENGTH_SHORT).show();
-				    Preferencias.setPreferencia(ConfigActivity.this, "TipoTributacao", 1);
+					Toast.makeText(ConfigurationActivity.this, "Lucro Presumido selecionado!", Toast.LENGTH_SHORT).show();
+				    Preferences.setPreferencia(ConfigurationActivity.this, "TipoTributacao", 1);
 				    FormataTela(LUCRO_PRESUMIDO);
 					
 			    } else if(rbSimples.getId() == checkedId) {  
-			    	Toast.makeText(ConfigActivity.this, "Simples Nacional selecionado!", Toast.LENGTH_SHORT).show();
-			    	Preferencias.setPreferencia(ConfigActivity.this, "TipoTributacao", 2);
+			    	Toast.makeText(ConfigurationActivity.this, "Simples Nacional selecionado!", Toast.LENGTH_SHORT).show();
+			    	Preferences.setPreferencia(ConfigurationActivity.this, "TipoTributacao", 2);
 			    	FormataTela(SIMPLES_NACIONAL);
 			    }  
 			}
@@ -78,13 +78,13 @@ public class ConfigActivity extends Activity {
         rgPercIRPJ.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
 				if(rb2_40.getId() == checkedId) {  
-					Toast.makeText(ConfigActivity.this, "IRPJ: 2,4%", Toast.LENGTH_SHORT).show();
-				    Preferencias.setPreferencia(ConfigActivity.this, "PercIRPJ", 2.4f);
+					Toast.makeText(ConfigurationActivity.this, "IRPJ: 2,4%", Toast.LENGTH_SHORT).show();
+				    Preferences.setPreferencia(ConfigurationActivity.this, "PercIRPJ", 2.4f);
 				    lirpj_darf.setText("0,90%");
 					
 			    } else if(rb4_80.getId() == checkedId) {  
-			    	Toast.makeText(ConfigActivity.this, "IRPJ: 4,8%", Toast.LENGTH_SHORT).show();
-			    	Preferencias.setPreferencia(ConfigActivity.this, "PercIRPJ", 4.8f);
+			    	Toast.makeText(ConfigurationActivity.this, "IRPJ: 4,8%", Toast.LENGTH_SHORT).show();
+			    	Preferences.setPreferencia(ConfigurationActivity.this, "PercIRPJ", 4.8f);
 			    	lirpj_darf.setText("3,30%");
 			    } 
 			}

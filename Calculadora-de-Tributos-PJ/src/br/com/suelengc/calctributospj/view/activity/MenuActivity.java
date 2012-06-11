@@ -9,7 +9,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import br.com.suelengc.calctributospj.R;
-import br.com.suelengc.calctributospj.domain.*;
+import br.com.suelengc.calctributospj.domain.TypeBaseCalculation;
 
 public class MenuActivity extends Activity {
 
@@ -25,15 +25,15 @@ public class MenuActivity extends Activity {
 	}
 	
 	public void CallCalcActivity_ByValuePerHour(View view) {
-		Intent intent = new Intent(this, CalcActivity.class);
-		intent.putExtra(EXTRA_FORMATO_TELA, TipoBaseCalculo.VALOR_HORA);
+		Intent intent = new Intent(this, CalculationActivity.class);
+		intent.putExtra(EXTRA_FORMATO_TELA, TypeBaseCalculation.VALOR_HORA);
 		startActivity(intent);
 		
 	}
 	
 	public void CallCalcActivity_ByValue(View view) {
-		Intent intent = new Intent(this, CalcActivity.class);
-		intent.putExtra(EXTRA_FORMATO_TELA, TipoBaseCalculo.VALOR_BRUTO);
+		Intent intent = new Intent(this, CalculationActivity.class);
+		intent.putExtra(EXTRA_FORMATO_TELA, TypeBaseCalculation.VALOR_BRUTO);
 		startActivity(intent);
 	}
 	
@@ -43,7 +43,7 @@ public class MenuActivity extends Activity {
 	}
 	
 	public void CallConfigActivity(View view) {
-		Intent intent = new Intent(this, ConfigActivity.class);
+		Intent intent = new Intent(this, ConfigurationActivity.class);
 		startActivity(intent);
 	}
 	

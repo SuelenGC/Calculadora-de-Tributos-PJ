@@ -10,11 +10,11 @@ import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import br.com.suelengc.calctributospj.R;
-import br.com.suelengc.calctributospj.domain.TipoBaseCalculo;
-import br.com.suelengc.calctributospj.domain.TipoTributacao;
-import br.com.suelengc.calctributospj.view.activity.listener.CalcularListener;
+import br.com.suelengc.calctributospj.domain.TypeBaseCalculation;
+import br.com.suelengc.calctributospj.domain.TypeTaxation;
+import br.com.suelengc.calctributospj.view.activity.listener.CalculateListener;
 
-public class CalcActivity extends Activity implements BaseActivity {
+public class CalculationActivity extends Activity implements BaseActivity {
 	private static final int SOBRE = Menu.FIRST;
 	
     TableRow trValorHora1, trValorHora2, trValor;
@@ -33,17 +33,17 @@ public class CalcActivity extends Activity implements BaseActivity {
         getScreenInformation(); 
         
         //Lógica para exibição dos campo de entradas de dados
-        TipoBaseCalculo baseCalculo;
-        baseCalculo = (TipoBaseCalculo) getIntent().getSerializableExtra(MenuActivity.EXTRA_FORMATO_TELA);
+        TypeBaseCalculation baseCalculo;
+        baseCalculo = (TypeBaseCalculation) getIntent().getSerializableExtra(MenuActivity.EXTRA_FORMATO_TELA);
         LoadInputDataScreen(baseCalculo);
         
         //Lógica para exibição dos tributos a serem exibido/saída de dados
         //TipoTributacao tipoTributacao = (TipoTributacao) Preferencias.getPreferenciaValorInteiro(CalcActivity.this, "TipoTributacao");
         //Mudar aqui
-        LoadOutputDataScreen(TipoTributacao.LUCRO_PRESUMIDO);
+        LoadOutputDataScreen(TypeTaxation.LUCRO_PRESUMIDO);
         
         btcalcular = (Button) findViewById(R.id_calc.btcalcular);
-        btcalcular.setOnClickListener(new CalcularListener(baseCalculo, this));
+        btcalcular.setOnClickListener(new CalculateListener(baseCalculo, this));
 
     }
     
@@ -53,28 +53,28 @@ public class CalcActivity extends Activity implements BaseActivity {
         trValor = (TableRow) findViewById(R.id_calc.tr_valor);		
 	}
 	
-	private void LoadInputDataScreen(TipoBaseCalculo baseCalculo) {
-        if (baseCalculo == TipoBaseCalculo.VALOR_BRUTO) {
+	private void LoadInputDataScreen(TypeBaseCalculation baseCalculo) {
+        if (baseCalculo == TypeBaseCalculation.VALOR_BRUTO) {
         	trValorHora1.setVisibility(View.GONE);
         	trValorHora2.setVisibility(View.GONE);
         	trValor.setVisibility(View.VISIBLE);
         	
-        } else if (baseCalculo == TipoBaseCalculo.VALOR_HORA) {
+        } else if (baseCalculo == TypeBaseCalculation.VALOR_HORA) {
         	trValorHora1.setVisibility(View.VISIBLE);
         	trValorHora2.setVisibility(View.VISIBLE);
         	trValor.setVisibility(View.GONE);
         }
 	}
 	
-    private void LoadOutputDataScreen(TipoTributacao tipoTributacao) {
+    private void LoadOutputDataScreen(TypeTaxation tipoTributacao) {
         frmLucroPresumido = (TableLayout) findViewById(R.id_calc.frmLucroPresumido);
         frmSimplesNacional = (TableLayout) findViewById(R.id_calc.frmSimplesNacional);
         
-		if(tipoTributacao == TipoTributacao.LUCRO_PRESUMIDO) {  
+		if(tipoTributacao == TypeTaxation.LUCRO_PRESUMIDO) {  
 		    frmLucroPresumido.setVisibility(View.VISIBLE);
 		    frmSimplesNacional.setVisibility(View.GONE);
 			
-	    } else if(tipoTributacao == TipoTributacao.SIMPLES_NACIONAL) {  
+	    } else if(tipoTributacao == TypeTaxation.SIMPLES_NACIONAL) {  
 	    	frmLucroPresumido.setVisibility(View.GONE);
 	    	frmSimplesNacional.setVisibility(View.VISIBLE);
 	    }  

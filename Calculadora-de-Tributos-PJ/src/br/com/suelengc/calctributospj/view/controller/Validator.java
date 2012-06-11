@@ -2,7 +2,7 @@ package br.com.suelengc.calctributospj.view.controller;
 
 import android.widget.EditText;
 
-public class Validadores {
+public class Validator {
 
 	public static boolean ValidaEditText(EditText editText) {
 		boolean retorno = true;

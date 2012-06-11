@@ -1,8 +1,8 @@
 package br.com.suelengc.calctributospj.view.activity;
 
-import br.com.suelengc.calctributospj.R;
 import android.app.Activity;
 import android.os.Bundle;
+import br.com.suelengc.calctributospj.R;
 
 public class InformationActivity extends Activity {
 
