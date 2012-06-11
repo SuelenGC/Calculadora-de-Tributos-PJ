@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="information_label_developer">Desenvolvedor:</string>
+    <string name="information_developer">Suelen Goularte Carvalho</string>
+    
+    <string name="information_label_twitter">Twitter:</string>
+    <string name="information_twitter">SuelenGC</string>
+    
+    <string name="information_label_email">E-Mail:</string>
+    <string name="information_email">suelengcarvalho@gmail.com</string>
+    
+    <string name="information_label_website">Website:</string>
+    <string name="information_website">www.suelengc.com.br</string>
+</resources>

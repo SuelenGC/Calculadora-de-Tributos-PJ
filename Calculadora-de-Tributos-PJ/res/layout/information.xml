@@ -35,12 +35,12 @@
 			            android:layout_height="wrap_content"
 			            android:layout_width="wrap_content"
 			            android:textColor="#FFA500"
-			            android:text="Desenvolvedor(a): "/>
+			            android:text="@string/information_label_developer"/>
 			        <TextView 
 				        android:layout_height="wrap_content"
 				        android:layout_width="fill_parent"
 				        android:textColor="#ffffff"
-						android:text="@string/desenvolvedor"/>    
+						android:text="@string/information_developer"/>    
 		        </TableRow>
 			    
 			    
@@ -52,12 +52,12 @@
 			            android:layout_height="wrap_content"
 			            android:layout_width="wrap_content"
 			            android:textColor="#FFA500"
-			            android:text="Twitter: "/>
+			            android:text="@string/information_label_twitter"/>
 			        <TextView 
 				        android:layout_height="wrap_content"
 				        android:layout_width="fill_parent"
 				        android:textColor="#ffffff"
-						android:text="@string/twitter"/>    
+						android:text="@string/information_twitter"/>    
 		        </TableRow>
 		        
 				<TableRow 
@@ -68,12 +68,12 @@
 			            android:layout_height="wrap_content"
 			            android:layout_width="wrap_content"
 			            android:textColor="#FFA500"
-			            android:text="E-mail: "/>
+			            android:text="@string/information_label_email"/>
 			        <TextView 
 				        android:layout_height="wrap_content"
 				        android:layout_width="fill_parent"
 				        android:textColor="#ffffff"
-						android:text="@string/email"/>    
+						android:text="@string/information_email"/>    
 		        </TableRow>
 		        
 				<TableRow 
@@ -84,13 +84,13 @@
 			            android:layout_height="wrap_content"
 			            android:layout_width="wrap_content"
 			            android:textColor="#FFA500"
-			            android:text="Website: "/>
+			            android:text="@string/information_label_website"/>
 			        
 			        <TextView 
 				        android:layout_height="wrap_content"
 				        android:layout_width="fill_parent"
 				        android:textColor="#ffffff"
-						android:text="@string/website"/>    
+						android:text="@string/information_website"/>    
 		        </TableRow>
 		
 		    </TableLayout>
@@ -100,8 +100,7 @@
 		        android:layout_width="wrap_content"
 		        android:layout_gravity="center"
 		        android:textColor="#ffffff"
-		        android:text="@string/versao" />
-        
+		        android:text="@string/version" />
     </LinearLayout>
 
 </LinearLayout>
