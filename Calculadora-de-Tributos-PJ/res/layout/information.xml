@@ -15,7 +15,7 @@
             <TextView 
 		        android:layout_height="wrap_content"
 		        android:layout_width="fill_parent"
-				android:text="Calculadora de Tributos PJ"
+				android:text="@string/app_name"
 				android:textAppearance="?android:attr/textAppearanceLarge"
 				android:gravity="center_horizontal"
 				android:textColor="#FFA500"
