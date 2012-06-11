@@ -1,8 +1,7 @@
 package br.com.suelengc.calctributospj.controller;
 
-import android.content.Context;
-import br.com.suelengc.calctributospj.model.*;
-import br.com.suelengc.calctributospj.preference.*;
+import br.com.suelengc.calctributospj.model.NotaFiscal;
+import br.com.suelengc.calctributospj.model.TributosLucroPresumido;
 
 public class NotaFiscalController {
 

@@ -1,16 +1,17 @@
 package br.com.suelengc.calctributospj.view.activity;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
-import android.widget.*;
-import android.view.*;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.calctributospj.domain.TipoBaseCalculo;
 import br.com.suelengc.calctributospj.domain.TipoTributacao;
-import br.com.suelengc.calctributospj.preference.*;
 import br.com.suelengc.calctributospj.view.activity.listener.CalcularListener;
 
 public class CalcActivity extends Activity implements BaseActivity {

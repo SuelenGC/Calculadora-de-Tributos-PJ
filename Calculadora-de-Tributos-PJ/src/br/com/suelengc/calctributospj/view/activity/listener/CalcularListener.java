@@ -1,21 +1,19 @@
 package br.com.suelengc.calctributospj.view.activity.listener;
 
+import android.content.Context;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.EditText;
+import android.widget.TextView;
 import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.calctributospj.controller.NotaFiscalController;
 import br.com.suelengc.calctributospj.domain.TipoBaseCalculo;
 import br.com.suelengc.calctributospj.model.NotaFiscal;
 import br.com.suelengc.calctributospj.model.TributosLucroPresumido;
 import br.com.suelengc.calctributospj.model.TributosSimples;
-import br.com.suelengc.calctributospj.preference.*;
+import br.com.suelengc.calctributospj.preference.Preferencias;
 import br.com.suelengc.calctributospj.view.controller.Formatadores;
 import br.com.suelengc.calctributospj.view.controller.Validadores;
-import android.content.Context;
-import android.util.Log;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
-import android.widget.TextView;
 
 public class CalcularListener implements OnClickListener {
 
