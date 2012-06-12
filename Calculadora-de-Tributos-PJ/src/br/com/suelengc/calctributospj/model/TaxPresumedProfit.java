@@ -9,8 +9,6 @@ public class TaxPresumedProfit implements Tax {
 	private double csllTrimetral;
 	private double issMensal;
 	
-	public TaxPresumedProfit() {}
-	
 	public TaxPresumedProfit(double valorTotalNotaFiscal, float percIRPJ) {
 		setCofinsMensal(valorTotalNotaFiscal);
 		setCsllMensal(valorTotalNotaFiscal);

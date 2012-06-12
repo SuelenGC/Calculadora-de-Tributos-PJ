@@ -8,8 +8,11 @@ public class InvoiceTest extends AndroidTestCase {
 		//Defining gross value
 		double grossValue = 6000;
 		
+		//Definig IRPJ percentage
+		float percIRPJ = 2.4f;
+		
 		//Defining Taxation type
-		Tax tax = new TaxPresumedProfit();
+		Tax tax = new TaxPresumedProfit(grossValue, percIRPJ);
 		
 		//Create a new invoice
 		Invoice invoice = new Invoice(grossValue, tax);
