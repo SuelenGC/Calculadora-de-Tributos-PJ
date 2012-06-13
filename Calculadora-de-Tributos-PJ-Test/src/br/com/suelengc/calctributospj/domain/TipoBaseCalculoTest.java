@@ -33,7 +33,7 @@ public class TipoBaseCalculoTest extends AndroidTestCase {
 			sb.append(" ");
 			sb.append(fields[i].getName().toString());
 			
-			Log.e("TESTE_CT-PJ", sb.toString());
+			Log.e("TEST_CT-PJ", sb.toString());
 			
 		}
 
