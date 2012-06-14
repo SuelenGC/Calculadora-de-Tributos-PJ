@@ -30,7 +30,7 @@ public class TaxPresumedProfitTest extends AndroidTestCase {
 			//Log how many parameters have
 			Log.e("TEST_CT-PJ", "Contructor with " + parameters.length + " parameters");
 			
-			//Validating if have more than zero parameters
+			//Checking if have more than zero parameters
 			assertTrue(parameters.length>0);
 		}
 	}
@@ -169,7 +169,7 @@ public class TaxPresumedProfitTest extends AndroidTestCase {
 		//Get methods
 		Method[] methods = clazz.getDeclaredMethods();
 		
-		//Create a array of privates methods
+		//Create a array of private methods
 		ArrayList<Method> methodsPrivate = new ArrayList<Method>();
 		
 		//Feeding the methodsPrivate whit setters methods
