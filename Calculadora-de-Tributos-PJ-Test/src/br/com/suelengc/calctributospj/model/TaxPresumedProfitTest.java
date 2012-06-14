@@ -8,7 +8,7 @@ import android.util.Log;
 public class TaxPresumedProfitTest extends AndroidTestCase {
 	
 	@SuppressWarnings("unchecked")
-	public void testContructors() throws Throwable {
+	public void testContructorsWithoutParameters() throws Throwable {
 		//Get class object 
 		Class<TaxPresumedProfit> clazz = TaxPresumedProfit.class;
 		
@@ -34,15 +34,128 @@ public class TaxPresumedProfitTest extends AndroidTestCase {
 	
 	public void testCofinsValue() {
 		//Defining gross value
-		double grossValue = 6000;
+		double grossValue = 5000;
 		
 		//Defining IRPJ percentage
 		float percIRPJ = 2.4f;
 		
-		//Defining Taxation type
+		//Creating taxation object
 		Tax tax = new TaxPresumedProfit(grossValue, percIRPJ);
+
+		//Checking the cofins value
+		assertEquals( ((TaxPresumedProfit) tax).getCofinsMensal(), 150.0);
+	}
+	
+	public void testCsllMonthlyValue() {
+		//Defining gross value
+		double grossValue = 5000;
 		
-		//Create a new invoice
-		Invoice invoice = new Invoice(grossValue, tax);
+		//Defining IRPJ percentage
+		float percIRPJ = 2.4f;
+		
+		//Creating taxation object
+		Tax tax = new TaxPresumedProfit(grossValue, percIRPJ);
+
+		//Checking the monthly csll value
+		assertEquals( ((TaxPresumedProfit) tax).getCsllMensal(), 50.0);
+	}
+
+	public void testCsllQuarterlyValue() {
+		//Defining gross value
+		double grossValue = 5000;
+		
+		//Defining IRPJ percentage
+		float percIRPJ = 2.4f;
+		
+		//Creating taxation object
+		Tax tax = new TaxPresumedProfit(grossValue, percIRPJ);
+
+		//Checking the quarterly csll value
+		assertEquals( ((TaxPresumedProfit) tax).getCsllTrimetral(), 94.0);
+	}
+	
+	public void testIrpjMonthlyValue() {
+		//Defining gross value
+		double grossValue = 5000;
+		
+		//Defining IRPJ percentage
+		float percIRPJ = 2.4f;
+		
+		//Creating taxation object
+		Tax tax = new TaxPresumedProfit(grossValue, percIRPJ);
+
+		//Checking the monthly irpj value
+		assertEquals( ((TaxPresumedProfit) tax).getIrpjMensal(), 75.0);
+	}
+
+	
+	public void testIrpjQuarterlyValueWithTwoDotFourIrpjPercentage() {
+		//Defining gross value
+		double grossValue = 5000;
+		
+		//Defining IRPJ percentage
+		float percIRPJ = 2.4f;
+		
+		//Creating taxation object
+		Tax tax = new TaxPresumedProfit(grossValue, percIRPJ);
+
+		//Checking the quarterly irpj value
+		assertEquals( ((TaxPresumedProfit) tax).getIrpjTrimestral(), 45.0);
+	}
+
+	public void testIrpjQuarterlyValueWithFourDotEightIrpjPercentage() {
+		//Defining gross value
+		double grossValue = 5000;
+		
+		//Defining IRPJ percentage
+		float percIRPJ = 4.8f;
+		
+		//Creating taxation object
+		Tax tax = new TaxPresumedProfit(grossValue, percIRPJ);
+
+		//Checking the quarterly irpj value
+		assertEquals( ((TaxPresumedProfit) tax).getIrpjTrimestral(), 165.0);
+	}
+
+	public void testPisValue() {
+		//Defining gross value
+		double grossValue = 5000;
+		
+		//Defining IRPJ percentage
+		float percIRPJ = 2.4f;
+		
+		//Creating taxation object
+		Tax tax = new TaxPresumedProfit(grossValue, percIRPJ);
+
+		//Checking the monthly irpj value
+		assertEquals( ((TaxPresumedProfit) tax).getPisMensal(), 32.5);
+	}
+	
+	public void testIssValue() {
+		//Defining gross value
+		double grossValue = 5000;
+		
+		//Defining IRPJ percentage
+		float percIRPJ = 2.4f;
+		
+		//Creating taxation object
+		Tax tax = new TaxPresumedProfit(grossValue, percIRPJ);
+
+		//Checking the monthly irpj value
+		assertEquals( ((TaxPresumedProfit) tax).getIssMensal(), 100.0);
+	}
+	
+	public void testGetTotalDiscountValue() {
+		//Defining gross value
+		double grossValue = 5000;
+		
+		//Defining IRPJ percentage
+		float percIRPJ = 2.4f;
+		
+		//Creating taxation object
+		Tax tax = new TaxPresumedProfit(grossValue, percIRPJ);
+
+		//Checking the monthly irpj value
+		assertEquals( ((TaxPresumedProfit) tax).getValorTotalDescontos(), 407.5);
 	}
 }
