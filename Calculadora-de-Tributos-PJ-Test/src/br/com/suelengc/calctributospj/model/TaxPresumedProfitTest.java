@@ -1,6 +1,9 @@
 package br.com.suelengc.calctributospj.model;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+import java.util.ArrayList;
 
 import android.test.AndroidTestCase;
 import android.util.Log;
@@ -157,5 +160,29 @@ public class TaxPresumedProfitTest extends AndroidTestCase {
 
 		//Checking the monthly irpj value
 		assertEquals( ((TaxPresumedProfit) tax).getValorTotalDescontos(), 407.5);
+	}
+	
+	public void testSetters() {
+		//Get class object
+		Class<TaxPresumedProfit> clazz = TaxPresumedProfit.class;
+		
+		//Get methods
+		Method[] methods = clazz.getDeclaredMethods();
+		
+		//Create a array of privates methods
+		ArrayList<Method> methodsPrivate = new ArrayList<Method>();
+		
+		//Feeding the methodsPrivate whit setters methods
+		for (Method m : methods) {
+			if (m.getName().substring(0, 3).equals("set")) {
+				methodsPrivate.add(m);
+			}
+		}
+		
+		//Checking if modifiers of setters are only private
+		for (Method m : methodsPrivate) {
+			Log.e("TEST_CT-PJ", "Method " + m.getName() + " have the modifier " + m.getModifiers());
+			assertEquals(Modifier.PRIVATE, m.getModifiers());
+		}
 	}
 }
