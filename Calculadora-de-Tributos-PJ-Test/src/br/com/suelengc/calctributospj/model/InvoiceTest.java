@@ -8,7 +8,7 @@ public class InvoiceTest extends AndroidTestCase {
 		//Defining gross value
 		double grossValue = 6000;
 		
-		//Definig IRPJ percentage
+		//Defining IRPJ percentage
 		float percIRPJ = 2.4f;
 		
 		//Defining Taxation type
