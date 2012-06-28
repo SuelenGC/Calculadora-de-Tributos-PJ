@@ -8,7 +8,7 @@ public class NotaFiscalControllerTest extends AndroidTestCase {
 	public void testNotaFiscalAPartirDoValorBruto() {
 		double valorBruto = 5000;
 		
-		InvoiceController notaFiscalController = new InvoiceController(valorBruto, 1, 2.4f);
+		NotaFiscalController notaFiscalController = new NotaFiscalController(valorBruto, 1, 2.4f);
 		
 		Assert.assertNotNull(notaFiscalController);
 		Assert.assertEquals(notaFiscalController.getNotaFiscal().getValorBruto(), 5000.0);
@@ -18,7 +18,7 @@ public class NotaFiscalControllerTest extends AndroidTestCase {
 		double valorPorHora = 55;
 		double qtdeHoras = 168;
 				
-		InvoiceController notaFiscalController = new InvoiceController(valorPorHora, qtdeHoras, 1, 2.4f);
+		NotaFiscalController notaFiscalController = new NotaFiscalController(valorPorHora, qtdeHoras, 1, 2.4f);
 		
 		Assert.assertNotNull(notaFiscalController);
 		Assert.assertEquals(notaFiscalController.getNotaFiscal().getValorBruto(), 9240.0);
