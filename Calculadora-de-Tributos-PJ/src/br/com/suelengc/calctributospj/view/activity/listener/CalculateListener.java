@@ -7,10 +7,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.calctributospj.controller.InvoiceController;
-import br.com.suelengc.calctributospj.domain.TypeBaseCalculation;
-import br.com.suelengc.calctributospj.model.Invoice;
-import br.com.suelengc.calctributospj.model.TaxPresumedProfit;
-import br.com.suelengc.calctributospj.model.TaxSimple;
+import br.com.suelengc.calctributospj.domain.TipoBaseCalculo;
+import br.com.suelengc.calctributospj.model.NotaFiscal;
+import br.com.suelengc.calctributospj.model.TributacaoLucroPresumido;
+import br.com.suelengc.calctributospj.model.TributacaoSimples;
 import br.com.suelengc.calctributospj.preference.Preferences;
 import br.com.suelengc.calctributospj.view.controller.Formatter;
 import br.com.suelengc.calctributospj.view.controller.Validator;
@@ -22,10 +22,10 @@ public class CalculateListener implements OnClickListener {
 	TextView tvvalor_bruto2, tvvalor_liquido2, tvtotaldescontosmensais2, tvtributo_unificado;
 
 	private double valorHora, qtdeHoras, valorBruto, valorTotalNotaFiscal;
-	private TypeBaseCalculation baseCalculo;
+	private TipoBaseCalculo baseCalculo;
 	InvoiceController notaFiscalController;
 	
-	public CalculateListener(TypeBaseCalculation baseCalculo, Context contexto) {
+	public CalculateListener(TipoBaseCalculo baseCalculo, Context contexto) {
 		this.baseCalculo = baseCalculo; 
 	}
 	
@@ -35,7 +35,7 @@ public class CalculateListener implements OnClickListener {
 		View p = (View) v.getRootView();
 		int tipoTributacao = 1;
 		float percIRPJ = 2.4f;
-		Invoice notaFiscal = null;
+		NotaFiscal notaFiscal = null;
 		
 		if (p != null) {
 
@@ -51,7 +51,7 @@ public class CalculateListener implements OnClickListener {
 			
 			percIRPJ = Preferences.getPreferenciaValorFloat(p.getContext(), "PercIRPJ");
 			
-			if (baseCalculo  == TypeBaseCalculation.VALOR_HORA) {
+			if (baseCalculo  == TipoBaseCalculo.VALOR_HORA) {
 				
 			    if (Validator.ValidaEditText(edvalorhora) && Validator.ValidaEditText(edtotalhoras)) {
 
@@ -61,7 +61,7 @@ public class CalculateListener implements OnClickListener {
 				    notaFiscalController = new InvoiceController(valorHora, qtdeHoras, tipoTributacao, percIRPJ);
 			    } else return;
 			    
-			} else if (baseCalculo == TypeBaseCalculation.VALOR_BRUTO) { 
+			} else if (baseCalculo == TipoBaseCalculo.VALOR_BRUTO) { 
 				
 				if (Validator.ValidaEditText(edvalor)) {
 					valorBruto = Double.parseDouble(edvalor.getText().toString());
@@ -76,7 +76,7 @@ public class CalculateListener implements OnClickListener {
 				notaFiscal = notaFiscalController.getNotaFiscal();
 			
 				if (tipoTributacao == 1) {
-					TaxPresumedProfit tributos = (TaxPresumedProfit) notaFiscal.getTributos();
+					TributacaoLucroPresumido tributos = (TributacaoLucroPresumido) notaFiscal.getTributos();
 					
 					tvvalor_liquido = (TextView) p.findViewById(R.id_calc.valorliquido);
 				    tvvalor_bruto = (TextView) p.findViewById(R.id_calc.valorbruto);
@@ -103,7 +103,7 @@ public class CalculateListener implements OnClickListener {
 					tvvalor_liquido.setText("R$ " + Formatter.DoubleToString(notaFiscal.getValorLiquido()));
 					
 				} else if (tipoTributacao == 2) {
-					TaxSimple tributos = (TaxSimple) notaFiscal.getTributos();
+					TributacaoSimples tributos = (TributacaoSimples) notaFiscal.getTributos();
 				    
 					tvvalor_liquido2 = (TextView) p.findViewById(R.id_calc.valorliquido2);
 				    tvvalor_bruto2 = (TextView) p.findViewById(R.id_calc.valorbruto2);

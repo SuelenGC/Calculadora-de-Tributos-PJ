@@ -1,9 +1,9 @@
 package br.com.suelengc.calctributospj.model;
 
-public class TaxSimple implements Tax{
+public class TributacaoSimples implements Tributacao{
 	private double tributoUnificado;
 	
-	public TaxSimple (double valorTotalNotaFiscal) {
+	public TributacaoSimples (double valorTotalNotaFiscal) {
 		setTributoUnificado(valorTotalNotaFiscal);
 	}
 

@@ -10,7 +10,7 @@ public class TipoBaseCalculoTest extends AndroidTestCase {
 
 	public void testFields() {
 
-		Class<TypeBaseCalculation> clazz = TypeBaseCalculation.class;
+		Class<TipoBaseCalculo> clazz = TipoBaseCalculo.class;
 
 		Field[] fields = clazz.getDeclaredFields();
 		try {

@@ -1,22 +1,22 @@
 package br.com.suelengc.calctributospj.model;
 
-public class Invoice {
+public class NotaFiscal {
 
 	private double valorBruto;
 	private double valorLiquido;
-	private Tax tributos;  
+	private Tributacao tributos;  
 	
-	public Invoice(double valorTotalNotaFiscal, Tax tributos) {
+	public NotaFiscal(double valorTotalNotaFiscal, Tributacao tributos) {
 		setValorBruto(valorTotalNotaFiscal);
 		setTributos(tributos);
 		setValorLiquido();		
 	}
 
-	public void setTributos(Tax tributo) {
+	public void setTributos(Tributacao tributo) {
 		this.tributos = tributo;
 	}
 	
-	public Tax getTributos() {
+	public Tributacao getTributos() {
 		return tributos;
 	}
 	

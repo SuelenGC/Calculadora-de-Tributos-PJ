@@ -1,6 +1,6 @@
 package br.com.suelengc.calctributospj.model;
 
-public class TaxPresumedProfit implements Tax {
+public class TributacaoLucroPresumido implements Tributacao {
 	private double irpjMensal;
 	private double irpjTrimestral;
 	private double cofinsMensal;
@@ -10,7 +10,7 @@ public class TaxPresumedProfit implements Tax {
 	private double issMensal;
 
 	
-	public TaxPresumedProfit(double valorTotalNotaFiscal, float percIRPJ) {
+	public TributacaoLucroPresumido(double valorTotalNotaFiscal, float percIRPJ) {
 		setCofinsMensal(valorTotalNotaFiscal);
 		setCsllMensal(valorTotalNotaFiscal);
 		setCsllTrimetral(valorTotalNotaFiscal);

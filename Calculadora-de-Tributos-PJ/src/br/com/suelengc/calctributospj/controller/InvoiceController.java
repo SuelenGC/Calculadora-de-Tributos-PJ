@@ -1,14 +1,14 @@
 package br.com.suelengc.calctributospj.controller;
 
-import br.com.suelengc.calctributospj.model.Invoice;
-import br.com.suelengc.calctributospj.model.TaxPresumedProfit;
+import br.com.suelengc.calctributospj.model.NotaFiscal;
+import br.com.suelengc.calctributospj.model.TributacaoLucroPresumido;
 
 public class InvoiceController {
 
-	private Invoice notaFiscal;
+	private NotaFiscal notaFiscal;
 	
 	public InvoiceController (double valorTotalNotaFiscal, int tipoTributacao, float percIRPJ) {
-		notaFiscal = new Invoice(valorTotalNotaFiscal, new TaxPresumedProfit(valorTotalNotaFiscal, percIRPJ));
+		notaFiscal = new NotaFiscal(valorTotalNotaFiscal, new TributacaoLucroPresumido(valorTotalNotaFiscal, percIRPJ));
 	}
 	
 	public InvoiceController (double valorHora, double qtdeHoras, int tipoTributacao, float percIRPJ) {
@@ -16,7 +16,7 @@ public class InvoiceController {
 
 	}
 	
-	public Invoice getNotaFiscal() {
+	public NotaFiscal getNotaFiscal() {
 		return notaFiscal;
 	} 
 
