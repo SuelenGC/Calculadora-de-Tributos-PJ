@@ -3,22 +3,44 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/gradientbackground"
-    android:orientation="vertical"
-    android:padding="10dp" >
+    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/AnimationImageView"
+    <LinearLayout 
+        android:layout_height="fill_parent"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:orientation="vertical"
         android:layout_weight="1"
-        android:src="@drawable/ic_app_play_store2" />
+        android:gravity="bottom">
+        
+        <TextView
+            android:id="@+id_splash/logo"
+		    android:layout_height="200dp"
+		    android:layout_width="220dp"
+		    android:background="@drawable/logo"
+		    android:text="PJ"
+	        android:layout_gravity="center"
+	        android:gravity="center"
+		    android:textSize="140sp"
+		    android:textStyle="bold"
+		    android:textColor="#376092" />
+        
+    </LinearLayout>
     
-    <TextView 
-        android:layout_height="20dp"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/version"
-        android:textColor="#000000" />
-
+    <LinearLayout 
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        
+        <TextView 
+            android:id="@+id_splash/slogan"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Calculadora de Tributos"
+		    android:textSize="20sp"
+		    android:textColor="#F2F2F2"
+		    android:layout_gravity="center_horizontal"/>
+                
+    </LinearLayout>
+	 
 </LinearLayout>
