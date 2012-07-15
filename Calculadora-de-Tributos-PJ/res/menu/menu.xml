@@ -5,12 +5,14 @@
         android:id="@+id/Settings" 
         android:title="@string/menu_settings" 
         android:orderInCategory="1"
-        android:icon="@drawable/action_settings_white" />
+        android:icon="@drawable/action_settings_white"
+        android:showAsAction="always" />
     
     <item 
         android:id="@+id/Informations" 
         android:title="@string/menu_informations" 
         android:orderInCategory="2"
-        android:icon="@drawable/action_about_white" />
+        android:icon="@drawable/action_about_white"
+        android:showAsAction="always" />
 
 </menu>

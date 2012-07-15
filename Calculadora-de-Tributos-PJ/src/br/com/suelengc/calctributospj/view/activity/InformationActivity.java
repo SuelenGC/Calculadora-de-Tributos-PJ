@@ -10,7 +10,7 @@ public class InformationActivity extends Activity {
 	    @Override
 	    public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
-	        setTitle("Calculadora de Tributos PJ - Sobre");
+	        setTitle("Sobre");
 	        setContentView(R.layout.information);
 	    }
 

@@ -1,17 +1,18 @@
 package br.com.suelengc.calctributospj.view.activity;
 
-import android.app.Activity;
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.calctributospj.domain.TipoBaseCalculo;
 
-public class MenuActivity extends Activity {
+public class MenuActivity extends SherlockActivity{
 
 	public static final String EXTRA_FORMATO_TELA = "1"; 
 	private static final int SETTINGS = Menu.FIRST;
@@ -21,7 +22,7 @@ public class MenuActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu);
-		setTitle("Calculadora de Tributos PJ - Menu");
+		setTitle("Menu");
 	}
 	
 	public void CallCalcActivity_ByValuePerHour(View view) {
