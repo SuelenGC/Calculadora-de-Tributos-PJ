@@ -20,9 +20,8 @@
     </style>
     
     <style name="Frase">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
 		<item name="android:layout_height">wrap_content</item>
-		<item name="android:text">@string/splash_frase</item>
 		<item name="android:textSize">20sp</item>
 		<item name="android:textColor">@color/CinzaClaro</item>
 		<item name="android:gravity">center</item>

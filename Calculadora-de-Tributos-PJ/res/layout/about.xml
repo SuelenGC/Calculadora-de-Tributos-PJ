@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    style="@style/ScreenAbout">
+
+    <!-- Metade azul escuro com o logo -->
+    <LinearLayout 
+        style="@style/UpperLayout"
+        android:layout_weight="1">
+        
+        <include layout="@layout/include_logo"/>
+        
+		<TextView
+		    style="@style/AboutFrase" 
+            android:text="@string/splash_frase" />        
+    </LinearLayout>
+
+    <!-- Metade azul claro com as informações -->
+    <LinearLayout 
+        style="@style/DownLayout"
+        android:layout_weight="1">
+        
+        <TextView
+		    android:layout_height="wrap_content"
+		    android:layout_width="wrap_content"
+		    style="@style/FontBase"
+            android:text="@string/about_label_website" />
+        
+        <TextView
+		    android:layout_height="wrap_content"
+		    android:layout_width="wrap_content"
+		    style="@style/FontBaseBold"
+		    android:paddingBottom="30dp" 
+            android:text="@string/about_website" />
+        
+        <TextView
+		    android:layout_height="wrap_content"
+		    android:layout_width="wrap_content"
+		    style="@style/FontBase"
+            android:text="@string/version" />     
+            
+    </LinearLayout>
+</LinearLayout>

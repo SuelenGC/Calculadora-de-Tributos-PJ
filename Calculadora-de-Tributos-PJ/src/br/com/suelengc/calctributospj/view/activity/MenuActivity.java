@@ -1,20 +1,17 @@
 package br.com.suelengc.calctributospj.view.activity;
 
-import com.actionbarsherlock.app.SherlockActivity;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
-
 import android.content.Intent;
-import android.graphics.Shader.TileMode;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.ShapeDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.calctributospj.domain.TipoBaseCalculo;
+
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 
 public class MenuActivity extends SherlockActivity{
 
@@ -46,7 +43,7 @@ public class MenuActivity extends SherlockActivity{
 	}
 	
 	public void CallInfoActivity(View view) {
-		Intent intent = new Intent(this, InformationActivity.class);
+		Intent intent = new Intent(this, AboutActivity.class);
 		startActivity(intent);
 	}
 	
@@ -79,7 +76,7 @@ public class MenuActivity extends SherlockActivity{
 		switch (item.getOrder()) {
 		
 		case SOBRE:
-			intent = new Intent(this, InformationActivity.class);
+			intent = new Intent(this, AboutActivity.class);
 			startActivity(intent);
 			return true;
 			

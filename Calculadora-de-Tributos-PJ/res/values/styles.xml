@@ -13,6 +13,23 @@
         <item name="android:paddingBottom">@dimen/BorderTopDown</item>
     </style>
     
+    <style name="FontBase">
+        <item name="android:textColor">@color/Preto</item>
+        <item name="android:textSize">@dimen/TextSize</item>
+    </style>
+
+    <style name="FontBaseBold" parent="@style/FontBase">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="FontBaseItalic" parent="@style/FontBase">
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="FontBaseBoldItalic" parent="@style/FontBase">
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+        
     <style name="ButtonBase">
     	<item name="android:layout_width">fill_parent</item>
     	<item name="android:layout_height">@dimen/ButtonHeight</item>

@@ -119,7 +119,7 @@ public class ConfigurationActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case INFORMACOES:
-			Intent intent = new Intent(this, InformationActivity.class);
+			Intent intent = new Intent(this, AboutActivity.class);
 			startActivity(intent);
 			return true;
 		default:

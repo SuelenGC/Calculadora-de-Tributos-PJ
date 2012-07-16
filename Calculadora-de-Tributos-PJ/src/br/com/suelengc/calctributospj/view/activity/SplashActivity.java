@@ -17,11 +17,11 @@ public class SplashActivity extends Activity implements Runnable {
         
         Handler h = new Handler();
         h.postDelayed(this, 3000);
-        }
+    }
 
-        public void run(){
-        	startActivity(new Intent(this, MenuActivity.class));
-        	finish();
-        }
+    public void run(){
+    	startActivity(new Intent(this, MenuActivity.class));
+    	finish();
+    }
 
 }

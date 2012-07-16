@@ -3,6 +3,7 @@
     <!-- Padrão de Telas -->
     <dimen name="BorderLeftRight">5dp</dimen>
     <dimen name="BorderTopDown">10dp</dimen>
+    <dimen name="TextSize">18sp</dimen>
     
     <!-- Splash Logo -->
     <dimen name="BorderRadiusLogo">40dp</dimen>

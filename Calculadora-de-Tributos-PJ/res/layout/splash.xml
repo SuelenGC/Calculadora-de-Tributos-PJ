@@ -7,9 +7,7 @@
 
 	<LinearLayout style="@style/LogoLayout">
     	
-    	<TextView
-        	android:text="@string/splash_logo"
-	    	style="@style/Logo" />
+    	<include layout="@layout/include_logo"/>
 
         <TextView 
 		    android:text="@string/splash_frase"
