@@ -9,4 +9,11 @@
     <dimen name="BorderLogo">3dp</dimen>
     <dimen name="TextLogoSize">140sp</dimen>
     
+    <!-- Botões -->
+    <dimen name="ButtonHeight">55dp</dimen>
+    <dimen name="SpaceAfterButton">10dp</dimen>
+    <dimen name="BorderButton">1dp</dimen>
+    <dimen name="TextButtonSize">18sp</dimen>
+    <dimen name="BorderRadiusButton">10dp</dimen>
+    
 </resources>
