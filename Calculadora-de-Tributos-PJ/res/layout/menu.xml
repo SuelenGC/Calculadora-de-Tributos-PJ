@@ -1,44 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/ScreenBase" >
+		    
+  	<Button
+  	    android:id="@+id/btn_calc_by_value_per_hour"
+       	style="@style/ButtonCalcValorHora"
+   		android:text="@string/menu_calc_valor_hora"
+   		android:onClick="CallCalcActivity_ByValuePerHour" />
 
-    <LinearLayout 
-        		 android:layout_height="fill_parent"
-        		 android:layout_width="fill_parent"
-        		 android:gravity="center_horizontal"
-        		 android:orientation="vertical">
-		    
-	       <Button 
-	            android:id="@+id/btn_calc_by_value_per_hour"
-		       	android:layout_width="fill_parent"
-		       	android:layout_height="60dp"
-		       	android:background="@drawable/rounded_button_menu"
-		       	android:textStyle="bold"
-		       	android:gravity="left|center_vertical"
-		       	android:drawableRight="@drawable/ic_next"
-		       	android:layout_marginBottom="10dp"
-		       	android:drawableLeft="@drawable/ic_relogio"
-		       	android:text="   Cálculo pelo valor/hora"
-		       	android:textSize="18sp"
-		       	android:textColor="#000000"
-		       	android:paddingLeft="10dp"
-		       	android:onClick="CallCalcActivity_ByValuePerHour" />
-		    
-		    <Button 
-		        android:id="@+id/btn_calc_by_value"
-	        	android:layout_width="fill_parent"
-	        	android:layout_height="60dp"
-	        	android:textStyle="bold"
-	        	android:paddingLeft="10dp"
-	        	android:gravity="left|center_vertical"
-	        	android:textSize="18sp"
-	        	android:background="@drawable/rounded_button_menu"
-	        	android:drawableLeft="@drawable/ic_dinheiro"
-	        	android:drawableRight="@drawable/ic_next"
-	            android:layout_marginBottom="10dp"
-	            android:textColor="#000000"
-	        	android:text="   Cálculo pelo valor bruto"
-	        	android:onClick="CallCalcActivity_ByValue"/>	
+	<Button 
+	    android:id="@+id/btn_calc_by_value"
+	   	style="@style/ButtonCalcValorBruto"
+	   	android:text="@string/menu_calc_valor_bruto"
+	   	android:onClick="CallCalcActivity_ByValue"/>	
 	        
-	</LinearLayout>
 </LinearLayout>
