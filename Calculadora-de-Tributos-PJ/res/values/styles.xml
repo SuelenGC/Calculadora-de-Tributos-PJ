@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Padrão de telas -->
+    <style name="ScreenBase">
+        <item name="android:background">@drawable/bg_solid_light_blue</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">@dimen/BorderLeftRight</item>
+        <item name="android:paddingRight">@dimen/BorderLeftRight</item>
+        <item name="android:paddingTop">@dimen/BorderTopDown</item>
+        <item name="android:paddingBottom">@dimen/BorderTopDown</item>
+    </style>
+    
+</resources>

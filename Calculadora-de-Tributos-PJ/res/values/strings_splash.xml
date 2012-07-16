@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_logo">PJ</string>
+    <string name="splash_frase">Calculadora de Tributos</string>
+    
+</resources>

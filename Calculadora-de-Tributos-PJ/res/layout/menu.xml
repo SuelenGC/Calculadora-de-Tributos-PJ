@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/light_blue_screen_background"
-    android:orientation="vertical"
-    android:padding="10dp" >
+    style="@style/ScreenBase" >
 
     <LinearLayout 
         		 android:layout_height="fill_parent"
@@ -19,7 +15,7 @@
 		       	android:background="@drawable/rounded_button_menu"
 		       	android:textStyle="bold"
 		       	android:gravity="left|center_vertical"
-		       	android:drawableRight="@drawable/ic_proximo2"
+		       	android:drawableRight="@drawable/ic_next"
 		       	android:layout_marginBottom="10dp"
 		       	android:drawableLeft="@drawable/ic_relogio"
 		       	android:text="   Cálculo pelo valor/hora"
@@ -38,7 +34,7 @@
 	        	android:textSize="18sp"
 	        	android:background="@drawable/rounded_button_menu"
 	        	android:drawableLeft="@drawable/ic_dinheiro"
-	        	android:drawableRight="@drawable/ic_proximo2"
+	        	android:drawableRight="@drawable/ic_next"
 	            android:layout_marginBottom="10dp"
 	            android:textColor="#000000"
 	        	android:text="   Cálculo pelo valor bruto"

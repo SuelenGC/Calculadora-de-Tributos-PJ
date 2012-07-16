@@ -6,6 +6,10 @@ import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 
 import android.content.Intent;
+import android.graphics.Shader.TileMode;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.ShapeDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +27,9 @@ public class MenuActivity extends SherlockActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu);
 		setTitle("Menu");
+		
+		GradientDrawable bg = (GradientDrawable) getResources().getDrawable(R.drawable.bg_gradient);
+        getSupportActionBar().setBackgroundDrawable(bg);
 	}
 	
 	public void CallCalcActivity_ByValuePerHour(View view) {

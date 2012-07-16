@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <style name="LogoLayout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+    
+    <style name="Logo">
+        <item name="android:layout_height">200dp</item>
+		<item name="android:layout_width">220dp</item>
+		<item name="android:background">@drawable/logo</item>
+		<item name="android:gravity">center</item>
+		<item name="android:textSize">@dimen/TextLogoSize</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">@color/AzulEscuro4</item>
+    </style>
+    
+    <style name="Frase">
+        <item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:text">@string/splash_frase</item>
+		<item name="android:textSize">20sp</item>
+		<item name="android:textColor">@color/CinzaClaro</item>
+		<item name="android:gravity">center</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:paddingBottom">50dp</item>
+    </style>
+</resources>

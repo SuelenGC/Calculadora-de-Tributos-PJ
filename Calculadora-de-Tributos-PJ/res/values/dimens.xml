@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Padrão de Telas -->
+    <dimen name="BorderLeftRight">5dp</dimen>
+    <dimen name="BorderTopDown">10dp</dimen>
+    
+    <!-- Splash Logo -->
+    <dimen name="BorderRadiusLogo">40dp</dimen>
+    <dimen name="BorderLogo">3dp</dimen>
+    <dimen name="TextLogoSize">140sp</dimen>
+    
+</resources>

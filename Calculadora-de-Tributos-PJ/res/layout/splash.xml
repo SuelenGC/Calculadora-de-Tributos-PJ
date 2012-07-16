@@ -3,44 +3,18 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/gradientbackground"
-    android:orientation="vertical">
+    android:gravity="center">
 
-    <LinearLayout 
-        android:layout_height="fill_parent"
-        android:layout_width="fill_parent"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:gravity="bottom">
-        
-        <TextView
-            android:id="@+id_splash/logo"
-		    android:layout_height="200dp"
-		    android:layout_width="220dp"
-		    android:background="@drawable/logo"
-		    android:text="PJ"
-	        android:layout_gravity="center"
-	        android:gravity="center"
-		    android:textSize="140sp"
-		    android:textStyle="bold"
-		    android:textColor="#376092" />
-        
-    </LinearLayout>
-    
-    <LinearLayout 
-        android:layout_height="fill_parent"
-        android:layout_width="fill_parent"
-        android:orientation="vertical"
-        android:layout_weight="1">
-        
+	<LinearLayout style="@style/LogoLayout">
+    	
+    	<TextView
+        	android:text="@string/splash_logo"
+	    	style="@style/Logo" />
+
         <TextView 
-            android:id="@+id_splash/slogan"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:text="Calculadora de Tributos"
-		    android:textSize="20sp"
-		    android:textColor="#F2F2F2"
-		    android:layout_gravity="center_horizontal"/>
-                
+		    android:text="@string/splash_frase"
+		    style="@style/Frase" />    	
+    
     </LinearLayout>
-	 
+     
 </LinearLayout>

@@ -2,13 +2,13 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android" >
     <corners 
         android:radius="0dp"
-        android:topLeftRadius="40dp"
-        android:bottomRightRadius="40dp"/>
+        android:topLeftRadius="@dimen/BorderRadiusLogo"
+        android:bottomRightRadius="@dimen/BorderRadiusLogo"/>
     
-    <solid android:color="#F2F2F2" />
+    <solid android:color="@color/AzulClaro" />
     
     <stroke 
-        android:width="3dp"
-        android:color="#BFBFBF"/>
+        android:width="@dimen/BorderLogo"
+        android:color="@color/Cinza"/>
 
 </shape>

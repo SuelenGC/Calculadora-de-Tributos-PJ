@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
 	<color name="background">#0000FF</color>
+	<color name="AzulClaro">#CFD5F2</color>
+	
+	<!-- Splash -->
+	<color name="AzulEscuro">#4780C5</color>
+	<color name="AzulEscuro2">#3A6BA5</color>
+	<color name="AzulEscuro3">#254872</color>
+	<color name="Cinza">#BFBFBF</color>
+	<color name="AzulEscuro4">#376092</color>
+	<color name="CinzaClaro">#F2F2F2</color>
+	
 </resources>
