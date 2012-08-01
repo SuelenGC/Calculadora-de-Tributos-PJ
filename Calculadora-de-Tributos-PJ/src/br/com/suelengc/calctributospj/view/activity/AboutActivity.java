@@ -1,9 +1,10 @@
 package br.com.suelengc.calctributospj.view.activity;
 
-import com.actionbarsherlock.app.SherlockActivity;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import br.com.suelengc.calctributospj.R;
+
+import com.actionbarsherlock.app.SherlockActivity;
 
 public class AboutActivity extends SherlockActivity{
 		    

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     
-	<style name="ButtonCalcValorHora" parent="@style/ButtonBase">
+	<style name="ButtonCalcValorHora" parent="@style/MenuButtonBase">
     	<item name="android:drawableLeft">@drawable/ic_relogio</item>
     </style>
     
-    <style name="ButtonCalcValorBruto" parent="@style/ButtonBase">
+    <style name="ButtonCalcValorBruto" parent="@style/MenuButtonBase">
     	<item name="android:drawableLeft">@drawable/ic_dinheiro</item>
     </style>
     

@@ -1,4 +1,4 @@
-package br.com.suelengc.calctributospj.view.activity.listener;
+package br.com.suelengc.calctributospj.view.listener;
 
 import android.content.Context;
 import android.view.View;

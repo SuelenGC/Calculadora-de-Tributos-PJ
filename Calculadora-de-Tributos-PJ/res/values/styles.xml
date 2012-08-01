@@ -13,6 +13,7 @@
         <item name="android:paddingBottom">@dimen/BorderTopDown</item>
     </style>
     
+    <!-- Padrões de Fontes -->
     <style name="FontBase">
         <item name="android:textColor">@color/Preto</item>
         <item name="android:textSize">@dimen/TextSize</item>
@@ -29,16 +30,51 @@
     <style name="FontBaseBoldItalic" parent="@style/FontBase">
         <item name="android:textStyle">bold|italic</item>
     </style>
-        
+      
+    <!-- Padrões de Botões -->
     <style name="ButtonBase">
-    	<item name="android:layout_width">fill_parent</item>
     	<item name="android:layout_height">@dimen/ButtonHeight</item>
-    	<item name="android:gravity">left|center_vertical</item>
-    	<item name="android:background">@drawable/rounded_button_menu</item>
+    	<item name="android:gravity">center</item>
     	<item name="android:layout_marginBottom">@dimen/SpaceAfterButton</item>
     	<item name="android:textStyle">bold</item>
     	<item name="android:textSize">@dimen/TextButtonSize</item>
-    	<item name="android:textColor">@color/Preto</item>
-    	<item name="android:drawableRight">@drawable/ic_next</item>
+    	<item name="android:textColor">@color/Branco</item>
     </style>
+    
+    <style name="MenuButtonBase" parent="@style/ButtonBase">
+    	<item name="android:layout_height">@dimen/MenuButtonHeight</item>
+    	<item name="android:layout_width">fill_parent</item>
+    	<item name="android:background">@drawable/rounded_button_menu</item>
+    	<item name="android:gravity">left|center_vertical</item>
+    	<item name="android:drawableRight">@drawable/ic_next</item>
+    	<item name="android:textColor">@color/Preto</item>
+    </style>
+
+    <!-- Padrões de Row -->
+    <style name="RowBase">
+    	<item name="android:layout_width">fill_parent</item>
+    	<item name="android:layout_height">@dimen/FieldHeight</item>
+    	<item name="android:background">@drawable/rounded_button_menu</item>
+    	<item name="android:layout_marginBottom">@dimen/SpaceAfterField</item>
+    	<item name="android:paddingLeft">@dimen/SpaceLateralDefault</item>
+    	<item name="android:paddingRight">@dimen/SpaceLateralDefault</item>
+  	</style>
+    
+    <!-- Labels -->
+    <style name="FieldLabelBase">
+    	<item name="android:layout_width">wrap_content</item>
+    	<item name="android:layout_height">@dimen/FieldHeight</item>
+    	<item name="android:textStyle">bold</item>
+    	<item name="android:textSize">@dimen/TextFieldSize</item>
+    	<item name="android:textColor">@color/Preto</item>
+    </style>
+
+    <!-- Campos (edits) -->
+    <style name="FieldBase">
+    	<item name="android:layout_width">fill_parent</item>
+    	<item name="android:layout_height">@dimen/FieldHeight</item>
+    	<item name="android:textSize">@dimen/TextFieldSize</item>
+    	<item name="android:textColor">@color/Preto</item>
+    </style>
+    
 </resources>

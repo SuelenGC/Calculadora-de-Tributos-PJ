@@ -13,7 +13,7 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 
-public class MenuActivity extends SherlockActivity{
+public class MenuActivity extends SherlockActivity {
 
 	public static final String EXTRA_FORMATO_TELA = "1"; 
 	private static final int SETTINGS = Menu.FIRST;
@@ -30,8 +30,8 @@ public class MenuActivity extends SherlockActivity{
 	}
 	
 	public void CallCalcActivity_ByValuePerHour(View view) {
-		Intent intent = new Intent(this, CalculationActivity.class);
-		intent.putExtra(EXTRA_FORMATO_TELA, TipoBaseCalculo.VALOR_HORA);
+		Intent intent = new Intent(this, CalculadoraActivity.class);
+		//intent.putExtra(EXTRA_FORMATO_TELA, TipoBaseCalculo.VALOR_HORA);
 		startActivity(intent);
 		
 	}
@@ -60,15 +60,10 @@ public class MenuActivity extends SherlockActivity{
 		mi.inflate(R.menu.menu, menu);
 		
 		return true;
-		//menu.add(0, SOBRE, 0, "Sobre!");
-		//return super.onCreateOptionsMenu(menu);
 	}
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		//Intent intent = new Intent(this, SettingsActivity.class);
-		//startActivity(intent);
-		
 		Intent intent;
 		
 		Log.d("SuelenGC", "Menu: " + item.getItemId());

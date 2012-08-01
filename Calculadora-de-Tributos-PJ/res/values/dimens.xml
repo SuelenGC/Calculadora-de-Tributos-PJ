@@ -11,10 +11,24 @@
     <dimen name="TextLogoSize">140sp</dimen>
     
     <!-- Botões -->
-    <dimen name="ButtonHeight">55dp</dimen>
+    <dimen name="MenuButtonHeight">55dp</dimen>
     <dimen name="SpaceAfterButton">10dp</dimen>
     <dimen name="BorderButton">1dp</dimen>
     <dimen name="TextButtonSize">18sp</dimen>
     <dimen name="BorderRadiusButton">10dp</dimen>
+    <dimen name="ButtonHeight">45dp</dimen>
+    
+    <!-- Campos -->
+    <dimen name="FieldHeight">45dp</dimen>
+    <dimen name="SpaceAfterField">5dp</dimen>
+    <dimen name="BorderField">1dp</dimen>
+    <dimen name="TextFieldSize">16sp</dimen>
+    <dimen name="BorderRadiusField">10dp</dimen>
+    
+    <!-- Dimensões padrões -->
+    <dimen name="SpaceAfterDefault">10dp</dimen>
+    <dimen name="BorderDefault">1dp</dimen>
+    <dimen name="BorderDefault">10dp</dimen>
+    <dimen name="SpaceLateralDefault">10dp</dimen>
     
 </resources>

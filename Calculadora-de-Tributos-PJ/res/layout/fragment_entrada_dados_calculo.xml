@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+		<TableRow 
+		    android:id="@+id_calc/tr_valorhora1"
+		    style="@style/RowBase" >
+
+            <TextView
+                android:text="@string/calc_label_valor_hora"
+                style="@style/FieldLabelBase" />
+
+            <EditText
+                android:id="@+id_calc/valorhora"
+                android:selectAllOnFocus="true"
+                android:inputType="numberDecimal"
+                android:layout_weight="1"
+                style="@style/FieldBase" />
+
+        </TableRow>     
+           
+        <TableRow 
+            android:id="@+id_calc/tr_valorhora2"
+            style="@style/RowBase" >
+            
+            <TextView
+                android:text="@string/calc_label_qtde_horas"
+                style="@style/FieldLabelBase" />
+
+            <EditText
+                android:id="@+id_calc/totalhoras"
+                android:selectAllOnFocus="true"
+                android:layout_weight="1"
+                android:inputType="numberDecimal"
+                style="@style/FieldBase" />
+        </TableRow>
+
+        <Button
+            android:id="@+id_calc/btcalcular"
+            android:text="@string/calc_button_calcular"
+            style="@style/ButtonCalcular" />
+
+    </TableLayout>
+
+</LinearLayout>
