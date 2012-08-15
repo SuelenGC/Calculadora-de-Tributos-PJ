@@ -8,13 +8,13 @@ import br.com.suelengc.calctributospj.R;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
-public class EntradaDadosCalculoFragment extends SherlockFragment {
+public class SaidaDadosCalculoFragment extends SherlockFragment {
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 	
-		View view = inflater.inflate(R.layout.fragment_entrada_dados_calculo, container, false);
+		View view = inflater.inflate(R.layout.fragment_saida_dados_calculo, container, false);
 		return view;
 		
 	}

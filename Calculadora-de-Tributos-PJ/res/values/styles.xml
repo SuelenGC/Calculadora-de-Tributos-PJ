@@ -53,14 +53,35 @@
     <!-- Padrões de Row -->
     <style name="RowBase">
     	<item name="android:layout_width">fill_parent</item>
-    	<item name="android:layout_height">@dimen/FieldHeight</item>
+  	</style>
+
+    <style name="FieldRowBase" parent="@style/RowBase">
     	<item name="android:background">@drawable/rounded_button_menu</item>
-    	<item name="android:layout_marginBottom">@dimen/SpaceAfterField</item>
+		<item name="android:layout_height">@dimen/FieldHeight</item>
     	<item name="android:paddingLeft">@dimen/SpaceLateralDefault</item>
     	<item name="android:paddingRight">@dimen/SpaceLateralDefault</item>
+    	<item name="android:layout_marginBottom">@dimen/SpaceAfterField</item>    	
   	</style>
-    
-    <!-- Labels -->
+  	
+    <!-- Padrões de Row de Tabela -->
+    <style name="TableRowBase" parent="@style/RowBase">
+    	<item name="android:paddingLeft">@dimen/BorderLeftRight</item>
+    	<item name="android:paddingRight">@dimen/BorderLeftRight</item>
+  	</style>
+  	
+    <style name="TableRowLightBlue" parent="@style/TableRowBase">
+    	<item name="android:background">@color/AzulClaro</item>
+  	</style>
+  	
+    <style name="TableRowWhiteOpacity50" parent="@style/TableRowBase">
+    	<item name="android:background">@color/BrancoOpaco50</item>
+  	</style>
+  	
+    <style name="TableRowWhite" parent="@style/TableRowBase">
+    	<item name="android:background">@color/Branco</item>
+  	</style>
+  	
+    <!-- Padrões de Labels -->
     <style name="FieldLabelBase">
     	<item name="android:layout_width">wrap_content</item>
     	<item name="android:layout_height">@dimen/FieldHeight</item>
@@ -69,7 +90,7 @@
     	<item name="android:textColor">@color/Preto</item>
     </style>
 
-    <!-- Campos (edits) -->
+    <!-- Padrões de Campos (edit texts) -->
     <style name="FieldBase">
     	<item name="android:layout_width">fill_parent</item>
     	<item name="android:layout_height">@dimen/FieldHeight</item>

@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     
+    <style name="ScreenCalc" parent="@style/ScreenBase">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@drawable/bg_solid_light_blue</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    
+    <style name="FragmentInputData">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+    <style name="FragmentOutputData">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    
 	<style name="ButtonCalcular" parent="@style/ButtonBase">
 	    <item name="android:layout_width">wrap_content</item>
     	<item name="android:background">@drawable/rounded_button</item>
     </style>
     
+	<style name="TableTitleRowText" parent="@style/FontBaseBold">
+        <item name="android:textColor">@color/AzulEscuro</item>
+        <item name="android:layout_height">@dimen/TableRowHeight</item>
+    </style>
+    
+	<style name="TableRowText" parent="@style/FontBase">
+        <item name="android:textColor">@color/CinzaBrilhante</item>
+        <item name="android:layout_height">@dimen/TableTitleRowHeight</item>
+		<item name="android:textSize">@dimen/TextSize</item>
+    </style>
     
 </resources>

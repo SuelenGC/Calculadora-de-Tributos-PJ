@@ -31,14 +31,17 @@ public class MenuActivity extends SherlockActivity {
 	
 	public void CallCalcActivity_ByValuePerHour(View view) {
 		Intent intent = new Intent(this, CalculadoraActivity.class);
-		//intent.putExtra(EXTRA_FORMATO_TELA, TipoBaseCalculo.VALOR_HORA);
+
+		//Log.d("CalculadoraActivity-Log", "TipoBaseCalculo Menu: " + TipoBaseCalculo.VALOR_HORA.toString());
+		
+		intent.putExtra(EXTRA_FORMATO_TELA, TipoBaseCalculo.VALOR_HORA.toString());
 		startActivity(intent);
 		
 	}
 	
 	public void CallCalcActivity_ByValue(View view) {
-		Intent intent = new Intent(this, CalculationActivity.class);
-		intent.putExtra(EXTRA_FORMATO_TELA, TipoBaseCalculo.VALOR_BRUTO);
+		Intent intent = new Intent(this, CalculadoraActivity.class);
+		intent.putExtra(EXTRA_FORMATO_TELA, TipoBaseCalculo.VALOR_BRUTO.toString());
 		startActivity(intent);
 	}
 	

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <ScrollView 
+        xmlns:android="http://schemas.android.com/apk/res/android"
+     	android:layout_width="fill_parent"
+     	android:layout_height="fill_parent">
+     
+	    <TableLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent">
+	
+	        <!-- Tributos Mensais -->
+			<TableRow 
+			    style="@style/TableRowWhite" >
+	            <TextView
+	                android:text="Tributos Mensais"
+	                android:layout_weight="1"
+	                android:gravity="left|center"       
+	                style="@style/TableTitleRowText" />
+	            <TextView
+	                android:text=""
+	                android:gravity="left|center"                
+	                style="@style/TableTitleRowText" />
+	        </TableRow>
+			<TableRow 
+			    style="@style/TableRowWhiteOpacity50" >
+	            <TextView
+	                android:text="IRPJ"
+	                android:layout_weight="1"
+				    android:gravity="left|center"
+	                style="@style/TableRowText" />
+	            <TextView
+	                android:text="R$123,45"
+				    android:gravity="left|center"
+	                style="@style/TableRowText" />
+	        </TableRow> 
+			<TableRow 
+			    style="@style/TableRowWhite" >
+	            <TextView
+	                android:text="CSLL"
+	                android:layout_weight="1"
+	                android:gravity="left|center"       
+	                style="@style/TableRowText" />
+	            <TextView
+	                android:text="R$123,45"
+	                android:gravity="left|center"                
+	                style="@style/TableRowText" />
+	        </TableRow>
+	        <TableRow 
+			    style="@style/TableRowWhiteOpacity50" >
+	            <TextView
+	                android:text="PIS"
+	                android:layout_weight="1"
+				    android:gravity="left|center"
+	                style="@style/TableRowText" />
+	            <TextView
+	                android:text="R$123,45"
+				    android:gravity="left|center"
+	                style="@style/TableRowText" />
+	        </TableRow>     
+	       	<TableRow 
+			    style="@style/TableRowWhite" >
+	            <TextView
+	                android:text="COFINS"
+	                android:layout_weight="1"
+	                android:gravity="left|center"       
+	                style="@style/TableRowText" />
+	            <TextView
+	                android:text="R$123,45"
+	                android:gravity="left|center"                
+	                style="@style/TableRowText" />
+	        </TableRow>
+	        <TableRow 
+			    style="@style/TableRowWhiteOpacity50" 
+			    android:layout_marginBottom="15dp">
+	            <TextView
+	                android:text="ISS"
+	                android:layout_weight="1"
+				    android:gravity="left|center"
+	                style="@style/TableRowText" />
+	            <TextView
+	                android:text="R$123,45"
+				    android:gravity="left|center"
+	                style="@style/TableRowText" />
+	        </TableRow> 		
+	        
+	
+	        <!-- Tributos Trimestrais -->
+	        <TableRow 
+			    style="@style/TableRowWhite" >
+	            <TextView
+	                android:text="Tributos Trimestrais"
+	                android:layout_weight="1"
+	                android:gravity="left|center"       
+	                style="@style/TableTitleRowText" />
+	            <TextView
+	                android:text=""
+	                android:gravity="left|center"                
+	                style="@style/TableTitleRowText" />
+	        </TableRow>
+			<TableRow 
+			    style="@style/TableRowWhiteOpacity50" >
+	            <TextView
+	                android:text="IRPJ"
+	                android:layout_weight="1"
+				    android:gravity="left|center"
+	                style="@style/TableRowText" />
+	            <TextView
+	                android:text="R$123,45"
+				    android:gravity="left|center"
+	                style="@style/TableRowText" />
+	        </TableRow> 
+			<TableRow 
+			    style="@style/TableRowWhite"
+			    android:layout_marginBottom="15dp" >
+	            <TextView
+	                android:text="CSLL"
+	                android:layout_weight="1"
+	                android:gravity="left|center"       
+	                style="@style/TableRowText" />
+	            <TextView
+	                android:text="R$123,45"
+	                android:gravity="left|center"                
+	                style="@style/TableRowText" />
+	        </TableRow>		
+	        
+	        <!-- Resumo -->
+	        <TableRow 
+			    style="@style/TableRowWhite" >
+	            <TextView
+	                android:text="Resumo"
+	                android:layout_weight="1"
+	                android:gravity="left|center"       
+	                style="@style/TableTitleRowText" />
+	            <TextView
+	                android:text=""
+	                android:gravity="left|center"                
+	                style="@style/TableTitleRowText" />
+	        </TableRow>
+			<TableRow 
+			    style="@style/TableRowWhiteOpacity50" >
+	            <TextView
+	                android:text="Total Bruto"
+	                android:layout_weight="1"
+				    android:gravity="left|center"
+	                style="@style/TableRowText" />
+	            <TextView
+	                android:text="R$123,45"
+				    android:gravity="left|center"
+	                style="@style/TableRowText" />
+	        </TableRow> 
+			<TableRow 
+			    style="@style/TableRowWhite" >
+	            <TextView
+	                android:text="Total Descontos"
+	                android:layout_weight="1"
+	                android:gravity="left|center"       
+	                style="@style/TableRowText" />
+	            <TextView
+	                android:text="R$123,45"
+	                android:gravity="left|center"                
+	                style="@style/TableRowText" />
+	        </TableRow>		
+			<TableRow 
+			    style="@style/TableRowWhiteOpacity50" >
+	            <TextView
+	                android:text="Total Líquido"
+	                android:layout_weight="1"
+	                android:gravity="left|center"       
+	                style="@style/TableRowText" />
+	            <TextView
+	                android:text="R$123,45"
+	                android:gravity="left|center"                
+	                style="@style/TableRowText" />
+	        </TableRow>	        
+	    </TableLayout>
+    </ScrollView>
+</LinearLayout>

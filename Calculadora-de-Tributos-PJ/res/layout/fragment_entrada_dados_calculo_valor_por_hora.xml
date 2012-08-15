@@ -10,7 +10,7 @@
 
 		<TableRow 
 		    android:id="@+id_calc/tr_valorhora1"
-		    style="@style/RowBase" >
+		    style="@style/FieldRowBase" >
 
             <TextView
                 android:text="@string/calc_label_valor_hora"
@@ -27,7 +27,7 @@
            
         <TableRow 
             android:id="@+id_calc/tr_valorhora2"
-            style="@style/RowBase" >
+            style="@style/FieldRowBase" >
             
             <TextView
                 android:text="@string/calc_label_qtde_horas"

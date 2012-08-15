@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/bg_solid_light_blue"
-    android:orientation="vertical"
-    style="@style/ScreenBase">
-
-   <LinearLayout 
-       android:layout_height="wrap_content"
-       android:layout_width="fill_parent"
-       android:orientation="vertical">
-       
-       <fragment
-           android:id="@+id/dadosEntradaCalculo" 
-           class="br.com.suelengc.calctributospj.view.fragment.EntradaDadosCalculoFragment"
-           android:layout_width="fill_parent"
-           android:layout_height="wrap_content"/>
-       
-   </LinearLayout>
-
+    style="@style/ScreenCalc">
+    
+    <!-- 
+    <fragment
+        android:id="@+id_calc/dadosEntradaCalculo" 
+        class="br.com.suelengc.calctributospj.view.fragment.EntradaDadosCalculoValorPorHoraFragment"
+        style="@style/FragmentInputData" />
+     -->
+     
+    <LinearLayout 
+        android:id="@+id_calc/dadosEntradaCalculo"
+        style="@style/FragmentInputData">
+        
+    </LinearLayout>    
+    
+    <fragment
+        android:id="@+id_calc/dadosSaidaCalculo" 
+        class="br.com.suelengc.calctributospj.view.fragment.SaidaDadosCalculoFragment"
+        style="@style/FragmentOutputData" />
 </LinearLayout>

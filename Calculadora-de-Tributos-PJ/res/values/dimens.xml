@@ -27,8 +27,11 @@
     
     <!-- Dimensões padrões -->
     <dimen name="SpaceAfterDefault">10dp</dimen>
-    <dimen name="BorderDefault">1dp</dimen>
     <dimen name="BorderDefault">10dp</dimen>
     <dimen name="SpaceLateralDefault">10dp</dimen>
+    
+    <!-- Tabelas -->
+    <dimen name="TableRowHeight">32dp</dimen>
+    <dimen name="TableTitleRowHeight">32dp</dimen>
     
 </resources>
