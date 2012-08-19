@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Padrão de Telas -->
-    <dimen name="BorderLeftRight">5dp</dimen>
+    <dimen name="BorderLeftRight">10dp</dimen>
     <dimen name="BorderTopDown">10dp</dimen>
     <dimen name="TextSize">18sp</dimen>
     
@@ -20,7 +20,7 @@
     
     <!-- Campos -->
     <dimen name="FieldHeight">45dp</dimen>
-    <dimen name="SpaceAfterField">5dp</dimen>
+    <dimen name="SpaceAfterField">10dp</dimen>
     <dimen name="BorderField">1dp</dimen>
     <dimen name="TextFieldSize">16sp</dimen>
     <dimen name="BorderRadiusField">10dp</dimen>

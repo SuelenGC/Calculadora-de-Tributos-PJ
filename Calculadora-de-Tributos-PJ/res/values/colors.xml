@@ -2,7 +2,7 @@
 <resources>
 	<color name="Preto">#000000</color>
 	<color name="Branco">#FFFFFF</color>
-	<color name="BrancoOpaco50">#50FFFFFF</color>
+	<color name="BrancoOpaco">#80FFFFFF</color>
 	<color name="AzulClaro">#CFD5F2</color>
 	
 	<!-- Splash -->

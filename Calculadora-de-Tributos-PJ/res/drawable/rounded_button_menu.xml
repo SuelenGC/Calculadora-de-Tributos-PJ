@@ -8,6 +8,6 @@
     
     <stroke 
         android:width="@dimen/BorderButton" 
-        android:color="@color/Preto" />
+        android:color="@color/Cinza" />
             
 </shape>

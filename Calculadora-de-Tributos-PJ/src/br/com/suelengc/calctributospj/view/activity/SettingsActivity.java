@@ -1,16 +1,20 @@
 package br.com.suelengc.calctributospj.view.activity;
 
+import com.actionbarsherlock.app.SherlockPreferenceActivity;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
 import br.com.suelengc.calctributospj.R;
 
-public class SettingsActivity extends PreferenceActivity{
+public class SettingsActivity extends SherlockPreferenceActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setTitle("Configurações");
 		
-		addPreferencesFromResource(R.xml.settings);
-		
+		GradientDrawable bg = (GradientDrawable) getResources().getDrawable(R.drawable.bg_gradient);
+        getSupportActionBar().setBackgroundDrawable(bg);
+        
+        addPreferencesFromResource(R.xml.settings);		
 	}
 }

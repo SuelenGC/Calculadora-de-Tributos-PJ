@@ -73,14 +73,30 @@
     	<item name="android:background">@color/AzulClaro</item>
   	</style>
   	
-    <style name="TableRowWhiteOpacity50" parent="@style/TableRowBase">
-    	<item name="android:background">@color/BrancoOpaco50</item>
+    <style name="TableRowLightBlueLastLine" parent="@style/TableRowBase">
+    	<item name="android:background">@drawable/table_row_last_line_light_blue</item>
+  	</style>
+    
+    <style name="TableRowWhiteOpacity" parent="@style/TableRowBase">
+    	<item name="android:background">@color/BrancoOpaco</item>
+  	</style>
+  	
+    <style name="TableRowWhiteOpacityLastLine" parent="@style/TableRowBase">
+    	<item name="android:background">@drawable/table_row_last_line_white_opacity</item>
   	</style>
   	
     <style name="TableRowWhite" parent="@style/TableRowBase">
     	<item name="android:background">@color/Branco</item>
   	</style>
-  	
+
+    <style name="TableRowWhiteLastLine" parent="@style/TableRowBase">
+    	<item name="android:background">@drawable/table_row_last_line_white</item>
+  	</style>
+  	    
+    <style name="TableTitleRowWhite" parent="@style/TableRowBase">
+    	<item name="android:background">@drawable/table_row_title</item>
+  	</style>
+    	
     <!-- Padrões de Labels -->
     <style name="FieldLabelBase">
     	<item name="android:layout_width">wrap_content</item>

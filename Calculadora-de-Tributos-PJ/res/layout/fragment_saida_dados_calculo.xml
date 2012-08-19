@@ -11,11 +11,12 @@
      
 	    <TableLayout
 	        android:layout_width="fill_parent"
-	        android:layout_height="fill_parent">
+	        android:layout_height="fill_parent"
+	        android:paddingRight="5dp">
 	
 	        <!-- Tributos Mensais -->
 			<TableRow 
-			    style="@style/TableRowWhite" >
+			    style="@style/TableTitleRowWhite" >
 	            <TextView
 	                android:text="Tributos Mensais"
 	                android:layout_weight="1"
@@ -27,7 +28,7 @@
 	                style="@style/TableTitleRowText" />
 	        </TableRow>
 			<TableRow 
-			    style="@style/TableRowWhiteOpacity50" >
+			    style="@style/TableRowWhiteOpacity" >
 	            <TextView
 	                android:text="IRPJ"
 	                android:layout_weight="1"
@@ -51,7 +52,7 @@
 	                style="@style/TableRowText" />
 	        </TableRow>
 	        <TableRow 
-			    style="@style/TableRowWhiteOpacity50" >
+			    style="@style/TableRowWhiteOpacity" >
 	            <TextView
 	                android:text="PIS"
 	                android:layout_weight="1"
@@ -75,7 +76,7 @@
 	                style="@style/TableRowText" />
 	        </TableRow>
 	        <TableRow 
-			    style="@style/TableRowWhiteOpacity50" 
+			    style="@style/TableRowWhiteOpacityLastLine" 
 			    android:layout_marginBottom="15dp">
 	            <TextView
 	                android:text="ISS"
@@ -91,7 +92,7 @@
 	
 	        <!-- Tributos Trimestrais -->
 	        <TableRow 
-			    style="@style/TableRowWhite" >
+			    style="@style/TableTitleRowWhite" >
 	            <TextView
 	                android:text="Tributos Trimestrais"
 	                android:layout_weight="1"
@@ -103,7 +104,7 @@
 	                style="@style/TableTitleRowText" />
 	        </TableRow>
 			<TableRow 
-			    style="@style/TableRowWhiteOpacity50" >
+			    style="@style/TableRowWhiteOpacity" >
 	            <TextView
 	                android:text="IRPJ"
 	                android:layout_weight="1"
@@ -115,7 +116,7 @@
 	                style="@style/TableRowText" />
 	        </TableRow> 
 			<TableRow 
-			    style="@style/TableRowWhite"
+			    style="@style/TableRowWhiteLastLine"
 			    android:layout_marginBottom="15dp" >
 	            <TextView
 	                android:text="CSLL"
@@ -130,7 +131,7 @@
 	        
 	        <!-- Resumo -->
 	        <TableRow 
-			    style="@style/TableRowWhite" >
+			    style="@style/TableTitleRowWhite" >
 	            <TextView
 	                android:text="Resumo"
 	                android:layout_weight="1"
@@ -142,7 +143,7 @@
 	                style="@style/TableTitleRowText" />
 	        </TableRow>
 			<TableRow 
-			    style="@style/TableRowWhiteOpacity50" >
+			    style="@style/TableRowWhiteOpacity" >
 	            <TextView
 	                android:text="Total Bruto"
 	                android:layout_weight="1"
@@ -166,7 +167,7 @@
 	                style="@style/TableRowText" />
 	        </TableRow>		
 			<TableRow 
-			    style="@style/TableRowWhiteOpacity50" >
+			    style="@style/TableRowWhiteOpacityLastLine" >
 	            <TextView
 	                android:text="Total Líquido"
 	                android:layout_weight="1"

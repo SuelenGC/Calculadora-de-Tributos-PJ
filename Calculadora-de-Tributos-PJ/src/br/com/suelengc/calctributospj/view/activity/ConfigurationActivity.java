@@ -30,7 +30,7 @@ public class ConfigurationActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.config);
+        setContentView(R.layout.configuration);
         setTitle("Calculadora de Tributos PJ - Configurações");
         
         rgTipoTributacao = (RadioGroup) findViewById(R.id_config.rgTipoTributacao);

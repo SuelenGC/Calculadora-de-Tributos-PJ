@@ -30,12 +30,12 @@ public class CalculadoraActivity extends SherlockFragmentActivity {
         SherlockFragment myFragment;
         
         if (tipoBaseCalculo.equals(TipoBaseCalculo.VALOR_BRUTO.toString())) {
-        	setTitle("Calculo Valor Bruto");
+        	setTitle("Cálculo Valor Bruto");
         	myFragment = new EntradaDadosCalculoValorBrutoFragment();
         	ft.replace(R.id_calc.dadosEntradaCalculo, myFragment);
         	
         }else {
-        	setTitle("Calculo Valor/Hora");
+        	setTitle("Cálculo Valor/Hora");
         	myFragment = new EntradaDadosCalculoValorPorHoraFragment();
         	ft.replace(R.id_calc.dadosEntradaCalculo, myFragment);
         }
