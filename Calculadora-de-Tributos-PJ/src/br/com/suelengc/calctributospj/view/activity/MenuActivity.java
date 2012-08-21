@@ -31,9 +31,6 @@ public class MenuActivity extends SherlockActivity {
 	
 	public void CallCalcActivity_ByValuePerHour(View view) {
 		Intent intent = new Intent(this, CalculadoraActivity.class);
-
-		//Log.d("CalculadoraActivity-Log", "TipoBaseCalculo Menu: " + TipoBaseCalculo.VALOR_HORA.toString());
-		
 		intent.putExtra(EXTRA_FORMATO_TELA, TipoBaseCalculo.VALOR_HORA.toString());
 		startActivity(intent);
 		
