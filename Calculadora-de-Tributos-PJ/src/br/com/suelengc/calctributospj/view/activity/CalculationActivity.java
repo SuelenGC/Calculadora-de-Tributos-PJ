@@ -12,8 +12,9 @@ import android.widget.TableRow;
 import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.calctributospj.domain.TipoBaseCalculo;
 import br.com.suelengc.calctributospj.domain.TipoTributacao;
-import br.com.suelengc.calctributospj.view.listener.CalculateListener;
 
+public class CalculationActivity {}
+/*
 public class CalculationActivity extends Activity implements BaseActivity {
 	private static final int SOBRE = Menu.FIRST;
 	
@@ -97,4 +98,4 @@ public class CalculationActivity extends Activity implements BaseActivity {
 			return super.onOptionsItemSelected(item);
 		}
 	}
-}
+}*/

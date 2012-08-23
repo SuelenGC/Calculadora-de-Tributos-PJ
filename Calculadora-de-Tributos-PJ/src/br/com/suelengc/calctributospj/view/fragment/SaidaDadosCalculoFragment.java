@@ -18,4 +18,9 @@ public class SaidaDadosCalculoFragment extends SherlockFragment {
 		return view;
 		
 	}
+	
+   @Override
+   public void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+   }
 }

@@ -13,16 +13,16 @@ public class TaxPresumedProfitTest extends AndroidTestCase {
 	@SuppressWarnings("unchecked")
 	public void testContructorsWithoutParameters() throws Throwable {
 		//Get class object 
-		Class<TributacaoLucroPresumido> clazz = TributacaoLucroPresumido.class;
+		Class<TributoLucroPresumido> clazz = TributoLucroPresumido.class;
 		
 		//Get constructors 
-		Constructor<TributacaoLucroPresumido>[] constructors = clazz.getConstructors();
+		Constructor<TributoLucroPresumido>[] constructors = clazz.getConstructors();
 		
 		//Log how many constructors have
 		Log.e("TEST_CT-PJ", "Number of contructors is " + constructors.length);
 		
 		//Checking if have some constructor without parameters
-		for (Constructor<TributacaoLucroPresumido> c : constructors) {
+		for (Constructor<TributoLucroPresumido> c : constructors) {
 			
 			//Get parameters type
 			Class<?>[] parameters = c.getParameterTypes();
@@ -43,10 +43,10 @@ public class TaxPresumedProfitTest extends AndroidTestCase {
 		float percIRPJ = 2.4f;
 		
 		//Creating taxation object
-		Tributacao tax = new TributacaoLucroPresumido(grossValue, percIRPJ);
+		Tributo tax = new TributoLucroPresumido(grossValue, percIRPJ);
 
 		//Checking the cofins value
-		assertEquals( ((TributacaoLucroPresumido) tax).getCofinsMensal(), 150.0);
+		assertEquals( ((TributoLucroPresumido) tax).getCofinsMensal(), 150.0);
 	}
 	
 	public void testCsllMonthlyValue() {
@@ -57,10 +57,10 @@ public class TaxPresumedProfitTest extends AndroidTestCase {
 		float percIRPJ = 2.4f;
 		
 		//Creating taxation object
-		Tributacao tax = new TributacaoLucroPresumido(grossValue, percIRPJ);
+		Tributo tax = new TributoLucroPresumido(grossValue, percIRPJ);
 
 		//Checking the monthly csll value
-		assertEquals( ((TributacaoLucroPresumido) tax).getCsllMensal(), 50.0);
+		assertEquals( ((TributoLucroPresumido) tax).getCsllMensal(), 50.0);
 	}
 
 	public void testCsllQuarterlyValue() {
@@ -71,10 +71,10 @@ public class TaxPresumedProfitTest extends AndroidTestCase {
 		float percIRPJ = 2.4f;
 		
 		//Creating taxation object
-		Tributacao tax = new TributacaoLucroPresumido(grossValue, percIRPJ);
+		Tributo tax = new TributoLucroPresumido(grossValue, percIRPJ);
 
 		//Checking the quarterly csll value
-		assertEquals( ((TributacaoLucroPresumido) tax).getCsllTrimetral(), 94.0);
+		assertEquals( ((TributoLucroPresumido) tax).getCsllTrimetral(), 94.0);
 	}
 	
 	public void testIrpjMonthlyValue() {
@@ -85,10 +85,10 @@ public class TaxPresumedProfitTest extends AndroidTestCase {
 		float percIRPJ = 2.4f;
 		
 		//Creating taxation object
-		Tributacao tax = new TributacaoLucroPresumido(grossValue, percIRPJ);
+		Tributo tax = new TributoLucroPresumido(grossValue, percIRPJ);
 
 		//Checking the monthly irpj value
-		assertEquals( ((TributacaoLucroPresumido) tax).getIrpjMensal(), 75.0);
+		assertEquals( ((TributoLucroPresumido) tax).getIrpjMensal(), 75.0);
 	}
 
 	
@@ -100,10 +100,10 @@ public class TaxPresumedProfitTest extends AndroidTestCase {
 		float percIRPJ = 2.4f;
 		
 		//Creating taxation object
-		Tributacao tax = new TributacaoLucroPresumido(grossValue, percIRPJ);
+		Tributo tax = new TributoLucroPresumido(grossValue, percIRPJ);
 
 		//Checking the quarterly irpj value
-		assertEquals( ((TributacaoLucroPresumido) tax).getIrpjTrimestral(), 45.0);
+		assertEquals( ((TributoLucroPresumido) tax).getIrpjTrimestral(), 45.0);
 	}
 
 	public void testIrpjQuarterlyValueWithFourDotEightIrpjPercentage() {
@@ -114,10 +114,10 @@ public class TaxPresumedProfitTest extends AndroidTestCase {
 		float percIRPJ = 4.8f;
 		
 		//Creating taxation object
-		Tributacao tax = new TributacaoLucroPresumido(grossValue, percIRPJ);
+		Tributo tax = new TributoLucroPresumido(grossValue, percIRPJ);
 
 		//Checking the quarterly irpj value
-		assertEquals( ((TributacaoLucroPresumido) tax).getIrpjTrimestral(), 165.0);
+		assertEquals( ((TributoLucroPresumido) tax).getIrpjTrimestral(), 165.0);
 	}
 
 	public void testPisValue() {
@@ -128,10 +128,10 @@ public class TaxPresumedProfitTest extends AndroidTestCase {
 		float percIRPJ = 2.4f;
 		
 		//Creating taxation object
-		Tributacao tax = new TributacaoLucroPresumido(grossValue, percIRPJ);
+		Tributo tax = new TributoLucroPresumido(grossValue, percIRPJ);
 
 		//Checking the monthly irpj value
-		assertEquals( ((TributacaoLucroPresumido) tax).getPisMensal(), 32.5);
+		assertEquals( ((TributoLucroPresumido) tax).getPisMensal(), 32.5);
 	}
 	
 	public void testIssValue() {
@@ -142,10 +142,10 @@ public class TaxPresumedProfitTest extends AndroidTestCase {
 		float percIRPJ = 2.4f;
 		
 		//Creating taxation object
-		Tributacao tax = new TributacaoLucroPresumido(grossValue, percIRPJ);
+		Tributo tax = new TributoLucroPresumido(grossValue, percIRPJ);
 
 		//Checking the monthly irpj value
-		assertEquals( ((TributacaoLucroPresumido) tax).getIssMensal(), 100.0);
+		assertEquals( ((TributoLucroPresumido) tax).getIssMensal(), 100.0);
 	}
 	
 	public void testGetTotalDiscountValue() {
@@ -156,15 +156,15 @@ public class TaxPresumedProfitTest extends AndroidTestCase {
 		float percIRPJ = 2.4f;
 		
 		//Creating taxation object
-		Tributacao tax = new TributacaoLucroPresumido(grossValue, percIRPJ);
+		Tributo tax = new TributoLucroPresumido(grossValue, percIRPJ);
 
 		//Checking the monthly irpj value
-		assertEquals( ((TributacaoLucroPresumido) tax).getValorTotalDescontos(), 407.5);
+		assertEquals( ((TributoLucroPresumido) tax).getValorTotalDescontos(), 407.5);
 	}
 	
 	public void testSetters() {
 		//Get class object
-		Class<TributacaoLucroPresumido> clazz = TributacaoLucroPresumido.class;
+		Class<TributoLucroPresumido> clazz = TributoLucroPresumido.class;
 		
 		//Get methods
 		Method[] methods = clazz.getDeclaredMethods();

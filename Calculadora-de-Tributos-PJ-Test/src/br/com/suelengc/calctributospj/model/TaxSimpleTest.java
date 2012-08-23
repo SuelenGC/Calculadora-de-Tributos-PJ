@@ -10,16 +10,16 @@ public class TaxSimpleTest extends AndroidTestCase {
 		@SuppressWarnings("unchecked")
 		public void testContructors() throws Throwable {
 			//Get class object 
-			Class<TributacaoLucroPresumido> clazz = TributacaoLucroPresumido.class;
+			Class<TributoLucroPresumido> clazz = TributoLucroPresumido.class;
 			
 			//Get constructors 
-			Constructor<TributacaoSimples>[] constructors = clazz.getConstructors();
+			Constructor<SimplesNacional>[] constructors = clazz.getConstructors();
 			
 			//Log how many constructors have
 			Log.e("TEST_CT-PJ", "Number of contructors is " + constructors.length);
 			
 			//Checking if have some constructor without parameters
-			for (Constructor<TributacaoSimples> c : constructors) {
+			for (Constructor<SimplesNacional> c : constructors) {
 				
 				//Get parameters type
 				Class<?>[] parameters = c.getParameterTypes();

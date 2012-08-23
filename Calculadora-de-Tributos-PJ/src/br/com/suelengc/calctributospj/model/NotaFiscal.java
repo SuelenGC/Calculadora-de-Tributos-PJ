@@ -1,38 +1,39 @@
 package br.com.suelengc.calctributospj.model;
 
+import br.com.suelengc.calctributospj.domain.TipoTributacao;
+
 public class NotaFiscal {
 
 	private double valorBruto;
 	private double valorLiquido;
-	private Tributacao tributos;  
+	private Tributo tributo;  
 	
-	public NotaFiscal(double valorTotalNotaFiscal, Tributacao tributos) {
-		setValorBruto(valorTotalNotaFiscal);
-		setTributos(tributos);
-		setValorLiquido();		
+	public NotaFiscal(double valorTotalNotaFiscal) {
+		this.valorBruto = valorTotalNotaFiscal;
+	}
+	
+	public NotaFiscal(double valorHora, double qtdeHora) {
+		this(valorHora * qtdeHora);
 	}
 
-	public void setTributos(Tributacao tributo) {
-		this.tributos = tributo;
+	public void setTributos(Tributo tributo) {
+		this.tributo = tributo;
 	}
 	
-	public Tributacao getTributos() {
-		return tributos;
+	public Tributo getTributo() {
+		return tributo;
 	}
 	
-	private void setValorBruto (double valorTotalNotaFiscal) {
-		valorBruto = valorTotalNotaFiscal;
-	}
-
 	public double getValorBruto() {
 		return valorBruto;
 	}
 	
-	private void setValorLiquido() {
-		valorLiquido = getValorBruto() - getTributos().getValorTotalDescontos();
-	}
-	
 	public double getValorLiquido() {
 		return valorLiquido;
+	}
+	
+	public void CalcularTributos() {
+		tributo.Calcular(valorBruto);
+		valorLiquido = valorBruto - tributo.valorTotalTributos();
 	}
 }
