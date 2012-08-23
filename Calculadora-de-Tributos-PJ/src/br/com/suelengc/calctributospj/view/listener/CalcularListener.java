@@ -65,14 +65,6 @@ public class CalcularListener implements OnClickListener, BaseListener {
 			//Toast.makeText(p.getContext(), "Cofins: " + String.valueOf(((LucroPresumido) notaFiscal.getTributo()).getCofinsMensal()), Toast.LENGTH_SHORT).show();
 			//Toast.makeText(p.getContext(), "CSLL: " + String.valueOf(((LucroPresumido) notaFiscal.getTributo()).getCsllMensal()), Toast.LENGTH_SHORT).show();
 			
-			//Toast.makeText(p.getContext(), "Cofins: " + String.valueOf(((LucroPresumido) notaFiscal.getTributo()).getCofinsMensal()), Toast.LENGTH_SHORT).show();
-			//Toast.makeText(p.getContext(), "Cofins: " + String.valueOf(((LucroPresumido) notaFiscal.getTributo()).getCofinsMensal()), Toast.LENGTH_SHORT).show();
-			//Toast.makeText(p.getContext(), "Cofins: " + String.valueOf(((LucroPresumido) notaFiscal.getTributo()).getCofinsMensal()), Toast.LENGTH_SHORT).show();
-			
-			//Log.d("SuelenGC", "IRPJ: " + String.valueOf(((LucroPresumido) notaFiscal.getTributo()).getIrpjMensal()));
-			//Log.d("SuelenGC", "ISS: " + String.valueOf(((LucroPresumido) notaFiscal.getTributo()).getIssMensal()));
-			//Log.d("SuelenGC", "PPIS: " + String.valueOf(((LucroPresumido) notaFiscal.getTributo()).getPisMensal()));
-			
 			setDadosSaida();
 		}
 	}
