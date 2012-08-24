@@ -27,7 +27,7 @@ public class PreferenciasCalculo {
 		}else if (tributacao == SIMPLES_NACIONAL) {
 			retorno = TipoTributacao.SIMPLES_NACIONAL;
 		}else {
-			retorno = TipoTributacao.LUCRO_PRESUMIDO;
+			retorno = TipoTributacao.LUCRO_PRESUMIDO ;
 		}
 		
 		return retorno;

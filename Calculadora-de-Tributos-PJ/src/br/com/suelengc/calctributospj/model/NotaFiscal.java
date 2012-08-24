@@ -1,6 +1,5 @@
 package br.com.suelengc.calctributospj.model;
 
-import br.com.suelengc.calctributospj.domain.TipoTributacao;
 
 public class NotaFiscal {
 

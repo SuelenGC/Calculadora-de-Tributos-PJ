@@ -11,7 +11,7 @@
     <style name="FragmentInputData">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">fill_parent</item>
-        <item name="android:layout_weight">1</item>
+        <item name="android:layout_weight">2</item>
         <item name="android:layout_marginRight">5dp</item>
     </style>
     

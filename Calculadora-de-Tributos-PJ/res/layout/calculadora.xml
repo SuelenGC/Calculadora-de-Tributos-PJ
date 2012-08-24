@@ -14,18 +14,18 @@
         style="@style/FragmentInputData">
         
     </LinearLayout>    
-    
+    <!-- 
     <fragment
         android:id="@+id_calc/dadosSaidaCalculo" 
         class="br.com.suelengc.calctributospj.view.fragment.SaidaDadosCalculoFragment"
         style="@style/FragmentOutputData">
    	</fragment>
-    <!-- 
+   	-->
+     
     <LinearLayout 
         android:id="@+id_calc/dadosSaidaCalculo"
-        android:background="@drawable/border"
         style="@style/FragmentOutputData">
-
+		<!--  
         <TextView 
             android:layout_height="wrap_content"
             android:layout_width="fill_parent"
@@ -34,7 +34,7 @@
             android:textColor="@color/CinzaBrilhante"
             android:textSize="18sp"
             android:text="Olá! Após você clicar em 'Calcular', exibirei aqui o cálculo dos impostos."/>
-        
+        -->
     </LinearLayout>
-    -->
+    
 </LinearLayout>

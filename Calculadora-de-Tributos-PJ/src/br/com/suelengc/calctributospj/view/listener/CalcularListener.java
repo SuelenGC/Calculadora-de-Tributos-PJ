@@ -1,11 +1,9 @@
 package br.com.suelengc.calctributospj.view.listener;
 
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.calctributospj.controller.TributoFactory;
 import br.com.suelengc.calctributospj.domain.TipoBaseCalculo;
@@ -15,7 +13,6 @@ import br.com.suelengc.calctributospj.model.NotaFiscal;
 import br.com.suelengc.calctributospj.model.SimplesNacional;
 import br.com.suelengc.calctributospj.model.Tributo;
 import br.com.suelengc.calctributospj.preference.PreferenciasCalculo;
-import br.com.suelengc.calctributospj.view.activity.ConfigurationActivity;
 import br.com.suelengc.calctributospj.view.controller.Formatter;
 
 public class CalcularListener implements OnClickListener, BaseListener {
@@ -26,7 +23,7 @@ public class CalcularListener implements OnClickListener, BaseListener {
 	View p;
 	
 	TextView tvvalor_bruto, tvvalor_liquido, tvirpj_retido, tvcofins_retido, tvpis_retido, tvcsll_retido, tvinss_darf, tvirpj_darf, tvcsll_darf, tvtotaldescontosmensais;
-	TextView tvvalor_bruto2, tvvalor_liquido2, tvtotaldescontosmensais2, tvtributo_unificado;
+	TextView tvtributo_unificado;
 	
 	public CalcularListener(PreferenciasCalculo preferencias, TipoBaseCalculo baseCalculo) {
 		this.preferencias = preferencias;
@@ -77,6 +74,7 @@ public class CalcularListener implements OnClickListener, BaseListener {
 
 	@Override
 	public void setDadosSaida() {
+        
 		if (preferencias.getTipoTributacao().equals(TipoTributacao.LUCRO_PRESUMIDO)) {
 		
 			tvvalor_liquido = (TextView) p.findViewById(R.id_calc.valorliquido);
@@ -104,18 +102,18 @@ public class CalcularListener implements OnClickListener, BaseListener {
 			tvvalor_liquido.setText("R$ " + Formatter.DoubleToString(notaFiscal.getValorLiquido()));
 	
 		} else if (preferencias.getTipoTributacao().equals(TipoTributacao.SIMPLES_NACIONAL)) {
-			/*
-			tvvalor_liquido2 = (TextView) p.findViewById(R.id_calc.valorliquido2);
-		    tvvalor_bruto2 = (TextView) p.findViewById(R.id_calc.valorbruto2);
-		    tvtotaldescontosmensais2 = (TextView) p.findViewById(R.id_calc.totaldescontosmensais2);
+			
+			tvvalor_liquido = (TextView) p.findViewById(R.id_calc.valorliquido);
+		    tvvalor_bruto = (TextView) p.findViewById(R.id_calc.valorbruto);
+		    tvtotaldescontosmensais = (TextView) p.findViewById(R.id_calc.totaldescontosmensais);
 	
 			tvtributo_unificado = (TextView) p.findViewById(R.id_calc.tributo_unificado);
 			tvtributo_unificado.setText("R$ " + Formatter.DoubleToString(((SimplesNacional) tributo).valorTotalTributos()));
 	
-			tvvalor_bruto2.setText("R$ " + Formatter.DoubleToString(notaFiscal.getValorBruto()));
-			tvtotaldescontosmensais2.setText("R$ " + Formatter.DoubleToString(((SimplesNacional) tributo).valorTotalTributos()));
-			tvvalor_liquido2.setText("R$ " + Formatter.DoubleToString(notaFiscal.getValorLiquido()));
-			*/
+			tvvalor_bruto.setText("R$ " + Formatter.DoubleToString(notaFiscal.getValorBruto()));
+			tvtotaldescontosmensais.setText("R$ " + Formatter.DoubleToString(((SimplesNacional) tributo).valorTotalTributos()));
+			tvvalor_liquido.setText("R$ " + Formatter.DoubleToString(notaFiscal.getValorLiquido()));
+			
 		}
 		
 	}
