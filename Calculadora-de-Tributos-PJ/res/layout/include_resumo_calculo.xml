@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    		<!-- Resumo -->
+	        <TableRow 
+			    style="@style/TableTitleRowWhite" >
+	            <TextView
+	                android:text="Resumo"
+	                android:layout_weight="1"
+	                android:gravity="left|center"       
+	                style="@style/TableTitleRowText" />
+	            <TextView
+	                android:text=""
+	                android:gravity="left|center"                
+	                style="@style/TableTitleRowText" />
+	        </TableRow>
+			<TableRow 
+			    style="@style/TableRowWhiteOpacity" >
+	            <TextView
+	                android:text="Total Bruto"
+	                android:layout_weight="2"
+				    android:gravity="left|center"
+	                style="@style/TableRowText" />
+	            <TextView
+	                android:id="@+id_calc/valorbruto"
+	                android:text="R$0,00"
+				    android:layout_weight="1"
+	                android:gravity="right|center"
+	                style="@style/TableRowText" />
+	        </TableRow> 
+			<TableRow 
+			    style="@style/TableRowWhite" >
+	            <TextView
+	                android:text="Total Descontos"
+	                android:layout_weight="2"
+	                android:gravity="left|center"       
+	                style="@style/TableRowText" />
+	            <TextView
+	                android:id="@+id_calc/totaldescontosmensais"
+	                android:text="R$0,00"
+	                android:layout_weight="1"
+	                android:gravity="right|center"                
+	                style="@style/TableRowText" />
+	        </TableRow>		
+			<TableRow 
+			    style="@style/TableRowWhiteOpacityLastLine" >
+	            <TextView
+	                android:text="Total Líquido"
+	                android:layout_weight="2"
+	                android:gravity="left|center"       
+	                style="@style/TableRowText" />
+	            <TextView
+	                android:id="@+id_calc/valorliquido"
+	                android:text="R$0,00"
+	                android:layout_weight="1"
+	                android:gravity="right|center"                
+	                style="@style/TableRowText" />
+	        </TableRow>	        
+    
+
+</TableLayout>

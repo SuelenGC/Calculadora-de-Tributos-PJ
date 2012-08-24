@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <ScrollView 
+        xmlns:android="http://schemas.android.com/apk/res/android"
+     	android:layout_width="fill_parent"
+     	android:layout_height="fill_parent">
+     
+	    <TableLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:paddingRight="5dp">
+	
+	        <!-- Tributo -->
+			<TableRow 
+			    style="@style/TableTitleRowWhite" >
+	            <TextView
+	                android:text="Tributos"
+	                android:layout_weight="1"
+	                android:gravity="left|center"       
+	                style="@style/TableTitleRowText" />
+	            <TextView
+	                android:text=""
+	                android:gravity="left|center"                
+	                style="@style/TableTitleRowText" />
+	        </TableRow>
+			<TableRow 
+			    style="@style/TableRowWhiteOpacityLastLine"
+			    android:layout_marginBottom="10dp"  >
+	            <TextView
+	                android:text="Tributo Unificado"
+	                android:layout_weight="2"
+				    android:gravity="left|center"
+	                style="@style/TableRowText" />
+	            <TextView
+	                android:id="@+id_calc/tributo_unificado"
+	                android:text="R$0,00"
+				    android:layout_weight="1"
+	                android:gravity="right|center"
+	                style="@style/TableRowText" />
+	        </TableRow> 
+	    
+			<!-- Resumo -->
+			<include layout="@layout/include_resumo_calculo"/>
+	    </TableLayout>
+	    
+    </ScrollView>
+</LinearLayout>
