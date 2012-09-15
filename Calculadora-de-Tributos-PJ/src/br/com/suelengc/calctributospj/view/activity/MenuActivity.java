@@ -5,8 +5,10 @@ import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.calctributospj.domain.TipoBaseCalculo;
+import br.com.suelengc.calctributospj.view.menu.MyMenu;
 
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
@@ -16,8 +18,6 @@ import com.actionbarsherlock.view.MenuItem;
 public class MenuActivity extends SherlockActivity {
 
 	public static final String EXTRA_FORMATO_TELA = "1"; 
-	private static final int SETTINGS = Menu.FIRST;
-	private static final int SOBRE = Menu.FIRST+1;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,6 @@ public class MenuActivity extends SherlockActivity {
 	
 	public void CallCalcActivity_ByValuePerHour(View view) {
 		Intent intent = new Intent(this, CalculadoraActivity.class);
-		//intent.putExtra(EXTRA_FORMATO_TELA, TipoBaseCalculo.VALOR_HORA.toString());
 		intent.putExtra(EXTRA_FORMATO_TELA, TipoBaseCalculo.VALOR_HORA);
 		startActivity(intent);
 		
@@ -39,7 +38,6 @@ public class MenuActivity extends SherlockActivity {
 	
 	public void CallCalcActivity_ByValue(View view) {
 		Intent intent = new Intent(this, CalculadoraActivity.class);
-		//intent.putExtra(EXTRA_FORMATO_TELA, TipoBaseCalculo.VALOR_BRUTO.toString());
 		intent.putExtra(EXTRA_FORMATO_TELA, TipoBaseCalculo.VALOR_BRUTO);
 		startActivity(intent);
 	}
@@ -70,21 +68,20 @@ public class MenuActivity extends SherlockActivity {
 		
 		Log.d("SuelenGC", "Menu: " + item.getItemId());
 
-		switch (item.getOrder()) {
+		switch (item.getItemId()) {
 		
-		case SOBRE:
+		case MyMenu.ABOUT:
 			intent = new Intent(this, AboutActivity.class);
 			startActivity(intent);
 			return true;
 			
-		case SETTINGS:
+		case MyMenu.SETTINGS:
 			intent = new Intent(this, SettingsActivity.class);
 			startActivity(intent);
 			return true;
-			
-		default:
-			return super.onOptionsItemSelected(item);
+
 		}
-		
+
+		return super.onOptionsItemSelected(item);
 	}
 }
