@@ -33,6 +33,8 @@ public class AboutActivity extends SherlockActivity{
 			MenuInflater mi = new MenuInflater(getApplicationContext());
 			mi.inflate(R.menu.menu, menu);
 			
+			menu.findItem(MyMenu.ABOUT).setVisible(false);
+			menu.findItem(MyMenu.SETTINGS).setVisible(false);
 			return true;
 		}
 		
