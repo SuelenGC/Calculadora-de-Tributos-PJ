@@ -30,7 +30,7 @@
     </style>
     
 	<style name="TableRowText" parent="@style/FontBase">
-        <item name="android:textColor">@color/CinzaBrilhante</item>
+        <item name="android:textColor">@color/Preto</item>
         <item name="android:layout_height">@dimen/TableTitleRowHeight</item>
 		<item name="android:textSize">@dimen/TextSize</item>
     </style>
