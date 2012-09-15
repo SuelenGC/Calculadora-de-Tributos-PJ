@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Toast;
 import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.calctributospj.domain.TipoBaseCalculo;
+import br.com.suelengc.calctributospj.share.Email;
 import br.com.suelengc.calctributospj.view.menu.MyMenu;
 
 import com.actionbarsherlock.app.SherlockActivity;
@@ -66,8 +67,6 @@ public class MenuActivity extends SherlockActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		Intent intent;
 		
-		Log.d("SuelenGC", "Menu: " + item.getItemId());
-
 		switch (item.getItemId()) {
 		
 		case MyMenu.ABOUT:
@@ -79,7 +78,10 @@ public class MenuActivity extends SherlockActivity {
 			intent = new Intent(this, SettingsActivity.class);
 			startActivity(intent);
 			return true;
-
+		
+		case MyMenu.EMAIL:
+			new Email().sendEmail(this);
+		
 		}
 
 		return super.onOptionsItemSelected(item);

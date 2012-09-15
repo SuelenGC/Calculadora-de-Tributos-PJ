@@ -5,7 +5,6 @@ import android.content.Intent;
 
 public class Email {
 
-	
 	public void sendEmail(Context context) {
 		Intent intent = new Intent(Intent.ACTION_SEND);
 		intent.setType("message/rfc822");
