@@ -23,7 +23,7 @@
         <activity android:name=".view.activity.CalculationActivity"></activity>
 		<activity android:name=".view.activity.ConfigurationActivity"></activity>  
 		<activity android:name=".view.activity.MenuActivity"></activity>
-		<activity android:name=".view.activity.AboutActivity"></activity>
+		<activity android:name=".view.activity.AboutActivity" />
 		<activity android:name=".view.activity.SettingsActivity"></activity>
 		<activity android:name=".view.activity.CalculadoraActivity"></activity>
     </application>

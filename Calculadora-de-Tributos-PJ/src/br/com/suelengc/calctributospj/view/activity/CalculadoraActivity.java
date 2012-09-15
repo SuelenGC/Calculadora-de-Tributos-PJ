@@ -13,6 +13,7 @@ import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.calctributospj.domain.TipoBaseCalculo;
 import br.com.suelengc.calctributospj.domain.TipoTributacao;
 import br.com.suelengc.calctributospj.preference.PreferenciasCalculo;
+import br.com.suelengc.calctributospj.share.Email;
 import br.com.suelengc.calctributospj.view.fragment.EntradaDadosCalculoValorBrutoFragment;
 import br.com.suelengc.calctributospj.view.fragment.EntradaDadosCalculoValorPorHoraFragment;
 import br.com.suelengc.calctributospj.view.fragment.SaidaDadosCalculoLucroPresumidoFragment;
@@ -176,13 +177,12 @@ public class CalculadoraActivity extends SherlockFragmentActivity {
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		Intent intent;
-		
-		Log.d("SuelenGC", "Menu: " + item.getItemId());
-
 		switch (item.getItemId()) {
 		case MyMenu.HOME:
 			finish();
+			
+		case MyMenu.EMAIL:
+			new Email().sendEmail(this);
 		}
 		
 		return super.onOptionsItemSelected(item);

@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 import br.com.suelengc.calctributospj.R;
+import br.com.suelengc.calctributospj.share.Email;
 import br.com.suelengc.calctributospj.view.menu.MyMenu;
 
 import com.actionbarsherlock.app.SherlockActivity;
@@ -33,24 +33,26 @@ public class AboutActivity extends SherlockActivity{
 			MenuInflater mi = new MenuInflater(getApplicationContext());
 			mi.inflate(R.menu.menu, menu);
 			
+			//Ocultar menus desta tela
 			menu.findItem(MyMenu.ABOUT).setVisible(false);
 			menu.findItem(MyMenu.SETTINGS).setVisible(false);
+			
 			return true;
 		}
 		
 		@Override
 		public boolean onOptionsItemSelected(MenuItem item) {
-			Intent intent;
-			
-			Log.d("SuelenGC", "Menu: " + item.getItemId());
-
 			switch (item.getItemId()) {
+			
 			case MyMenu.HOME:
 				finish();
+				
+			case MyMenu.EMAIL:
+				new Email().sendEmail(this);
+			
+			default:
+				return super.onOptionsItemSelected(item);
 			}
-			
-			return super.onOptionsItemSelected(item);
-			
 		}
 	
 }
