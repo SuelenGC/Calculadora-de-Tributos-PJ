@@ -5,7 +5,7 @@ import android.content.Intent;
 
 public class Email {
 
-	public void sendEmail(Context context) {
+	public void openIntentEmail(Context context) {
 		Intent intent = new Intent(Intent.ACTION_SEND);
 		intent.setType("message/rfc822");
 		String[] emails = {"suelengcarvalho@gmail.com"};
