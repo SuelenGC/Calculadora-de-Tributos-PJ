@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+	<string name="setting_title_type_taxation">Tipo de Tributação</string>  
+	<string name="setting_summary_type_taxation">Define qual o tipo de tributação</string>
+	<string name="setting_title_percentage_irpj">Percentual de IRPJ</string>  
+	<string name="setting_summary_percentage_irpj">Define qual o percentual de IRPJ</string>
+</resources>

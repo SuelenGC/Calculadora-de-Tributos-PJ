@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 public class Preferences {
-	public static final String PREF_FILE_CTPJ = "PREFERENCES_CTPJ";
+	public static final String PREF_FILE_CTPJ = "PREFERENCIAS_CTPJ";
 	
     public static int getPreferenciaValorInteiro(Context c, String item) {
     	SharedPreferences settings = c.getSharedPreferences(PREF_FILE_CTPJ, Context.MODE_PRIVATE);

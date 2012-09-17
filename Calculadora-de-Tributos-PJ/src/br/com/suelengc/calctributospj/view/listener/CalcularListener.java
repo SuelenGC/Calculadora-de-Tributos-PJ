@@ -1,7 +1,9 @@
 package br.com.suelengc.calctributospj.view.listener;
 
+import android.content.Context;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import br.com.suelengc.calctributospj.R;
@@ -63,6 +65,11 @@ public class CalcularListener implements OnClickListener, BaseListener {
 			//Toast.makeText(p.getContext(), "CSLL: " + String.valueOf(((LucroPresumido) notaFiscal.getTributo()).getCsllMensal()), Toast.LENGTH_SHORT).show();
 			
 			setDadosSaida();
+			
+			//Ocultar o teclado virtual
+			Context context = p.getContext();
+            InputMethodManager imm = (InputMethodManager) context.getSystemService(context.INPUT_METHOD_SERVICE);  
+            imm.hideSoftInputFromWindow(tvcofins_retido.getWindowToken(), 0); 
 		}
 	}
 

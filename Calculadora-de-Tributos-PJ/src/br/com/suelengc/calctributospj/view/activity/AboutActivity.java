@@ -44,15 +44,15 @@ public class AboutActivity extends SherlockActivity{
 		public boolean onOptionsItemSelected(MenuItem item) {
 			switch (item.getItemId()) {
 			
+			case MyMenu.EMAIL:
+				new Email().openIntentEmail(this);
+				return true;
+			
 			case MyMenu.HOME:
 				finish();
-				
-			case MyMenu.EMAIL:
-				new Email().sendEmail(this);
-			
-			default:
-				return super.onOptionsItemSelected(item);
 			}
+			
+			return super.onOptionsItemSelected(item);
 		}
 	
 }

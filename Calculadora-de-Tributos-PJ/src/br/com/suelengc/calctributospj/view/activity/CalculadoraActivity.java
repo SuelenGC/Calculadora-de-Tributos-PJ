@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,7 +37,6 @@ public class CalculadoraActivity extends SherlockFragmentActivity {
 	TextView tvvalor_bruto, tvvalor_liquido, tvirpj_retido, tvcofins_retido, tvpis_retido, tvcsll_retido, tvinss_darf, tvirpj_darf, tvcsll_darf, tvtotaldescontosmensais;
 	TextView tvtributo_unificado;
 	PreferenciasCalculo preferencias;
-	//Bundle bundle;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,30 +49,33 @@ public class CalculadoraActivity extends SherlockFragmentActivity {
         getSupportActionBar().setBackgroundDrawable(bg);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
    
+        //Impedir que o teclado seja aberto ao abrir a activity
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        
         if(savedInstanceState != null){
-        	/*
-        	bundle = savedInstanceState;
-			tvvalor_liquido = (TextView) findViewById(R.id_calc.valorliquido);
-		    tvvalor_bruto = (TextView) findViewById(R.id_calc.valorbruto);
-		    tvirpj_retido = (TextView) findViewById(R.id_calc.irpj_retido);
-		    tvcofins_retido = (TextView) findViewById(R.id_calc.cofins_retido);
-		    tvpis_retido = (TextView) findViewById(R.id_calc.pis_retido);
-		    tvcsll_retido = (TextView) findViewById(R.id_calc.csll_retido);
-		    tvinss_darf = (TextView) findViewById(R.id_calc.iss_darf);
-		    tvirpj_darf = (TextView) findViewById(R.id_calc.irpj_darf);
-		    tvcsll_darf = (TextView) findViewById(R.id_calc.csll_darf);
-		    tvtotaldescontosmensais = (TextView) findViewById(R.id_calc.totaldescontosmensais);
-		    */
+        	
+//        	bundle = savedInstanceState;
+//			tvvalor_liquido = (TextView) findViewById(R.id_calc.valorliquido);
+//		    tvvalor_bruto = (TextView) findViewById(R.id_calc.valorbruto);
+//		    tvirpj_retido = (TextView) findViewById(R.id_calc.irpj_retido);
+//		    tvcofins_retido = (TextView) findViewById(R.id_calc.cofins_retido);
+//		    tvpis_retido = (TextView) findViewById(R.id_calc.pis_retido);
+//		    tvcsll_retido = (TextView) findViewById(R.id_calc.csll_retido);
+//		    tvinss_darf = (TextView) findViewById(R.id_calc.iss_darf);
+//		    tvirpj_darf = (TextView) findViewById(R.id_calc.irpj_darf);
+//		    tvcsll_darf = (TextView) findViewById(R.id_calc.csll_darf);
+//		    tvtotaldescontosmensais = (TextView) findViewById(R.id_calc.totaldescontosmensais);
+		   
 		    
 		    Toast.makeText(this, "Teste: " + savedInstanceState.getString("teste"), Toast.LENGTH_LONG).show();
-	    	/*
-		    tvvalor_liquido.setText(bundle.getString("valorliquido"));
-	    	tvvalor_bruto.setText(bundle.getString("valorbruto"));
-	    	tvirpj_retido.setText(bundle.getString("irpj_retido"));
-	    	tvcofins_retido.setText(bundle.getString("cofins_retido"));
-	    	tvpis_retido.setText(bundle.getString("pis_retido"));*/
 	    	
-        } //else {
+//		    tvvalor_liquido.setText(bundle.getString("valorliquido"));
+//	    	tvvalor_bruto.setText(bundle.getString("valorbruto"));
+//	    	tvirpj_retido.setText(bundle.getString("irpj_retido"));
+//	    	tvcofins_retido.setText(bundle.getString("cofins_retido"));
+//	    	tvpis_retido.setText(bundle.getString("pis_retido"));
+	    	
+        } 
         
     	FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
@@ -90,7 +93,6 @@ public class CalculadoraActivity extends SherlockFragmentActivity {
         	ft.replace(R.id_calc.dadosEntradaCalculo, myFragmentDadosEntrada);
         }
         ft.commit();	
-        //}        
    	}
 	
 	@Override
@@ -119,43 +121,40 @@ public class CalculadoraActivity extends SherlockFragmentActivity {
 
         fragmentTransaction.replace(R.id_calc.dadosSaidaCalculo, myFragmentDadosSaida);
         fragmentTransaction.commit(); 
-	}
-	
-	@Override
-	protected void onPause() {
-		super.onPause();
-		
+        
+        Toast toast = Toast.makeText(this, preferencias.getTipoTributacao().toString() + " / " + preferencias.getPercentIRPJ().toString(), Toast.LENGTH_LONG);
+        toast.show();
 	}
 	
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
-		super.onSaveInstanceState(outState);
+		//super.onSaveInstanceState(outState);
 		
 		//if (preferencias.getTipoTributacao().equals(TipoTributacao.LUCRO_PRESUMIDO)) {
 			
-			/*
-			tvvalor_liquido = (TextView) findViewById(R.id_calc.valorliquido);
-		    tvvalor_bruto = (TextView) findViewById(R.id_calc.valorbruto);
-		    tvirpj_retido = (TextView) findViewById(R.id_calc.irpj_retido);
-		    tvcofins_retido = (TextView) findViewById(R.id_calc.cofins_retido);
-		    tvpis_retido = (TextView) findViewById(R.id_calc.pis_retido);
-		    tvcsll_retido = (TextView) findViewById(R.id_calc.csll_retido);
-		    tvinss_darf = (TextView) findViewById(R.id_calc.iss_darf);
-		    tvirpj_darf = (TextView) findViewById(R.id_calc.irpj_darf);
-		    tvcsll_darf = (TextView) findViewById(R.id_calc.csll_darf);
-		    tvtotaldescontosmensais = (TextView) findViewById(R.id_calc.totaldescontosmensais);
-		    
-		    outState.putString("valorliquido", String.valueOf(tvvalor_liquido.getText()));
-		    outState.putString("valorbruto", String.valueOf(tvvalor_bruto.getText()));
-		    outState.putString("irpj_retido", String.valueOf(tvirpj_retido.getText()));
-		    outState.putString("cofins_retido", String.valueOf(tvcofins_retido.getText()));
-		    outState.putString("pis_retido", String.valueOf(tvpis_retido.getText()));
+			
+//			tvvalor_liquido = (TextView) findViewById(R.id_calc.valorliquido);
+//		    tvvalor_bruto = (TextView) findViewById(R.id_calc.valorbruto);
+//		    tvirpj_retido = (TextView) findViewById(R.id_calc.irpj_retido);
+//		    tvcofins_retido = (TextView) findViewById(R.id_calc.cofins_retido);
+//		    tvpis_retido = (TextView) findViewById(R.id_calc.pis_retido);
+//		    tvcsll_retido = (TextView) findViewById(R.id_calc.csll_retido);
+//		    tvinss_darf = (TextView) findViewById(R.id_calc.iss_darf);
+//		    tvirpj_darf = (TextView) findViewById(R.id_calc.irpj_darf);
+//		    tvcsll_darf = (TextView) findViewById(R.id_calc.csll_darf);
+//		    tvtotaldescontosmensais = (TextView) findViewById(R.id_calc.totaldescontosmensais);
+//		    
+//		    outState.putString("valorliquido", String.valueOf(tvvalor_liquido.getText()));
+//		    outState.putString("valorbruto", String.valueOf(tvvalor_bruto.getText()));
+//		    outState.putString("irpj_retido", String.valueOf(tvirpj_retido.getText()));
+//		    outState.putString("cofins_retido", String.valueOf(tvcofins_retido.getText()));
+//		    outState.putString("pis_retido", String.valueOf(tvpis_retido.getText()));
 		    //outState.putString("csll_retido", "123");
 		    //outState.putString("iss_darf", "123");
 		    //outState.putString("irpj_darf", "123");
 		    //outState.putString("csll_darf", "123");
 		    //outState.putString("totaldescontosmensais", "123");
-		    */
+		    
 			
 		outState.putString("teste", "123");
 		//}else if (preferencias.getTipoTributacao().equals(TipoTributacao.SIMPLES_NACIONAL)) {
@@ -172,17 +171,28 @@ public class CalculadoraActivity extends SherlockFragmentActivity {
 		MenuInflater mi = new MenuInflater(getApplicationContext());
 		mi.inflate(R.menu.menu, menu);
 		
+		//Ocultar menus desta tela
+		menu.findItem(MyMenu.SETTINGS).setVisible(false);
+		
 		return true;
 	}
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+		Intent intent = null;
+		
 		switch (item.getItemId()) {
 		case MyMenu.HOME:
 			finish();
 			
+		case MyMenu.ABOUT:
+			intent = new Intent(this, AboutActivity.class);
+			startActivity(intent);
+			return true;
+		
 		case MyMenu.EMAIL:
-			new Email().sendEmail(this);
+			new Email().openIntentEmail(this);
+			return false;
 		}
 		
 		return super.onOptionsItemSelected(item);

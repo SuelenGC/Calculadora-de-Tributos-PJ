@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Toast;
 import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.calctributospj.domain.TipoBaseCalculo;
+import br.com.suelengc.calctributospj.preference.Preferencias;
 import br.com.suelengc.calctributospj.share.Email;
 import br.com.suelengc.calctributospj.view.menu.MyMenu;
 
@@ -28,6 +29,7 @@ public class MenuActivity extends SherlockActivity {
 		
 		GradientDrawable bg = (GradientDrawable) getResources().getDrawable(R.drawable.bg_gradient);
         getSupportActionBar().setBackgroundDrawable(bg);
+        
 	}
 	
 	public void CallCalcActivity_ByValuePerHour(View view) {
@@ -56,7 +58,6 @@ public class MenuActivity extends SherlockActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		
-		Log.d("SuelenGC", menu.toString());
 		MenuInflater mi = new MenuInflater(getApplicationContext());
 		mi.inflate(R.menu.menu, menu);
 		
@@ -76,12 +77,13 @@ public class MenuActivity extends SherlockActivity {
 			
 		case MyMenu.SETTINGS:
 			intent = new Intent(this, SettingsActivity.class);
+//			intent = new Intent(this, ConfigurationActivity.class);
 			startActivity(intent);
 			return true;
 		
 		case MyMenu.EMAIL:
-			new Email().sendEmail(this);
-		
+			new Email().openIntentEmail(this);
+			return true;
 		}
 
 		return super.onOptionsItemSelected(item);

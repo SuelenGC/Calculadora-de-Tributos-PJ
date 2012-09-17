@@ -20,8 +20,8 @@ public class PreferenciasCalculo {
 	
 	public TipoTributacao getTipoTributacao() {
 		TipoTributacao retorno = null;
-		int tributacao = preferencias.getInt("TipoTributacao");
-		
+		int tributacao = Integer.parseInt(preferencias.getString("TipoTributacao"));
+				
 		if (tributacao == LUCRO_PRESUMIDO){
 			retorno = TipoTributacao.LUCRO_PRESUMIDO;
 		}else if (tributacao == SIMPLES_NACIONAL) {
@@ -35,7 +35,7 @@ public class PreferenciasCalculo {
 
 	public PercentualIRPJ getPercentIRPJ() {
 		PercentualIRPJ retorno = null;
-		int percIRPJ = preferencias.getInt("PercIRPJ");
+		int percIRPJ = Integer.parseInt(preferencias.getString("PercentualIRPJ"));
 		
 		if (percIRPJ == DOIS_PONTO_QUADRO){
 			retorno = PercentualIRPJ.DOIS_PONTO_QUATRO;

@@ -1,42 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:windowBackground="@color/AzulClaro">
-    <!-- 
+    
     <PreferenceCategory 
         android:title="Definições de Cálculo"
         android:key="calculation_category">
         
         <ListPreference 
-            android:key="tipoTributacao"
+            android:key="TipoTributacao"
             android:title="@string/setting_title_type_taxation"
             android:summary="@string/setting_summary_type_taxation"
-            android:defaultValue="1" 
-            android:entries="@array/tipoTributacao"
-            android:entryValues="@array/tipoTributacaoValues" />    
-            
-         <ListPreference 
-            android:key="percIRPJ"
+            android:entries="@array/entries_tipo_tributacao"
+            android:entryValues="@array/entry_values_tipo_tributacao"
+            android:dialogTitle="Escolha o tipo de tributação:"
+            android:defaultValue="1"
+            android:persistent="true" />    
+   
+	    <ListPreference 
+            android:key="PercentualIRPJ"
             android:title="@string/setting_title_percentage_irpj"
             android:summary="@string/setting_summary_percentage_irpj"
-            android:defaultValue="240" 
-            android:entries="@array/percIRPJ"
-            android:entryValues="@array/percIRPJValues" />    
+            android:entries="@array/entries_percentual_irpj"
+            android:entryValues="@array/entry_values_percentual_irpj"
+            android:dialogTitle="Escolha o percentual de IRPJ:"
+            android:defaultValue="1"
+            android:persistent="true" />    
+ 
     </PreferenceCategory>
-    -->
-
-    <PreferenceCategory 
-        android:title="Definições de Exibição"
-        android:key="exibition_category">
-
-        <EditTextPreference
-            android:key="welcome_message"
-            android:title="Welcome Message" 
-            android:summary="Define the Welcome message to be shown"
-            android:dialogTitle="Welcome Message"
-            android:dialogMessage="Provide a message"    
-            android:defaultValue="Default welcome message"
-            android:background="@drawable/rounded_button_menu" />
-
-    </PreferenceCategory>
-
+    
 </PreferenceScreen>
