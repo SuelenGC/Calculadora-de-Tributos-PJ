@@ -28,9 +28,8 @@
  
     </PreferenceCategory>
     
-    <PreferenceCategory 
-        android:title="Percentuais usados no cálculo"
-        android:key="calculation_category">
-        
-    </PreferenceCategory>
+    <br.com.suelengc.calctributospj.view.activity.CustomDialog
+        android:title="Percentuais de Cálculo"
+        android:summary="Listagens dos percentuais usados nos cálculos"/> 
+                
 </PreferenceScreen>

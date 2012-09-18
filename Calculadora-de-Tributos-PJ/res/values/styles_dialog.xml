@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	<style name="Dialog" parent="@android:style/Theme.Dialog">
+		<item name="android:windowBackground">@color/BrancoOpaco</item>
+		<item name="android:windowIsFloating">false</item>
+		<item name="android:windowNoTitle">true</item>
+	</style>
+	
+    
+	<style name="TableRowTitleDialog">
+        <item name="android:textColor">@color/Cinza</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">@dimen/TextSize</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    
+	<style name="TableRowTextDialog">
+        <item name="android:textColor">@color/Cinza</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    
+</resources>
