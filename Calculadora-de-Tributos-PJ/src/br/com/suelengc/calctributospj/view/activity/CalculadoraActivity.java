@@ -49,6 +49,12 @@ public class CalculadoraActivity extends SherlockFragmentActivity {
         
         //-- Carrega preferencias de calculo
         preferencias = new PreferenciasCalculo(getApplicationContext());
+        if (baseCalculo.equals(TipoBaseCalculo.VALOR_BRUTO)) {
+        	setTitle("Cálculo pelo Valor Bruto");
+        	
+        }else {
+        	setTitle("Cálculo pelo Valor/Hora");
+        }
         
         if (savedInstanceState == null) {
         	//-- Cria fragment entrada
@@ -58,12 +64,10 @@ public class CalculadoraActivity extends SherlockFragmentActivity {
             
             //Escolhe qual fragment de entrada será apresentado a depender do tipo do tributo
             if (baseCalculo.equals(TipoBaseCalculo.VALOR_BRUTO)) {
-            	setTitle("Cálculo pelo Valor Bruto");
             	myFragmentDadosEntrada = new EntradaDadosCalculoValorBrutoFragment();
             	ft.replace(R.id_calc.dadosEntradaCalculo, myFragmentDadosEntrada);
             	
             }else {
-            	setTitle("Cálculo pelo Valor/Hora");
             	myFragmentDadosEntrada = new EntradaDadosCalculoValorPorHoraFragment();
             	ft.replace(R.id_calc.dadosEntradaCalculo, myFragmentDadosEntrada);
             }
