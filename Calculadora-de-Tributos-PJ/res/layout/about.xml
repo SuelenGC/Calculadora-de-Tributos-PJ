@@ -26,11 +26,13 @@
 		    style="@style/FontBase"
             android:text="@string/about_label_website" />
         
+        
         <TextView
 		    android:layout_height="wrap_content"
 		    android:layout_width="wrap_content"
 		    style="@style/FontBaseBold"
 		    android:paddingBottom="30dp" 
+		    android:autoLink="web"
             android:text="@string/about_website" />
         
         <TextView
