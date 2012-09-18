@@ -69,7 +69,7 @@ public class CalcularListener implements OnClickListener, BaseListener {
 			//Ocultar o teclado virtual
 			Context context = p.getContext();
             InputMethodManager imm = (InputMethodManager) context.getSystemService(context.INPUT_METHOD_SERVICE);  
-            imm.hideSoftInputFromWindow(tvcofins_retido.getWindowToken(), 0); 
+            imm.hideSoftInputFromWindow(tvvalor_liquido.getWindowToken(), 0); 
 		}
 	}
 
