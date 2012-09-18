@@ -1,16 +1,12 @@
 package br.com.suelengc.calctributospj.view.activity;
 
-import android.app.Fragment;
 import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.calctributospj.domain.TipoBaseCalculo;
 import br.com.suelengc.calctributospj.domain.TipoTributacao;

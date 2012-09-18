@@ -4,7 +4,7 @@ import android.widget.EditText;
 
 public class Validator {
 
-	public static boolean ValidaEditText(EditText editText) {
+	public boolean ValidaEditText(EditText editText) {
 		boolean retorno = true;
 		
 		if (editText.getText().toString().equals("")) 

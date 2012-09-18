@@ -16,6 +16,7 @@ import br.com.suelengc.calctributospj.model.SimplesNacional;
 import br.com.suelengc.calctributospj.model.Tributo;
 import br.com.suelengc.calctributospj.preference.PreferenciasCalculo;
 import br.com.suelengc.calctributospj.view.controller.Formatter;
+import br.com.suelengc.calctributospj.view.controller.Validator;
 
 public class CalcularListener implements OnClickListener, BaseListener {
 	PreferenciasCalculo preferencias;
@@ -26,6 +27,7 @@ public class CalcularListener implements OnClickListener, BaseListener {
 	
 	TextView tvvalor_bruto, tvvalor_liquido, tvirpj_retido, tvcofins_retido, tvpis_retido, tvcsll_retido, tvinss_darf, tvirpj_darf, tvcsll_darf, tvtotaldescontosmensais;
 	TextView tvtributo_unificado;
+	EditText edValorBruto, edValorHora, edQtdeHora;
 	
 	public CalcularListener(PreferenciasCalculo preferencias, TipoBaseCalculo baseCalculo) {
 		this.preferencias = preferencias;
@@ -35,22 +37,30 @@ public class CalcularListener implements OnClickListener, BaseListener {
 
 	@Override
 	public void onClick(View view) {
-		
 		p = (View) view.getRootView();
 		
 		if (p != null) {
 
 			if (baseCalculo.equals(TipoBaseCalculo.VALOR_BRUTO)) {
-				EditText edValorBruto = (EditText) p.findViewById(R.id_calc.valorBruto);
+				edValorBruto = (EditText) p.findViewById(R.id_calc.valorBruto);
+				
+				if (!validaDadosEntrada()) {
+					return;
+				}
+				
 				double valorBruto = Double.parseDouble(edValorBruto.getText().toString());
 
 				notaFiscal = new NotaFiscal(valorBruto);
 				
 			} else if (baseCalculo.equals(TipoBaseCalculo.VALOR_HORA)) {
-				EditText edValorHora = (EditText) p.findViewById(R.id_calc.valorHora);
-				double valorHora = Double.parseDouble(edValorHora.getText().toString());
+				edValorHora = (EditText) p.findViewById(R.id_calc.valorHora);
+				edQtdeHora = (EditText) p.findViewById(R.id_calc.qtdeHoras);
 				
-				EditText edQtdeHora = (EditText) p.findViewById(R.id_calc.qtdeHoras);
+				if (!validaDadosEntrada()) {
+					return;
+				}
+				
+				double valorHora = Double.parseDouble(edValorHora.getText().toString());
 				double qtdeHora = Double.parseDouble(edQtdeHora.getText().toString()); 
 				
 				notaFiscal = new NotaFiscal(valorHora, qtdeHora);
@@ -61,9 +71,6 @@ public class CalcularListener implements OnClickListener, BaseListener {
 			notaFiscal.setTributos(tributo);
 			notaFiscal.CalcularTributos();
 			
-			//Toast.makeText(p.getContext(), "Cofins: " + String.valueOf(((LucroPresumido) notaFiscal.getTributo()).getCofinsMensal()), Toast.LENGTH_SHORT).show();
-			//Toast.makeText(p.getContext(), "CSLL: " + String.valueOf(((LucroPresumido) notaFiscal.getTributo()).getCsllMensal()), Toast.LENGTH_SHORT).show();
-			
 			setDadosSaida();
 			
 			//Ocultar o teclado virtual
@@ -71,6 +78,25 @@ public class CalcularListener implements OnClickListener, BaseListener {
             InputMethodManager imm = (InputMethodManager) context.getSystemService(context.INPUT_METHOD_SERVICE);  
             imm.hideSoftInputFromWindow(tvvalor_liquido.getWindowToken(), 0); 
 		}
+	}
+
+	private boolean validaDadosEntrada() {
+		Validator validator = new Validator();
+		
+		if (baseCalculo.equals(TipoBaseCalculo.VALOR_BRUTO)) {
+			if (!validator.ValidaEditText(edValorBruto)) { 
+				return false;
+			}			
+		} else if (baseCalculo.equals(TipoBaseCalculo.VALOR_HORA)) {
+			if (!validator.ValidaEditText(edValorHora)) { 
+				return false;
+			}
+			
+			if (!validator.ValidaEditText(edQtdeHora)) { 
+				return false;
+			}	
+		}
+		return true;
 	}
 
 	@Override

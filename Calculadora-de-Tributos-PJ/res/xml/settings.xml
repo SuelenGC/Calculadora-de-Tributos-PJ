@@ -28,4 +28,9 @@
  
     </PreferenceCategory>
     
+    <PreferenceCategory 
+        android:title="Percentuais usados no cálculo"
+        android:key="calculation_category">
+        
+    </PreferenceCategory>
 </PreferenceScreen>

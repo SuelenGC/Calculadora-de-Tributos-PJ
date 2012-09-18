@@ -3,12 +3,9 @@ package br.com.suelengc.calctributospj.view.activity;
 import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.calctributospj.domain.TipoBaseCalculo;
-import br.com.suelengc.calctributospj.preference.Preferencias;
 import br.com.suelengc.calctributospj.share.Email;
 import br.com.suelengc.calctributospj.view.menu.MyMenu;
 

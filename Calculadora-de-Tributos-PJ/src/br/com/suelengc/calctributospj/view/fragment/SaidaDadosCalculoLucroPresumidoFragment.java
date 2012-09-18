@@ -5,10 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 import br.com.suelengc.calctributospj.R;
-import br.com.suelengc.calctributospj.domain.TipoTributacao;
-import br.com.suelengc.calctributospj.preference.PreferenciasCalculo;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
