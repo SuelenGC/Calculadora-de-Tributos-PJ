@@ -1,5 +1,6 @@
 package br.com.suelengc.calctributospj.model;
 
+import br.com.suelengc.calctributospj.domain.PercentualIRPJ;
 import android.test.AndroidTestCase;
 
 public class InvoiceTest extends AndroidTestCase {
@@ -9,10 +10,10 @@ public class InvoiceTest extends AndroidTestCase {
 		double grossValue = 6000;
 		
 		//Defining IRPJ percentage
-		float percIRPJ = 2.4f;
+		PercentualIRPJ percIRPJ = PercentualIRPJ.DOIS_PONTO_QUATRO;
 		
 		//Defining Taxation type
-		Tributo tax = new TributoLucroPresumido(grossValue, percIRPJ);
+		Tributo tax = new LucroPresumido(percIRPJ);
 		
 		//Create a new invoice
 		NotaFiscal invoice = new NotaFiscal(grossValue, tax);
@@ -26,7 +27,7 @@ public class InvoiceTest extends AndroidTestCase {
 		double grossValue = 9000;
 		
 		//Defining taxation type
-		Tributo tax = new SimplesNacional(grossValue);
+		Tributo tax = new SimplesNacional();
 		
 		//Create a new invoice
 		NotaFiscal invoice = new NotaFiscal(grossValue, tax);

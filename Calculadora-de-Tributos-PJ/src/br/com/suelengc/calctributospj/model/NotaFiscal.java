@@ -15,6 +15,11 @@ public class NotaFiscal {
 		this(valorHora * qtdeHora);
 	}
 
+	public NotaFiscal(double valorTotalNotaFiscal, Tributo tributo) {
+		this.valorBruto = valorTotalNotaFiscal;
+		this.setTributos(tributo);
+	}
+
 	public void setTributos(Tributo tributo) {
 		this.tributo = tributo;
 	}
