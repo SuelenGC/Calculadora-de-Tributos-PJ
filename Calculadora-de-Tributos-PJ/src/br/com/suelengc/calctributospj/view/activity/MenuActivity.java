@@ -47,11 +47,6 @@ public class MenuActivity extends SherlockActivity {
 		startActivity(intent);
 	}
 	
-	public void CallConfigActivity(View view) {
-		Intent intent = new Intent(this, ConfigurationActivity.class);
-		startActivity(intent);
-	}
-	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		
@@ -74,7 +69,6 @@ public class MenuActivity extends SherlockActivity {
 			
 		case MyMenu.SETTINGS:
 			intent = new Intent(this, SettingsActivity.class);
-//			intent = new Intent(this, ConfigurationActivity.class);
 			startActivity(intent);
 			return true;
 		

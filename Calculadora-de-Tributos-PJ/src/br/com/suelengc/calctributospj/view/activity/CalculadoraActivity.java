@@ -60,17 +60,15 @@ public class CalculadoraActivity extends SherlockFragmentActivity {
         	//-- Cria fragment entrada
         	FragmentManager fm = getSupportFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
-            SherlockFragment myFragmentDadosEntrada;
+            SherlockFragment myFragmentDadosEntrada = null;
             
             //Escolhe qual fragment de entrada será apresentado a depender do tipo do tributo
             if (baseCalculo.equals(TipoBaseCalculo.VALOR_BRUTO)) {
             	myFragmentDadosEntrada = new EntradaDadosCalculoValorBrutoFragment();
-            	ft.replace(R.id_calc.dadosEntradaCalculo, myFragmentDadosEntrada);
-            	
             }else {
             	myFragmentDadosEntrada = new EntradaDadosCalculoValorPorHoraFragment();
-            	ft.replace(R.id_calc.dadosEntradaCalculo, myFragmentDadosEntrada);
             }
+            ft.replace(R.id_calc.dadosEntradaCalculo, myFragmentDadosEntrada);
             ft.commit();	
             
             //-- Cria fragment saida
