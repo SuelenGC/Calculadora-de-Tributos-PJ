@@ -44,7 +44,7 @@
     <style name="MenuButtonBase" parent="@style/ButtonBase">
     	<item name="android:layout_height">@dimen/MenuButtonHeight</item>
     	<item name="android:layout_width">fill_parent</item>
-    	<item name="android:background">@drawable/rounded_button_menu</item>
+    	<item name="android:background">@drawable/button_menu</item>
     	<item name="android:gravity">left|center_vertical</item>
     	<item name="android:drawableRight">@drawable/ic_next</item>
     	<item name="android:textColor">@color/Preto</item>
