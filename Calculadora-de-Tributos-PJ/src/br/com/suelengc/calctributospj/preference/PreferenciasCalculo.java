@@ -55,4 +55,14 @@ public class PreferenciasCalculo {
 		
 		return retorno;
 	}
+	
+	public float getPercentISS() {
+		float retorno = 0;
+		
+		if (preferencias.getFloat("PencentualISS") <= 0) {
+			retorno = preferencias.getFloat("PencentualISS");	
+		}
+		
+		return retorno;
+	}
 }

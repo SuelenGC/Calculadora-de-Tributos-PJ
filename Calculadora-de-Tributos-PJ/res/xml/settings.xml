@@ -24,7 +24,15 @@
             android:entryValues="@array/entry_values_percentual_irpj"
             android:dialogTitle="Escolha o percentual de IRPJ:"
             android:defaultValue="1"
-            android:persistent="true" />    
+            android:persistent="true" /> 
+            
+	    <EditTextPreference
+	        android:key="PencentualISS"
+	        android:title="@string/setting_title_percentage_iss"
+	        android:summary="@string/setting_summary_percentage_iss"
+	        android:dialogTitle="Escolha o percentual de ISS:"
+	        android:defaultValue="2"
+	        android:persistent="true" />
  
     </PreferenceCategory>
     
