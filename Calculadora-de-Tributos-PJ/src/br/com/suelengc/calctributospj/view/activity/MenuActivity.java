@@ -30,14 +30,14 @@ public class MenuActivity extends SherlockActivity {
 	}
 	
 	public void CallCalcActivity_ByValuePerHour(View view) {
-		Intent intent = new Intent(this, CalculadoraActivity.class);
+		Intent intent = new Intent(this, CalculatorActivity.class);
 		intent.putExtra(EXTRA_FORMATO_TELA, TipoBaseCalculo.VALOR_HORA);
 		startActivity(intent);
 		
 	}
 	
 	public void CallCalcActivity_ByValue(View view) {
-		Intent intent = new Intent(this, CalculadoraActivity.class);
+		Intent intent = new Intent(this, CalculatorActivity.class);
 		intent.putExtra(EXTRA_FORMATO_TELA, TipoBaseCalculo.VALOR_BRUTO);
 		startActivity(intent);
 	}

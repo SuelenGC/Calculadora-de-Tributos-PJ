@@ -25,7 +25,7 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 
-public class CalculadoraActivity extends SherlockFragmentActivity {
+public class CalculatorActivity extends SherlockFragmentActivity {
 	
 	public static final String EXTRA_FORMATO_TELA = "1";
 	Button btnCalcular;
@@ -36,7 +36,7 @@ public class CalculadoraActivity extends SherlockFragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
-        setContentView(R.layout.calculadora);
+        setContentView(R.layout.calculator);
 
         baseCalculo = (TipoBaseCalculo) getIntent().getSerializableExtra(EXTRA_FORMATO_TELA);
 
