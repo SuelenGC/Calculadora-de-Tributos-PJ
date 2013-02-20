@@ -12,9 +12,11 @@ public class TributoFactory {
 		Tributo tributo = null;
 		
 		if (preferencias.getTipoTributacao().equals(TipoTributacao.LUCRO_PRESUMIDO)) {
-			tributo = new LucroPresumido(preferencias.getPercentIRPJ());
+			tributo = new LucroPresumido(preferencias.getPercentIRPJ(), preferencias.getPercentISS());
+		
 		} else if (preferencias.getTipoTributacao().equals(TipoTributacao.SIMPLES_NACIONAL)) {
 			tributo = new SimplesNacional();
+		
 		}
 		return tributo;
 	}

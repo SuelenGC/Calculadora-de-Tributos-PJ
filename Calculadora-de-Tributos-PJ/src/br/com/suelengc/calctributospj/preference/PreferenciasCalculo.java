@@ -3,6 +3,7 @@ package br.com.suelengc.calctributospj.preference;
 import android.content.Context;
 import br.com.suelengc.calctributospj.domain.PercentualIRPJ;
 import br.com.suelengc.calctributospj.domain.TipoTributacao;
+import br.com.suelengc.calctributospj.view.controller.Formatter;
 
 public class PreferenciasCalculo {
 
@@ -59,8 +60,8 @@ public class PreferenciasCalculo {
 	public float getPercentISS() {
 		float retorno = 0;
 		
-		if (preferencias.getFloat("PencentualISS") <= 0) {
-			retorno = preferencias.getFloat("PencentualISS");	
+		if (preferencias.getString("PencentualISS") != null) {
+			retorno = Float.parseFloat(new Formatter().commaToDot(preferencias.getString("PencentualISS")));	
 		}
 		
 		return retorno;

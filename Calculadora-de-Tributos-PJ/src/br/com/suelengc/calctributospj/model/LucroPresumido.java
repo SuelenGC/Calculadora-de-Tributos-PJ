@@ -12,8 +12,9 @@ public class LucroPresumido implements Tributo {
 	private double issMensal;
 	private PercentualIRPJ percentualIrpj;
 
-	public LucroPresumido(PercentualIRPJ percentIRPJ) {
-		percentualIrpj = percentIRPJ;
+	public LucroPresumido(PercentualIRPJ percentIRPJ, double percentISS) {
+		this.percentualIrpj = percentIRPJ;
+		this.issMensal = percentISS;
 	}
 
 	public double getIrpjMensal() {
@@ -63,6 +64,6 @@ public class LucroPresumido implements Tributo {
 		this.pisMensal = valorBruto * 0.0065;
 		this.csllMensal = valorBruto * 0.01;
 		this.csllTrimetral = valorBruto * 0.0188;
-		this.issMensal = valorBruto * 0.02;
+		this.issMensal *= valorBruto / 100;
 	}
 }

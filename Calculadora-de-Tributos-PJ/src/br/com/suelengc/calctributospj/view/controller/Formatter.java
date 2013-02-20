@@ -10,4 +10,9 @@ public class Formatter {
 		NumberFormat df = new DecimalFormat("#,##0.00", new DecimalFormatSymbols(new Locale("pt", "BR")));
 		return df.format(valor);
 	}
+
+	public String commaToDot(String value) {
+		return value.replace(",", "."); 
+	}
+
 }

@@ -1,7 +1,5 @@
 package br.com.suelengc.calctributospj.view.listener;
 
-import java.util.ResourceBundle;
-
 import android.content.Context;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -42,10 +40,10 @@ public class CalcularListener implements OnClickListener, BaseListener {
 		p = (View) view.getRootView();
 		
 		if (p != null) {
-
+			
 			if (baseCalculo.equals(TipoBaseCalculo.VALOR_BRUTO)) {
 				edValorBruto = (EditText) p.findViewById(R.id_calc.valorBruto);
-				
+
 				if (!validaDadosEntrada()) {
 					return;
 				}
@@ -86,15 +84,15 @@ public class CalcularListener implements OnClickListener, BaseListener {
 		Validator validator = new Validator();
 		
 		if (baseCalculo.equals(TipoBaseCalculo.VALOR_BRUTO)) {
-			if (!validator.ValidaEditText(edValorBruto)) { 
+			if (!validator.validateEditText(edValorBruto)) { 
 				return false;
 			}			
 		} else if (baseCalculo.equals(TipoBaseCalculo.VALOR_HORA)) {
-			if (!validator.ValidaEditText(edValorHora)) { 
+			if (!validator.validateEditText(edValorHora)) { 
 				return false;
 			}
 			
-			if (!validator.ValidaEditText(edQtdeHora)) { 
+			if (!validator.validateEditText(edQtdeHora)) { 
 				return false;
 			}	
 		}
