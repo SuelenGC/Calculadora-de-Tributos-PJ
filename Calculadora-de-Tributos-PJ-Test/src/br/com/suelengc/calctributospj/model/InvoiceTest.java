@@ -13,7 +13,7 @@ public class InvoiceTest extends AndroidTestCase {
 		PercentualIRPJ percIRPJ = PercentualIRPJ.DOIS_PONTO_QUATRO;
 		
 		//Defining Taxation type
-		Tributo tax = new LucroPresumido(percIRPJ);
+		Tributo tax = new LucroPresumido(percIRPJ, 3);
 		
 		//Create a new invoice
 		NotaFiscal invoice = new NotaFiscal(grossValue, tax);
