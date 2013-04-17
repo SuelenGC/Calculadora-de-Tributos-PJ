@@ -13,7 +13,11 @@ Se o tipo de tributação for Simples Nacional, será calculado o tributo unific
 
 Lista de Funcionalidades
 ========================
- 
+
+Versão 6 (3.0)
+    - Corrigido bug ao calcular com o tipo de tributação Simples Nacional.
+    - Re-design total da interface com o usuário. Criado nova identidade visual.
+
 Versão 5 (2.2.1)
     - Corrigido bug ao executar cálculo sem preencher nenhuma informação.
 
