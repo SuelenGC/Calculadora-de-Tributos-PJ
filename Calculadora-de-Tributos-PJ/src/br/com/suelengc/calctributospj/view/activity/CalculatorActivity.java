@@ -1,6 +1,5 @@
 package br.com.suelengc.calctributospj.view.activity;
 
-import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -11,7 +10,6 @@ import br.com.suelengc.calctributospj.R;
 import br.com.suelengc.calctributospj.domain.TipoBaseCalculo;
 import br.com.suelengc.calctributospj.domain.TipoTributacao;
 import br.com.suelengc.calctributospj.preference.PreferenciasCalculo;
-import br.com.suelengc.calctributospj.share.Email;
 import br.com.suelengc.calctributospj.view.fragment.EntradaDadosCalculoValorBrutoFragment;
 import br.com.suelengc.calctributospj.view.fragment.EntradaDadosCalculoValorPorHoraFragment;
 import br.com.suelengc.calctributospj.view.fragment.SaidaDadosCalculoLucroPresumidoFragment;
@@ -20,12 +18,10 @@ import br.com.suelengc.calctributospj.view.listener.CalcularListener;
 import br.com.suelengc.calctributospj.view.menu.MyMenu;
 
 import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
 
-public class CalculatorActivity extends SherlockFragmentActivity {
+public class CalculatorActivity extends BaseActivity {
 	
 	public static final String EXTRA_FORMATO_TELA = "1";
 	Button btnCalcular;
@@ -44,10 +40,10 @@ public class CalculatorActivity extends SherlockFragmentActivity {
         getSupportActionBar().setBackgroundDrawable(bg);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
    
-        //-- Impedir que o teclado seja aberto ao abrir a activity
+        /** Impedir que o teclado seja aberto ao abrir a activity */
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         
-        //-- Carrega preferencias de calculo
+        /** Carrega preferencias de calculo */
         preferencias = new PreferenciasCalculo(getApplicationContext());
         if (baseCalculo.equals(TipoBaseCalculo.VALOR_BRUTO)) {
         	setTitle("Cálculo pelo Valor Bruto");
@@ -57,12 +53,12 @@ public class CalculatorActivity extends SherlockFragmentActivity {
         }
         
         if (savedInstanceState == null) {
-        	//-- Cria fragment entrada
+        	/** Cria fragment entrada */
         	FragmentManager fm = getSupportFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
             SherlockFragment myFragmentDadosEntrada = null;
             
-            //Escolhe qual fragment de entrada será apresentado a depender do tipo do tributo
+            /** Escolhe qual fragment de entrada será apresentado a depender do tipo do tributo */
             if (baseCalculo.equals(TipoBaseCalculo.VALOR_BRUTO)) {
             	myFragmentDadosEntrada = new EntradaDadosCalculoValorBrutoFragment();
             }else {
@@ -71,7 +67,7 @@ public class CalculatorActivity extends SherlockFragmentActivity {
             ft.replace(R.id_calc.dadosEntradaCalculo, myFragmentDadosEntrada);
             ft.commit();	
             
-            //-- Cria fragment saida
+            /** Cria fragment saida */
             SherlockFragment myFragmentDadosSaida = null;
     		
             FragmentManager fragmentManager = getSupportFragmentManager();
@@ -106,33 +102,9 @@ public class CalculatorActivity extends SherlockFragmentActivity {
 		MenuInflater mi = new MenuInflater(getApplicationContext());
 		mi.inflate(R.menu.menu, menu);
 		
-		//Ocultar menus desta tela
+		/** Ocultar menus desta tela */
 		menu.findItem(MyMenu.SETTINGS).setVisible(false);
 		
 		return true;
 	}
-	
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		Intent intent = null;
-		
-		switch (item.getItemId()) {
-		case MyMenu.HOME:
-			finish();
-			break;
-			
-		case MyMenu.ABOUT:
-			intent = new Intent(this, AboutActivity.class);
-			startActivity(intent);
-			return true;
-		
-		case MyMenu.EMAIL:
-			new Email().openIntentEmail(this);
-			return false;
-		}
-		
-		return super.onOptionsItemSelected(item);
-		
-	}
-	
 }
