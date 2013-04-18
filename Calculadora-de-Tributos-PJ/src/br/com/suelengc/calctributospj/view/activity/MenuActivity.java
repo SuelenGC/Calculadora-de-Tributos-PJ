@@ -10,11 +10,12 @@ import br.com.suelengc.calctributospj.share.Email;
 import br.com.suelengc.calctributospj.view.menu.MyMenu;
 
 import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 
-public class MenuActivity extends SherlockActivity {
+public class MenuActivity extends SherlockFragmentActivity {
 
 	public static final String EXTRA_FORMATO_TELA = "1"; 
 	

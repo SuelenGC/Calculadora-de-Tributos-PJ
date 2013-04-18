@@ -8,11 +8,12 @@ import br.com.suelengc.calctributospj.share.Email;
 import br.com.suelengc.calctributospj.view.menu.MyMenu;
 
 import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 
-public class AboutActivity extends SherlockActivity {
+public class AboutActivity extends SherlockFragmentActivity {
 		    
 	    @Override
 	    public void onCreate(Bundle savedInstanceState) {

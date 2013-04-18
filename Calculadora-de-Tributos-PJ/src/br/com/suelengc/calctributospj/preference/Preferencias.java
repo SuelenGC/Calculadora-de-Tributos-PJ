@@ -13,7 +13,7 @@ public class Preferencias {
 		editor = preferencias.edit();
 	}
 	
-	// get-set int
+	/** get-set int */
 	public int getInt(String item) {
     	return preferencias.getInt(item, 0);
 	}
@@ -23,7 +23,7 @@ public class Preferencias {
         editor.commit();
 	}
 
-	// get-set float
+	/** get-set float */
 	public float getFloat(String item) {
     	return preferencias.getFloat(item, 0.0f);
 	}
@@ -33,7 +33,7 @@ public class Preferencias {
         editor.commit();
 	}
 	
-	// get-set string
+	/** get-set string */
 	public String getString(String item) {
     	return preferencias.getString(item, null);
 	}
@@ -43,7 +43,7 @@ public class Preferencias {
         editor.commit();
 	}
 	
-	// get-set long
+	/** get-set long */
 	public long getLong(String item) {
     	return preferencias.getLong(item, 0);
 	}
@@ -53,7 +53,7 @@ public class Preferencias {
         editor.commit();
 	}
 	
-	// get-set boolean
+	/** get-set boolean */
 	public boolean getBoolean(String item) {
     	return preferencias.getBoolean(item, false);
 	}

@@ -26,14 +26,16 @@
             android:defaultValue="1"
             android:persistent="true" /> 
             
-	    <EditTextPreference
+	    <ListPreference
 	        android:key="PencentualISS"
 	        android:title="@string/setting_title_percentage_iss"
+	        android:entries="@array/entries_percentual_iss"
+	        android:entryValues="@array/entry_values_percentual_iss"
 	        android:summary="@string/setting_summary_percentage_iss"
 	        android:dialogTitle="Escolha o percentual de ISS:"
 	        android:defaultValue="2"
 	        android:persistent="true" />
- 
+	   
     </PreferenceCategory>
     
     <br.com.suelengc.calctributospj.view.activity.CustomDialog
