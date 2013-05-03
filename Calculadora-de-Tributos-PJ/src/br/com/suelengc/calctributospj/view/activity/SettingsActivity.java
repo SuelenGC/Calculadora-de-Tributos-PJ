@@ -25,7 +25,6 @@ public class SettingsActivity extends SherlockPreferenceActivity {
         pm.setSharedPreferencesMode(this.MODE_PRIVATE);
         
         addPreferencesFromResource(R.xml.settings);		
-        
 	}
 	
 	@Override
@@ -36,6 +35,5 @@ public class SettingsActivity extends SherlockPreferenceActivity {
 		}
 		
 		return super.onOptionsItemSelected(item);
-		
 	}
 }

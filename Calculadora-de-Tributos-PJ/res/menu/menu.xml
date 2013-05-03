@@ -22,6 +22,11 @@
         android:icon="@drawable/ic_about"
         android:showAsAction="always" />
     
-
+    <item 
+        android:id="@+id_menu/Copy" 
+        android:title="@string/action_copy" 
+        android:orderInCategory="4"
+        android:icon="@drawable/ic_copy"
+        android:showAsAction="always" />	
     
 </menu>

@@ -9,4 +9,8 @@
     	<item name="android:drawableLeft">@drawable/ic_dinheiro</item>
     </style>
     
+    <style name="ButtonDonate" parent="@style/MenuButtonBase">
+    	<item name="android:drawableLeft">@drawable/ic_donate</item>
+    	<item name="android:paddingLeft">5dp</item>
+    </style>
 </resources>

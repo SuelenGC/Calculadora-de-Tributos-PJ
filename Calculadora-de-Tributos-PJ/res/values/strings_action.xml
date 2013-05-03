@@ -3,5 +3,5 @@
     <string name="action_settings">Configurações</string>
     <string name="action_informations">Informações</string>
     <string name="action_email">Email</string>
-    
+    <string name="action_copy">Copiar</string>
 </resources>

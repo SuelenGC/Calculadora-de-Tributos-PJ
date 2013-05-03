@@ -1,7 +1,6 @@
 package br.com.suelengc.calctributospj.view.activity;
 
 import android.content.Intent;
-import br.com.suelengc.calctributospj.share.Email;
 import br.com.suelengc.calctributospj.view.menu.MyMenu;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
@@ -26,10 +25,6 @@ public class BaseActivity extends SherlockFragmentActivity {
 		case MyMenu.SETTINGS:
 			intent = new Intent(this, SettingsActivity.class);
 			startActivity(intent);
-			return true;
-		
-		case MyMenu.EMAIL:
-			new Email().openIntentEmail(this);
 			return true;
 		}
 

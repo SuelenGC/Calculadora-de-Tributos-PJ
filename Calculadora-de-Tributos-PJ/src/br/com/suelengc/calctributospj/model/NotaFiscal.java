@@ -1,8 +1,13 @@
 package br.com.suelengc.calctributospj.model;
 
+import java.io.Serializable;
 
-public class NotaFiscal {
+import br.com.suelengc.calctributospj.view.controller.Formatter;
 
+
+public class NotaFiscal implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 	private double valorBruto;
 	private double valorLiquido;
 	private Tributo tributo;  
@@ -38,6 +43,17 @@ public class NotaFiscal {
 	
 	public void CalcularTributos() {
 		tributo.Calcular(valorBruto);
-		valorLiquido = valorBruto - tributo.valorTotalTributos();
+		valorLiquido = valorBruto - tributo.getValorTotalTributos();
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("\n\nResumo");
+		builder.append("\nValor Bruto: R$ " + Formatter.DoubleToString(getValorBruto()));
+		builder.append("\nTotal de Descontos: R$ " + Formatter.DoubleToString(tributo.getValorTotalTributos()));
+		builder.append("\nValor Líquido: R$ " + Formatter.DoubleToString(getValorLiquido()));
+		
+		return tributo.toString() +  builder.toString();
 	}
 }

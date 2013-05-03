@@ -2,5 +2,6 @@
 <resources>
     <string name="menu_calc_valor_hora">Cálculo pelo valor/hora</string>
     <string name="menu_calc_valor_bruto">Cálculo pelo valor bruto</string>
+    <string name="menu_donate">Ajude!</string>
     
 </resources>

@@ -4,7 +4,7 @@
         android:color="@color/Branco" />
         
     <corners 
-        android:radius="10dip"
+        android:radius="5dip"
         android:bottomLeftRadius="0dip"
         android:bottomRightRadius="0dip"/>
 </shape>

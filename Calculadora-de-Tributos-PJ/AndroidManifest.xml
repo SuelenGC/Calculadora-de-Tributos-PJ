@@ -4,28 +4,38 @@
     android:versionCode="7"
     android:versionName="3.1.0" >
 
-    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="15" />
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.Sherlock" 
-        android:debuggable="true">
-        
+        android:theme="@style/Theme.Sherlock" >
         <activity
             android:name="br.com.suelengc.calctributospj.view.activity.SplashActivity"
-			android:label="@string/app_name">  
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.activity.CalculationActivity"></activity>
-		<activity android:name=".view.activity.ConfigurationActivity"></activity>  
-		<activity android:name=".view.activity.MenuActivity"></activity>
-		<activity android:name=".view.activity.AboutActivity" />
-		<activity android:name=".view.activity.SettingsActivity"></activity>
-		<activity android:name=".view.activity.CalculatorActivity"></activity>
+        <activity android:name="br.com.suelengc.calctributospj.view.activity.CalculationActivity" >
+        </activity>
+        <activity android:name="br.com.suelengc.calctributospj.view.activity.ConfigurationActivity" >
+        </activity>
+        <activity android:name="br.com.suelengc.calctributospj.view.activity.MenuActivity" >
+        </activity>
+        <activity android:name="br.com.suelengc.calctributospj.view.activity.AboutActivity" />
+        <activity android:name="br.com.suelengc.calctributospj.view.activity.SettingsActivity" >
+        </activity>
+        <activity android:name="br.com.suelengc.calctributospj.view.activity.CalculatorActivity" >
+        </activity>
+        <activity android:name="br.com.suelengc.calctributospj.view.activity.DonateActivity">
+        </activity>
     </application>
 
 </manifest>

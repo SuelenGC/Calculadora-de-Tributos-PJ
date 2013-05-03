@@ -1,37 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <!-- Padrão de Telas -->
     <dimen name="BorderLeftRight">10dp</dimen>
     <dimen name="BorderTopDown">10dp</dimen>
     <dimen name="TextSize">18sp</dimen>
-    
+
     <!-- Splash Logo -->
     <dimen name="BorderRadiusLogo">40dp</dimen>
     <dimen name="BorderLogo">3dp</dimen>
     <dimen name="TextLogoSize">140sp</dimen>
-    
+
     <!-- Botões -->
     <dimen name="MenuButtonHeight">55dp</dimen>
     <dimen name="SpaceAfterButton">10dp</dimen>
     <dimen name="BorderButton">1dp</dimen>
     <dimen name="TextButtonSize">18sp</dimen>
-    <dimen name="BorderRadiusButton">10dp</dimen>
+    <dimen name="BorderRadiusButton">5dp</dimen>
     <dimen name="ButtonHeight">45dp</dimen>
-    
+
     <!-- Campos -->
     <dimen name="FieldHeight">45dp</dimen>
     <dimen name="SpaceAfterField">10dp</dimen>
     <dimen name="BorderField">1dp</dimen>
     <dimen name="TextFieldSize">16sp</dimen>
     <dimen name="BorderRadiusField">10dp</dimen>
-    
+
     <!-- Dimensões padrões -->
     <dimen name="SpaceAfterDefault">10dp</dimen>
     <dimen name="BorderDefault">10dp</dimen>
     <dimen name="SpaceLateralDefault">10dp</dimen>
-    
+
     <!-- Tabelas -->
     <dimen name="TableRowHeight">32dp</dimen>
     <dimen name="TableTitleRowHeight">32dp</dimen>
-    
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
 </resources>

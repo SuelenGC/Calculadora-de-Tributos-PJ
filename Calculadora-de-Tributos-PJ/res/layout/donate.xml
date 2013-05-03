@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    style="@style/ScreenAbout">
+
+    <!-- Metade azul claro com as informações -->
+    <LinearLayout 
+        style="@style/DownLayout"
+        android:gravity="center"
+        android:layout_weight="1">
+        
+        <ImageView 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_donate"
+            android:layout_marginBottom="20dp"/>
+        
+        <TextView
+		    android:layout_height="wrap_content"
+		    android:layout_width="fill_parent"
+		    android:layout_gravity="center"
+		    android:gravity="center"
+		    android:textColor="@color/AzulEscuro3"
+		    android:textSize="16sp"
+            android:text="Ajude a manter este aplicativo gratuito!\n\nAcesse o site e faça uma doação.\n\nObrigada!!" />
+        
+        
+        <TextView
+		    android:layout_height="wrap_content"
+		    android:layout_width="wrap_content"
+		    style="@style/FontBaseBold"
+		    android:paddingTop="25dp" 
+		    android:autoLink="web"
+            android:text="www.calcpj.com.br" />
+            
+    </LinearLayout>
+    
+    <!-- Metade azul escuro com o logo -->
+    <LinearLayout 
+        style="@style/UpperLayout"
+        android:layout_weight="1">
+        
+        <include layout="@layout/include_logo"/>
+        
+		<TextView
+		    style="@style/AboutFrase" 
+            android:text="@string/splash_frase" />        
+    </LinearLayout>
+
+</LinearLayout>

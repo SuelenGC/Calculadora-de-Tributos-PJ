@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradientbackground"
+    android:gravity="center" >
+
+    <LinearLayout style="@style/LogoLayout" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/Branco"
+            android:layout_margin="10dp"
+            android:text="Gostou deste app? A avaliação dura poucos segundos e é muito útil para o desenvolvedor! Que tal avaliar?" />
+		
+        <Button
+            android:id="@+id_rating/i_love_it"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Adorei!"
+            android:width="0dip" />
+
+        <Button
+            android:id="@+id_rating/needs_work"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Precisa melhorar."
+            android:width="0dip" />
+
+        <Button
+            android:id="@+id_rating/maybe_later"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Pergunte-me depois."
+            android:width="0dip" />
+    </LinearLayout>
+
+</ScrollView>

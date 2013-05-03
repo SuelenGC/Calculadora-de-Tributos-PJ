@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradientbackground"
+    android:gravity="center" >
+
+    <LinearLayout style="@style/LogoLayout" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Conheça as novas funcionalidades:"
+            android:textColor="@color/Branco"
+            android:textSize="18sp" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" >
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_copy" />
+
+                <TextView 
+                    android:layout_height="wrap_content"
+                    android:layout_width="10dp"
+                    android:text=" "/>
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Copie e cole o cálculo realizado em outro aplicativo!"
+                    android:textColor="@color/Branco"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_email" />
+                <TextView 
+                    android:layout_height="wrap_content"
+                    android:layout_width="10dp"
+                    android:text=" "/>
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="Envie o cálculo por e-mail!"
+                    android:textColor="@color/Branco"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_settings" />
+                <TextView 
+                    android:layout_height="wrap_content"
+                    android:layout_width="10dp"
+                    android:text=" "/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Configure o % de ISS."
+                    android:textColor="@color/Branco"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_web" />
+                <TextView 
+                    android:layout_height="wrap_content"
+                    android:layout_width="10dp"
+                    android:text=" "/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visite nosso novo site!\nwww.calcpj.com.br"
+                    android:textColor="@color/Branco"
+                    android:textSize="16sp" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id_new_features/close"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Me avise depois"
+            android:width="0dip" />
+
+        <Button
+            android:id="@+id_new_features/close_forever"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Não avisar novamente"
+            android:width="0dip" />
+    </LinearLayout>
+
+</ScrollView>

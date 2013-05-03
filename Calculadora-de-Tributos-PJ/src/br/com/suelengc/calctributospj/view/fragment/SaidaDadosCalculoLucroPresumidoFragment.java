@@ -84,5 +84,4 @@ public class SaidaDadosCalculoLucroPresumidoFragment extends SherlockFragment {
 
 		super.onSaveInstanceState(outState);
 	}
-
 }

@@ -19,25 +19,31 @@ import br.com.suelengc.calctributospj.view.controller.Formatter;
 import br.com.suelengc.calctributospj.view.controller.Validator;
 
 public class CalcularListener implements OnClickListener, BaseListener {
-	PreferenciasCalculo preferencias;
-	TipoBaseCalculo baseCalculo;
-	NotaFiscal notaFiscal;
-	Tributo tributo;
-	View p;
+	private PreferenciasCalculo preferencias;
+	private TipoBaseCalculo baseCalculo;
+	private NotaFiscal notaFiscal;
+	private Tributo tributo;
+	private View p;
+	private CalculatorCallback callback;
 	
-	TextView tvvalor_bruto, tvvalor_liquido, tvirpj_retido, tvcofins_retido, tvpis_retido, tvcsll_retido, tvinss_darf, tvirpj_darf, tvcsll_darf, tvtotaldescontosmensais;
-	TextView tvtributo_unificado;
-	EditText edValorBruto, edValorHora, edQtdeHora;
+	private TextView tvvalor_bruto, tvvalor_liquido, tvirpj_retido, tvcofins_retido, tvpis_retido, tvcsll_retido, tvinss_darf, tvirpj_darf, tvcsll_darf, tvtotaldescontosmensais;
+	private TextView tvtributo_unificado;
+	private EditText edValorBruto, edValorHora, edQtdeHora;
 	
-	public CalcularListener(PreferenciasCalculo preferencias, TipoBaseCalculo baseCalculo) {
+	public interface CalculatorCallback {
+		public void onFinishCalculator(boolean sucess, NotaFiscal notaFiscal);
+	}
+	
+	public CalcularListener(PreferenciasCalculo preferencias, TipoBaseCalculo baseCalculo, CalculatorCallback callback) {
 		this.preferencias = preferencias;
 		this.baseCalculo = baseCalculo;
-		
+		this.callback = callback;
 	}
 
 	@Override
 	public void onClick(View view) {
 		p = (View) view.getRootView();
+		Context context = p.getContext();
 		
 		if (p != null) {
 			
@@ -73,8 +79,9 @@ public class CalcularListener implements OnClickListener, BaseListener {
 			
 			setDadosSaida();
 			
+			callback.onFinishCalculator(true, notaFiscal);
+			
 			//Ocultar o teclado virtual
-			Context context = p.getContext();
             InputMethodManager imm = (InputMethodManager) context.getSystemService(context.INPUT_METHOD_SERVICE);  
             imm.hideSoftInputFromWindow(tvvalor_liquido.getWindowToken(), 0); 
 		}
@@ -131,7 +138,7 @@ public class CalcularListener implements OnClickListener, BaseListener {
 			tvcsll_darf.setText("R$ " + Formatter.DoubleToString(((LucroPresumido)tributo).getCsllTrimetral()));
 	
 			tvvalor_bruto.setText("R$ " + Formatter.DoubleToString(notaFiscal.getValorBruto()));
-			tvtotaldescontosmensais.setText("R$ " + Formatter.DoubleToString(((LucroPresumido)tributo).valorTotalTributos()));
+			tvtotaldescontosmensais.setText("R$ " + Formatter.DoubleToString(((LucroPresumido)tributo).getValorTotalTributos()));
 			tvvalor_liquido.setText("R$ " + Formatter.DoubleToString(notaFiscal.getValorLiquido()));
 	
 		} else if (preferencias.getTipoTributacao().equals(TipoTributacao.SIMPLES_NACIONAL)) {
@@ -141,13 +148,12 @@ public class CalcularListener implements OnClickListener, BaseListener {
 		    tvtotaldescontosmensais = (TextView) p.findViewById(R.id_calc.totaldescontosmensais);
 	
 			tvtributo_unificado = (TextView) p.findViewById(R.id_calc.tributo_unificado);
-			tvtributo_unificado.setText("R$ " + Formatter.DoubleToString(((SimplesNacional) tributo).valorTotalTributos()));
+			tvtributo_unificado.setText("R$ " + Formatter.DoubleToString(((SimplesNacional) tributo).getValorTotalTributos()));
 	
 			tvvalor_bruto.setText("R$ " + Formatter.DoubleToString(notaFiscal.getValorBruto()));
-			tvtotaldescontosmensais.setText("R$ " + Formatter.DoubleToString(((SimplesNacional) tributo).valorTotalTributos()));
+			tvtotaldescontosmensais.setText("R$ " + Formatter.DoubleToString(((SimplesNacional) tributo).getValorTotalTributos()));
 			tvvalor_liquido.setText("R$ " + Formatter.DoubleToString(notaFiscal.getValorLiquido()));
 			
 		}
-		
 	}
 }

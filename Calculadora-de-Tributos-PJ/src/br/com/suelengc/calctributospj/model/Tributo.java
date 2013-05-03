@@ -1,8 +1,10 @@
 package br.com.suelengc.calctributospj.model;
 
+import java.io.Serializable;
 
-public interface Tributo {
-	public double valorTotalTributos();
+
+public interface Tributo extends Serializable {
+	public double getValorTotalTributos();
 
 	public void Calcular(double valorBruto); 
 }

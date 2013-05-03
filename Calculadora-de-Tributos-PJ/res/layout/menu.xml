@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/ScreenBase" >
-		    
-  	<Button
-  	    android:id="@+id/btn_calc_by_value_per_hour"
-       	style="@style/ButtonCalcValorHora"
-   		android:text="@string/menu_calc_valor_hora"
-   		android:onClick="CallCalcActivity_ByValuePerHour" />
 
-	<Button 
-	    android:id="@+id/btn_calc_by_value"
-	   	style="@style/ButtonCalcValorBruto"
-	   	android:text="@string/menu_calc_valor_bruto"
-	   	android:onClick="CallCalcActivity_ByValue"/>	
-	        
+    <Button
+        android:id="@+id/btn_calc_by_value_per_hour"
+        style="@style/ButtonCalcValorHora"
+        android:onClick="CallCalcActivity_ByValuePerHour"
+        android:text="@string/menu_calc_valor_hora" />
+
+    <Button
+        android:id="@+id/btn_calc_by_value"
+        style="@style/ButtonCalcValorBruto"
+        android:onClick="CallCalcActivity_ByValue"
+        android:text="@string/menu_calc_valor_bruto" />
+
+    <Button
+        android:id="@+id/btn_donate"
+        style="@style/ButtonDonate"
+        android:onClick="CallCalcActivity_Donate"
+        android:text="@string/menu_donate" />
+
 </LinearLayout>

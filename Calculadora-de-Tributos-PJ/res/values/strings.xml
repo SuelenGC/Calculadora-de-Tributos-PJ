@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">Calc PJ</string>
     <string name="version">Versão 6.0 beta</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>

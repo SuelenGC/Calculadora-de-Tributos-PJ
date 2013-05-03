@@ -8,31 +8,31 @@ import br.com.suelengc.calctributospj.view.menu.MyMenu;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 
-public class AboutActivity extends BaseActivity {
+public class DonateActivity extends BaseActivity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setTitle("Sobre");
-		setContentView(R.layout.about);
-
+		setContentView(R.layout.donate);
+		
 		GradientDrawable bg = (GradientDrawable) getResources().getDrawable(R.drawable.bg_gradient);
 		getSupportActionBar().setBackgroundDrawable(bg);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		setTitle("Doação");
+		
 	}
-
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-
+		
 		MenuInflater mi = new MenuInflater(getApplicationContext());
 		mi.inflate(R.menu.menu, menu);
-
+		
 		/** Ocultar menus desta tela */
-		menu.findItem(MyMenu.ABOUT).setVisible(false);
 		menu.findItem(MyMenu.SETTINGS).setVisible(false);
 		menu.findItem(MyMenu.COPY).setVisible(false);
-
+		menu.findItem(MyMenu.ABOUT).setVisible(false);
+		
 		return true;
 	}
-
 }
