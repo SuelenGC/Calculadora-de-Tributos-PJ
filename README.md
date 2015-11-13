@@ -4,6 +4,8 @@ A Calculadora de Tributos PJ conta hoje com + de 5000 usuários. Sua função é
 
 Visite o <a href="http://www.calcpj.com.br" target="_blank">site</a>.
 
+<a href="intent://scan/#Intent;scheme=tripda;package=com.tripda.droid;end"> Tripda Home </a>
+
 Change Log
 ==========
 
