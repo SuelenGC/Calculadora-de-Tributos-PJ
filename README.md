@@ -3,7 +3,6 @@ Calculadora de Tributos PJ
 A Calculadora de Tributos PJ conta hoje com + de 5000 usuários. Sua função é tornar a emissão de Notas Fiscais mais fácil calculando os tributos que incidem sobre ela. Ela torna mais fácil ser PJ!!
 
 Visite o <a href="http://www.calcpj.com.br" target="_blank">site</a>.
-<a href="https://www.tripda.com.br"> Tripda Home </a>
 
 Change Log
 ==========
